@@ -1,0 +1,11 @@
+.container {
+  padding: 0 4rem;
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

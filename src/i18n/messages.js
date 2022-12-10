@@ -5,7 +5,7 @@ export const messages = {
     [LOCALES.KAZAKH]: {
         w: {
             "app_name": "Алланың 99 есімі",
-            "the_most_beautiful_names": "Алланың ең қасиетті есімдері",
+            "the_most_beautiful_names_text": "Алланың ең қасиетті есімдері",
             "main_block_title": "Расында, жүзге жетпей, Алланың 99 есімі бар – оларды атағандар жәннатқа кіреді",
             "name": "есім",
 

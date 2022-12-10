@@ -6,8 +6,8 @@ import {theme} from './themes/theme';
 
 import App from './App';
 
-import './index.css';
-import './reset.css';
+import './styles/index.css';
+import './styles/reset.css';
 import {ThemeProvider} from "@mui/material";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,0 +1,61 @@
+@import "../../../variables"
+
+.Block
+  @include flex(column, 1rem)
+  background: #f8f8f8
+  border: 1px solid rgba(0, 0, 0, 0.1)
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05)
+  border-radius: 20px
+  text-align: center
+  padding: 0.8rem
+  width: 15rem
+  max-height: 100%
+  object-fit: cover
+  overflow: hidden
+
+.UpperElement
+  @include flex(row, 0)
+  @include flexAlignment(flex-start, space-between, center)
+  div:first-child
+    display: flex
+    @include flexAlignment(flex-start, center, center)
+    @include font($fs4, $fwB)
+    color: #6BBED0
+    width: 1.7rem
+    height: 1.7rem
+    border: 0.1rem solid #6BBED0
+    border-radius: 1rem
+  img
+    width: 1.7rem
+
+.MiddleElement
+  display: flex
+  justify-content: center
+
+.LowerElement
+  @include grid(2fr 0.5fr, auto, 0.1rem)
+  background: white
+  border: 1px solid rgba(0, 0, 0, 0.05)
+  box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.05)
+  border-radius: 25px
+  height: 5rem
+  padding: 0 0.8rem
+  color: black
+  text-align: left
+  div
+    @include flex(column, 0)
+    &:first-child
+      justify-content: center
+      h4
+        font-family: $gilroyBold
+      h5
+        font-family: $gilroyRegular
+        font-weight: 300
+        color: #4B4B4B
+    &:last-child
+      @include flexAlignment(center, center, flex-end)
+
+@media (max-width: $xxl)
+  .Block
+    width: 14rem
+

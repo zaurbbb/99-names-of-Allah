@@ -4,12 +4,15 @@ import flatten from 'flat';
 
 import {messages} from "./i18n/messages";
 import {LOCALES} from "./i18n/locales";
+import {LanguageContext} from "./context";
 
 import AppRouter from "./AppRouter";
 import Header from "./components/elements/header/Header";
 import Footer from "./components/elements/footer/Footer";
 import AboutApp from "./components/elements/aboutApp/AboutApp";
 
+import './styles/swiper.sass';
+import './styles/app.sass';
 
 function App() {
     const [currentLocale, setCurrentLocale] = useState(getInitialLocale());
@@ -25,21 +28,25 @@ function App() {
     }
 
     return (
-        <IntlProvider
-            messages={flatten(messages[currentLocale])}
-            locale={currentLocale}
-            defaultLocale={LOCALES.KAZAKH}
-        >
-            <Header
-                currentLocale={currentLocale}
-                handleChange={handleChange}
-            />
-            <main>
-                <AppRouter/>
-                <AboutApp/>
-            </main>
-            <Footer/>
-        </IntlProvider>
+        <LanguageContext.Provider value={{
+            currentLocale
+        }}>
+            <IntlProvider
+                messages={flatten(messages[currentLocale])}
+                locale={currentLocale}
+                defaultLocale={LOCALES.KAZAKH}
+            >
+                <Header
+                    currentLocale={currentLocale}
+                    handleChange={handleChange}
+                />
+                <main>
+                    <AppRouter/>
+                    <AboutApp/>
+                </main>
+                <Footer/>
+            </IntlProvider>
+        </LanguageContext.Provider>
     );
 }
 
