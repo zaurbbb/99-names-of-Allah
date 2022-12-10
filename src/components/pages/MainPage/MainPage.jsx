@@ -2,7 +2,7 @@ import React from 'react';
 
 import Heading from "../../ui/Heading/Heading";
 import NamesList from "./NamesList/NamesList";
-import Star from "../../ui/Star/Star";
+import Star from "../../ui/StarIcon/Star";
 import { Link } from "react-router-dom";
 
 const MainPage = () => {

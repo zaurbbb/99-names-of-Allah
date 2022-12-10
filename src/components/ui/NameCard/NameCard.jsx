@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-import Star from "../Star/Star";
+import Star from "../StarIcon/Star";
 import Play from "../Play/Play";
 
 import css from './NameCard.module.sass'

@@ -1,0 +1,123 @@
+@import "../../../../variables"
+
+.Block
+  @include flex(column, 2rem)
+  @include flexAlignment(flex-start, center, center)
+
+.FirstCard, .SecondCard, .ThirdCard
+  @include flex(column, auto)
+  background: #fffefe
+  border: 1px solid rgba(0, 0, 0, 0.1)
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05)
+  border-radius: 20px
+  padding: 1rem
+  width: 50%
+
+.FirstCard
+  gap: 0.5rem
+  div
+    &:first-child
+      img
+        width: 1.8rem
+        cursor: pointer
+
+    &:nth-child(2)
+      display: flex
+      justify-content: center
+
+    &:last-child
+
+      @include flex(row, 0)
+      @include flexAlignment(flex-start, space-between, center)
+
+      div
+        @include flex(column, 0)
+        @include flexAlignment(flex-start, flex-start, flex-start)
+
+        h3
+          &:first-child
+            font-family: $gilroyBold
+
+          &:last-child
+            font-family: $gilroyRegular
+            font-weight: 500
+
+.FirstCard, .ThirdCard
+  div
+    &:first-child
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      div:nth-child(odd)
+        width: 40px
+
+.SecondCard, .ThirdCard
+  gap: 1.5rem
+
+  div
+    h3, .zikrCount
+      color: $poison
+      font-family: $gilroyBold
+      text-align: center
+
+    h4
+      font-family: $gilroyRegular
+      font-weight: 100
+
+      .zikrCount
+        font-family: $gilroyBold
+        font-size: $fs2
+
+.ModalContainer
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 30rem
+  background-color: #FAFAFA
+  border: none
+  outline: none
+  padding: 1rem 2rem
+  border-radius: 35px
+  overflow: scroll
+  height: 80%
+  display: block
+
+  h3
+    font-family: $gilroyBold
+    text-align: center
+
+  &::-webkit-scrollbar
+    display: none
+
+.MuiAlert-icon
+  align-items: center
+
+@media (max-width: $xxl)
+  .FirstCard, .SecondCard, .ThirdCard
+    width: 60%
+
+@media (max-width: $xl)
+  .FirstCard, .SecondCard, .ThirdCard
+    width: 70%
+
+
+@media (max-width: $lg)
+  .FirstCard, .SecondCard, .ThirdCard
+    width: 80%
+  .FirstCard, .ThirdCard
+    div:first-child
+      img
+        width: 2rem
+
+@media (max-width: $lg)
+  .ModalContainer
+    padding: 0.8rem
+    width: 85%
+
+@media (max-width: $sm)
+  .FirstCard, .SecondCard, .ThirdCard
+    width: 100%
+
+
