@@ -1,3 +1,9 @@
+// font
+$gilroyBold: 'GilroyBold', sans-serif
+$gilroyRegular: 'GilroyRegular', sans-serif
+$gilroyLight: 'GilroyLight', sans-serif
+$gilroyThin: 'GilroyThin', sans-serif
+
 // font-size
 $fs1: 1.728rem
 $fs2: 1.44rem
@@ -12,15 +18,60 @@ $fwM: 500
 $fwR: 400
 
 // colors
-$primary: #00D2FF
+$poison: #00D2FF
+$primary: #89ECFF
 $secondary: #6BBED0
 $success: #53E284
 $danger: #FF6666
 
 // media queries
-$xxl:  1400px
+$xxl: 1400px
 $xl:  1200px
 $lg:  992px
 $md:  768px
-$sm:  540px
-$xs:  360px
+$sm:  576px
+$xs:  380px
+
+//mixin for text
+@mixin font($fs, $fw)
+  font-size: $fs
+  font-weight: $fw
+
+//mixin for border
+@mixin border($width, $color, $radius)
+  border: $width solid $color
+  border-radius: $radius
+
+//mixin for shadow
+@mixin text-shadow($x, $y, $radius, $color)
+  text-shadow: $x $y $radius $color
+
+//mixin for width/height
+@mixin size($w, $h)
+  width: $w
+  height: $h
+
+//mixin for display flex
+@mixin flex($flexDirection, $gap)
+  display: flex
+  flex-direction: $flexDirection
+  gap: $gap
+
+//mixin for display grid
+@mixin grid($gridTemplateColumns, $gridTemplateRows, $gap)
+  display: grid
+  grid-template-columns: $gridTemplateColumns
+  grid-template-rows: $gridTemplateRows
+  gap: $gap
+
+//mixin for alignment of display flex/grid
+@mixin flexAlignment ($alignContent, $justifyContent, $alignItems)
+  align-content: $alignContent
+  justify-content: $justifyContent
+  align-items: $alignItems
+
+@mixin gridAlignment ($alignContent, $justifyContent, $alignItems, $justifyItems)
+  align-content: $alignContent
+  justify-content: $justifyContent
+  align-items: $alignItems
+  justify-items: $justifyItems

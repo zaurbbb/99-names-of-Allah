@@ -1,30 +1,21 @@
 import React from 'react';
+import {useLocation} from "react-router-dom";
 
-import {LOCALES} from "../../../i18n/locales";
-import {FormattedMessage} from "react-intl";
+import Navbar from "../navbar/Navbar";
+import HeaderContent from "./HeaderContent";
+import {useShow} from "../../../hooks/useShow";
 
-const Header = ({currentLocale, handleChange}) => {
-    const languages = [
-        {name: 'KZ', code: LOCALES.KAZAKH},
-        {name: 'RU', code: LOCALES.RUSSIAN},
-        {name: 'TR', code: LOCALES.TURKISH},
-    ];
+import css from './Header.module.sass';
+
+const Header = (props) => {
+    const location = useLocation();
+    const isBgShown = useShow(location, css.activeBg, css.inActiveBg);
+    const isHeaderContentShown = useShow(location, <HeaderContent/>, '');
 
     return (
-        <header>
-            <div className="switcher">
-                Languages
-                <select onChange={handleChange} value={currentLocale}>
-                    {languages.map(({ name, code }) => (
-                        <option key={code} value={code}>
-                            {name}
-                        </option>
-                    ))}
-                </select>
-            </div>
-            <h1>
-                <FormattedMessage id='words.name'/>
-            </h1>
+        <header className={`${css.block} ${isBgShown}`}>
+            <Navbar {...props}/>
+            {isHeaderContentShown}
         </header>
     );
 };

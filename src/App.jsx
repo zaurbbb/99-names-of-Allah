@@ -1,15 +1,14 @@
 import React, {useState} from 'react';
-
-import {BrowserRouter} from "react-router-dom";
 import {IntlProvider} from "react-intl";
 import flatten from 'flat';
+
+import {messages} from "./i18n/messages";
+import {LOCALES} from "./i18n/locales";
 
 import AppRouter from "./AppRouter";
 import Header from "./components/elements/header/Header";
 import Footer from "./components/elements/footer/Footer";
 
-import {messages} from "./i18n/messages";
-import {LOCALES} from "./i18n/locales";
 
 function App() {
     const [currentLocale, setCurrentLocale] = useState(getInitialLocale());
@@ -30,16 +29,14 @@ function App() {
             locale={currentLocale}
             defaultLocale={LOCALES.KAZAKH}
         >
-            <BrowserRouter>
-                <Header
-                    currentLocale={currentLocale}
-                    handleChange={handleChange}
-                />
-                <main>
-                    <AppRouter/>
-                </main>
-                <Footer/>
-            </BrowserRouter>
+            <Header
+                currentLocale={currentLocale}
+                handleChange={handleChange}
+            />
+            <main>
+                <AppRouter/>
+            </main>
+            <Footer/>
         </IntlProvider>
     );
 }

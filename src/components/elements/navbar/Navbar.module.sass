@@ -1,0 +1,71 @@
+@import "../../../Variables"
+
+.block
+  @include flex(row, 0)
+  @include flexAlignment(flex-start, space-between, center)
+
+  width: 100%
+  padding: 1rem 0
+  margin: 0
+
+  color: black
+  .firstColumn, .secondColumn, .thirdColumn
+    margin: 0 auto
+  .secondColumn
+    @include flex(row, 4rem)
+  .thirdColumn
+    @include flex(row, 1rem)
+    @include flexAlignment(flex-start, center, center)
+    &:hover
+      cursor: pointer
+
+.ModalContainer
+  margin: 4rem auto 0
+  width: 25rem
+  outline: none
+  overflow: scroll
+  display: block
+  &::-webkit-scrollbar
+    display: none
+
+
+@media (max-width: $xl)
+  .block
+    .secondColumn
+      @include flex(row, 1.5rem)
+    .thirdColumn
+      @include flex(row, 1rem)
+
+@media (max-width: $md)
+  .block
+    div
+      img
+        width: 18px!important
+    .firstColumn
+      img
+        width: 50px!important
+  .ModalContainer
+    width: 19rem
+
+@media (max-width: $sm)
+  .block
+    .firstColumn
+        display: none
+    .secondColumn
+        @include flex(row, 1rem)
+    .thirdColumn
+        @include flex(row, 0.5rem)
+
+.activeLink
+  color: $primary
+
+.inActiveLink
+  color: white
+
+.activeBg
+  background: linear-gradient(268.55deg, #6A5FEA 17.32%, #B471E8 86.43%)
+
+.inActiveBg
+  background: transparent
+
+

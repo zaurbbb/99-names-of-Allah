@@ -1,8 +1,11 @@
 import { LOCALES } from './locales'
 
+// w - words, n- names
 export const messages = {
     [LOCALES.KAZAKH]: {
-        words: {
+        w: {
+            number_display:
+                'Auf diese Weise werden {n, number} im ausgewählten Gebietsschema formatiert',
             "app_name": "Алланың 99 есімі",
             "the_most_beautiful_names": "Алланың ең қасиетті есімдері",
             "main_block_title": "Расында, жүзге жетпей, Алланың 99 есімі бар – оларды атағандар жәннатқа кіреді",
@@ -72,7 +75,7 @@ export const messages = {
             "zaur_name": "Бердибеков Заур",
             "zaur_description": "WEB разработчик",
         },
-        names: [
+        n: [
             {
                 "ayats": [
                     {
@@ -2536,7 +2539,7 @@ export const messages = {
         ],
     },
     [LOCALES.RUSSIAN]: {
-        words: {
+        w: {
             "app_name": "99 имен Аллаха",
             "the_most_beautiful_names_text": "Прекраснейшие имена Аллаха",
             "main_block_title": "Воистину, у Аллаха есть 99 имён – сто без одного, и тот, кто перечислит их, войдёт в Рай",
@@ -2606,7 +2609,7 @@ export const messages = {
             "zaur_name": "Бердибеков Заур",
             "zaur_description": "WEB разработчик",
         },
-        names: [
+        n: [
             {
                 "ayats": [
                     {
@@ -5070,7 +5073,7 @@ export const messages = {
         ],
     },
     [LOCALES.TURKISH]: {
-        words: {
+        w: {
             "app_name": "Allah'ın 99 ismi",
             "the_most_beautiful_names_text": "Allah'ın en güzel isimleri",
             "main_block_title": "Şüphesiz Allah'ın, biri olmadan yüz tane olmak üzere 99 ismi vardır ve kim onları sayarsa Cennete girecektir",
@@ -5140,7 +5143,7 @@ export const messages = {
             "zaur_name": "Berdibekov Zaur",
             "zaur_description": "WEB geliştiricisi",
         },
-        names: [
+        n: [
             {
                 "ayats": [
                     {
