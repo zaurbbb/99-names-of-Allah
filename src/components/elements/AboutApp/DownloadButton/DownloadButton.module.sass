@@ -1,0 +1,30 @@
+@import "../../../../variables"
+
+.button
+  @include flex(row, 0.4rem)
+  @include flexAlignment(0, center, center)
+  padding: 0.4rem 0.5rem
+  background: #000000
+  color: white
+  border-radius: 0.4rem
+  div
+    display: flex
+    flex-direction: column!important
+    @include flexAlignment(flex-start, flex-start, flex-start)
+    span
+      line-height: 1rem
+      &:first-child
+        @include font($fs6, $fwR)
+        margin-top: -0.2rem
+      &:last-child
+        @include font($fs4, $fwB)
+        font-family: $gilroyRegular
+
+
+@media (max-width: $sm)
+  .button
+    @include flex(row, 0rem)
+    div
+      img
+        width: 80%
+

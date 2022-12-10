@@ -7,9 +7,9 @@ import { LOCALES } from "./i18n/locales";
 import { LanguageContext } from "./context";
 
 import AppRouter from "./AppRouter";
-import Header from "./components/elements/header/Header";
-import Footer from "./components/elements/footer/Footer";
-import AboutApp from "./components/elements/aboutApp/AboutApp";
+import Header from "./components/elements/Header/Header";
+import Footer from "./components/elements/Footer/Footer";
+import AboutApp from "./components/elements/AboutApp/AboutApp";
 
 import './styles/swiper.sass';
 import './styles/app.sass';
@@ -42,7 +42,7 @@ function App() {
                     currentLocale={currentLocale}
                     handleChange={handleChange}
                 />
-                <main>
+                <main className='container'>
                     <AppRouter />
                     <AboutApp />
                 </main>

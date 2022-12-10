@@ -1,9 +1,9 @@
-import MainPage from "../components/pages/mainPage/MainPage";
-import AboutPage from "../components/pages/aboutPage/AboutPage";
-import TestPage from "../components/pages/testPage/TestPage";
-import TestsPage from "../components/pages/testsPage/TestsPage";
-import NamePage from "../components/pages/namePage/NamePage";
-import BookmarksPage from "../components/pages/bookmarksPage/BookmarksPage";
+import MainPage from "../components/pages/MainPage/MainPage";
+import AboutPage from "../components/pages/AboutPage/AboutPage";
+import TestPage from "../components/pages/TestPage/TestPage";
+import TestsPage from "../components/pages/TestsPage/TestsPage";
+import NamePage from "../components/pages/NamePage/NamePage";
+import BookmarksPage from "../components/pages/BookmarksPage/BookmarksPage";
 
 export const routes = [
     {path: '/', component: <MainPage/>},
@@ -12,5 +12,4 @@ export const routes = [
     {path: '/tests', component: <TestsPage/>},
     {path: '/test/:testId', component: <TestPage/>},
     {path: '/about', component: <AboutPage/>},
-
 ];
