@@ -1,13 +1,16 @@
 import React from 'react';
-import {FormattedMessage} from "react-intl";
+import { FormattedMessage } from "react-intl";
 
 import css from './Heading.module.sass'
-const Heading = ({children, value}) => {
+
+const Heading = ({ children, value }) => {
     return (
-        <h1 className={css.Block}>
-            <FormattedMessage id={value}/>
+        <div className={css.Block}>
+            <h1>
+                <FormattedMessage id={value} />
+            </h1>
             {children}
-        </h1>
+        </div>
     );
 };
 

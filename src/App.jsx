@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
-import {IntlProvider} from "react-intl";
+import React, { useState } from 'react';
+import { IntlProvider } from "react-intl";
 import flatten from 'flat';
 
-import {messages} from "./i18n/messages";
-import {LOCALES} from "./i18n/locales";
-import {LanguageContext} from "./context";
+import { messages } from "./i18n/messages";
+import { LOCALES } from "./i18n/locales";
+import { LanguageContext } from "./context";
 
 import AppRouter from "./AppRouter";
 import Header from "./components/elements/header/Header";
@@ -17,7 +17,7 @@ import './styles/app.sass';
 function App() {
     const [currentLocale, setCurrentLocale] = useState(getInitialLocale());
 
-    const handleChange = ({target: {value}}) => {
+    const handleChange = ({ target: { value } }) => {
         setCurrentLocale(value);
         localStorage.setItem('locale', value);
     };
@@ -28,9 +28,11 @@ function App() {
     }
 
     return (
-        <LanguageContext.Provider value={{
-            currentLocale
-        }}>
+        <LanguageContext.Provider
+            value={{
+                currentLocale
+            }}
+        >
             <IntlProvider
                 messages={flatten(messages[currentLocale])}
                 locale={currentLocale}
@@ -41,10 +43,10 @@ function App() {
                     handleChange={handleChange}
                 />
                 <main>
-                    <AppRouter/>
-                    <AboutApp/>
+                    <AppRouter />
+                    <AboutApp />
                 </main>
-                <Footer/>
+                <Footer />
             </IntlProvider>
         </LanguageContext.Provider>
     );

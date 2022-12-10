@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Link} from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 
 import css from './SearchBar.module.css'
 
@@ -8,7 +8,7 @@ import SearchIconBlack from "../../../../../assets/icons/navbar/search_dark.svg"
 
 const data = [];
 
-function SearchBar({ placeholder }) {
+function SearchBar({placeholder}) {
     const [filteredData, setFilteredData] = useState([]);
     const [wordEntered, setWordEntered] = useState("");
 
@@ -40,8 +40,16 @@ function SearchBar({ placeholder }) {
                 <div className={css.ResultsElement}>
                     {filteredData.map((value, key) => {
                         return (
-                            <Link className={css.ResultItemElement} to={`/name/${value.id}`} target="_blank" key={key}>
-                                <img src={SearchIconBlack} alt=""/>
+                            <Link
+                                className={css.ResultItemElement}
+                                to={`/name/${value.id}`}
+                                target="_blank"
+                                key={key}
+                            >
+                                <img
+                                    src={SearchIconBlack}
+                                    alt=""
+                                />
                                 <p>{value.name} </p>
                             </Link>
                         );

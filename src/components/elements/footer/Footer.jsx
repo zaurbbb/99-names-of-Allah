@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {FormattedMessage} from "react-intl";
+import { FormattedMessage } from "react-intl";
 
 import css from './Footer.module.sass';
 import FooterLogo from '../../../assets/icons/footer/logo.svg';
@@ -14,31 +14,43 @@ const Footer = () => {
             <div className={css.upperElement}>
                 <ul className={css.MainColumn}>
                     <li>
-                        <img src={FooterLogo} alt="Footer Logo"/>
-                        <FormattedMessage id='w.app_name'/>
+                        <img
+                            src={FooterLogo}
+                            alt="Footer Logo"
+                        />
+                        <FormattedMessage id='w.app_name' />
                     </li>
                     <li>
-                        <FormattedMessage id='w.footer_title'/>
+                        <FormattedMessage id='w.footer_title' />
                     </li>
                     <li>
                         <a href="https://github.com">
-                            <img src={IconFacebook} alt="Facebook Icon"/>
+                            <img
+                                src={IconFacebook}
+                                alt="Facebook Icon"
+                            />
                         </a>
                         <a href="https://github.com">
-                            <img src={IconTwitter} alt="Twitter Icon"/>
+                            <img
+                                src={IconTwitter}
+                                alt="Twitter Icon"
+                            />
                         </a>
                         <a href="https://github.com">
-                            <img src={IconInstagram} alt="Instagram Icon"/>
+                            <img
+                                src={IconInstagram}
+                                alt="Instagram Icon"
+                            />
                         </a>
                     </li>
                 </ul>
                 <ul className={css.SecondaryColumn}>
                     <li>
-                        <FormattedMessage id='w.footer_help'/>
+                        <FormattedMessage id='w.footer_help' />
                     </li>
                     <li>
                         <a href="https://github.com">
-                            <FormattedMessage id='w.footer_policy'/>
+                            <FormattedMessage id='w.footer_policy' />
                         </a>
                     </li>
                     <li>
@@ -48,29 +60,29 @@ const Footer = () => {
                     </li>
                     <li>
                         <a href="https://github.com">
-                            <FormattedMessage id='w.footer_contact'/>
+                            <FormattedMessage id='w.footer_contact' />
                         </a>
                     </li>
                 </ul>
                 <ul className={css.SecondaryColumn}>
                     <li>
-                        <FormattedMessage id='w.footer_apps'/>
+                        <FormattedMessage id='w.footer_apps' />
                     </li>
                     <li>
                         <a href="https://github.com">
-                            <FormattedMessage id='w.footer_android'/>
+                            <FormattedMessage id='w.footer_android' />
                         </a>
                     </li>
                     <li>
                         <a href="https://github.com">
-                            <FormattedMessage id='w.footer_ios'/>
+                            <FormattedMessage id='w.footer_ios' />
                         </a>
                     </li>
-                    <br/>
+                    <br />
                 </ul>
             </div>
             <div className={css.lowerElement}>
-                ©Allanyn99esimi. <FormattedMessage id='w.footer_subtitle'/>
+                ©Allanyn99esimi. <FormattedMessage id='w.footer_subtitle' />
             </div>
         </footer>
     );

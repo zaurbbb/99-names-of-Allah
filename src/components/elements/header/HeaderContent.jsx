@@ -1,18 +1,18 @@
 import React from 'react';
 
 import css from './Header.module.sass'
-import {FormattedMessage} from "react-intl";
+import { FormattedMessage } from "react-intl";
 
 const HeaderContent = () => {
     return (
         <div className={css.TextBlock}>
             <div>
                 <h1>
-                    <FormattedMessage id='w.app_name'/>
+                    <FormattedMessage id='w.app_name' />
                 </h1>
-                <br/>
+                <br />
                 <h3>
-                    <FormattedMessage id='w.main_block_title'/>
+                    <FormattedMessage id='w.main_block_title' />
                 </h3>
             </div>
         </div>

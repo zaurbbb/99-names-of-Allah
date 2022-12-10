@@ -1,8 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
-import {NavLink, useLocation} from "react-router-dom";
-import {FormattedMessage} from "react-intl";
-import {useShow} from "../../../hooks/useShow";
+import {
+    NavLink,
+    useLocation
+} from "react-router-dom";
+import { FormattedMessage } from "react-intl";
+import { useShow } from "../../../hooks/useShow";
 
 import css from './Navbar.module.sass';
 import NavbarLogoIcon from '../../../assets/icons/navbar/logo.webp'
@@ -28,20 +31,32 @@ const Navbar = (props) => {
         <nav className={`${css.Block} ${isBgShown}`}>
             <div className={css.FirstColumn}>
                 <NavLink to="/">
-                    <img src={NavbarLogoIcon} alt="Site Logo"/>
+                    <img
+                        src={NavbarLogoIcon}
+                        alt="Site Logo"
+                    />
                 </NavLink>
             </div>
             <div className={css.SecondColumn}>
-                <NavLink to="/" className={isLinkActive}>
-                    <FormattedMessage id='w.header_main'/>
+                <NavLink
+                    to="/"
+                    className={isLinkActive}
+                >
+                    <FormattedMessage id='w.header_main' />
                 </NavLink>
 
-                <NavLink to="/tests" className={isLinkActive}>
-                    <FormattedMessage id='w.header_test'/>
+                <NavLink
+                    to="/tests"
+                    className={isLinkActive}
+                >
+                    <FormattedMessage id='w.header_test' />
                 </NavLink>
 
-                <NavLink to="/about" className={isLinkActive}>
-                    <FormattedMessage id='w.header_about'/>
+                <NavLink
+                    to="/about"
+                    className={isLinkActive}
+                >
+                    <FormattedMessage id='w.header_about' />
                 </NavLink>
             </div>
             <div className={css.ThirdColumn}>
@@ -51,7 +66,7 @@ const Navbar = (props) => {
                     onClick={handleOpen}
                 />
 
-                <SelectLanguages {...props}/>
+                <SelectLanguages {...props} />
             </div>
 
             <SearchModal

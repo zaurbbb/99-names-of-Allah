@@ -9,7 +9,7 @@ import Name7 from "../assets/mosques/NameImg6.webp";
 import Name8 from "../assets/mosques/NameImg7.webp";
 import Name9 from "../assets/mosques/NameImg8.webp";
 
+const mosquesArr = [Name0, Name1, Name2, Name3, Name4, Name5, Name6, Name7, Name8, Name9];
 export const useMosque = (id) => {
-    const mosquesArr = [Name0, Name1, Name2, Name3, Name4, Name5, Name6, Name7, Name8, Name9];
     return mosquesArr[id % 10];
 };
