@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
 import css from './SearchBar.module.css'
-
-
 import SearchIconBlack from "../../../../../assets/icons/navbar/search_dark.svg";
+import { useNamesCollection } from "../../../../../hooks/useNamesCollection";
 
-const data = [];
-
-function SearchBar({placeholder}) {
+const SearchBar = () => {
+    const data = useNamesCollection();
     const [filteredData, setFilteredData] = useState([]);
     const [wordEntered, setWordEntered] = useState("");
 
@@ -31,7 +29,6 @@ function SearchBar({placeholder}) {
             <div className={css.InputElement}>
                 <input
                     type="text"
-                    placeholder={placeholder}
                     value={wordEntered}
                     onChange={handleFilter}
                 />
@@ -48,7 +45,7 @@ function SearchBar({placeholder}) {
                             >
                                 <img
                                     src={SearchIconBlack}
-                                    alt=""
+                                    alt="search"
                                 />
                                 <p>{value.name} </p>
                             </Link>

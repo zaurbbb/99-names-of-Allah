@@ -3,11 +3,13 @@ import {
     Box,
     Modal
 } from "@mui/material";
-import css from "../Navbar.module.sass";
-import { FormattedMessage } from "react-intl";
+
 import SearchBar from "./searchBar/SearchBar";
 
+import css from "../Navbar.module.sass";
+
 const SearchModal = ({open, handleClose}) => {
+
     return (
         <Modal
             open={open}
@@ -17,9 +19,7 @@ const SearchModal = ({open, handleClose}) => {
 
         >
             <Box className={css.ModalContainer}>
-                <SearchBar
-                    placeholder={<FormattedMessage id='w.search_input' />}
-                />
+                <SearchBar />
             </Box>
         </Modal>
     );
