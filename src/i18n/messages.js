@@ -4,8 +4,6 @@ import { LOCALES } from './locales'
 export const messages = {
     [LOCALES.KAZAKH]: {
         w: {
-            number_display:
-                'Auf diese Weise werden {n, number} im ausgewählten Gebietsschema formatiert',
             "app_name": "Алланың 99 есімі",
             "the_most_beautiful_names": "Алланың ең қасиетті есімдері",
             "main_block_title": "Расында, жүзге жетпей, Алланың 99 есімі бар – оларды атағандар жәннатқа кіреді",

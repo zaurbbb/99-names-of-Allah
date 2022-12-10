@@ -8,6 +8,7 @@ import {LOCALES} from "./i18n/locales";
 import AppRouter from "./AppRouter";
 import Header from "./components/elements/header/Header";
 import Footer from "./components/elements/footer/Footer";
+import AboutApp from "./components/elements/aboutApp/AboutApp";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
             />
             <main>
                 <AppRouter/>
+                <AboutApp/>
             </main>
             <Footer/>
         </IntlProvider>
