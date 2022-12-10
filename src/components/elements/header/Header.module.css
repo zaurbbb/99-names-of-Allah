@@ -1,16 +1,16 @@
-.block, .inActiveBg {
+.Block, .InActiveBg {
   display: flex;
   flex-direction: column;
   gap: 0;
   height: 100vh;
 }
 
-.activeBg {
-  background: url("../../../assets/header/bg.webp") no-repeat center;
+.ActiveBg {
+  background: url("../../../assets/backgrounds/header_bg.webp") no-repeat center;
   background-size: cover;
 }
 
-.TextContainer {
+.TextBlock {
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -20,22 +20,22 @@
   position: absolute;
   top: 50%;
   left: 22%;
-  margin-right: -50%;
   transform: translate(-50%, -50%);
+  margin-right: -50%;
 }
-.TextContainer h1 {
+.TextBlock h1 {
+  width: 15rem;
   font-size: 4rem;
   font-weight: 900;
   color: #89ECFF;
   line-height: 4rem;
-  width: 15rem;
 }
-.TextContainer h3 {
+.TextBlock h3 {
   color: white;
   width: 19rem;
 }
 
-.bg {
+.Bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -46,22 +46,22 @@
 }
 
 @media (max-width: 1200px) {
-  .TextContainer {
+  .TextBlock {
     top: 55%;
     width: 40%;
     left: 25%;
   }
 }
 @media (max-width: 992px) {
-  .Container {
+  .Block {
     background-position: right;
   }
-  .TextContainer {
+  .TextBlock {
     text-shadow: 2px 2px 10px #a74caf;
     width: 90%;
     left: 50%;
   }
-  .TextContainer h1, .TextContainer h3 {
+  .TextBlock h1, .TextBlock h3 {
     text-align: center;
     width: 100%;
   }

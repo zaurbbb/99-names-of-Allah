@@ -27,8 +27,8 @@ function SearchBar({ placeholder }) {
     };
 
     return (
-        <div className={css.Container}>
-            <div className={css.InputBlock}>
+        <div className={css.Block}>
+            <div className={css.InputElement}>
                 <input
                     type="text"
                     placeholder={placeholder}
@@ -37,10 +37,10 @@ function SearchBar({ placeholder }) {
                 />
             </div>
             {filteredData.length !== 0 && (
-                <div className={css.DataResult}>
+                <div className={css.ResultsElement}>
                     {filteredData.map((value, key) => {
                         return (
-                            <Link className={css.DataItem} to={`/name/${value.id}`} target="_blank" key={key}>
+                            <Link className={css.ResultItemElement} to={`/name/${value.id}`} target="_blank" key={key}>
                                 <img src={SearchIconBlack} alt=""/>
                                 <p>{value.name} </p>
                             </Link>

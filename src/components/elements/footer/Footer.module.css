@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap");
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  height: auto;
+  padding: 2rem 5rem;
+  background: url("../../../assets/backgrounds/footer_bg.webp") no-repeat center;
+  background-size: cover;
+  color: white;
+}
+.block a {
+  color: white;
+}
+.block div {
+  padding: 0 1rem;
+}
+.block div ul li:first-child {
+  font-weight: 900;
+}
+.block div:first-child {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.block div:last-child {
+  font-size: 0.694rem;
+  font-family: "GilroyLight", sans-serif;
+}
+.block div .MainColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+.block div .MainColumn li:first-child {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-content: 0;
+  justify-content: 0;
+  align-items: center;
+}
+.block div .MainColumn li:nth-child(2) {
+  font-size: 0.833rem;
+  font-weight: 100;
+  font-family: "Mulish", sans-serif;
+  width: 18rem;
+}
+.block div .MainColumn li:last-child {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
+}
+.block div .SecondaryColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.block div .SecondaryColumn li:first-child {
+  display: flex;
+  align-content: flex-start;
+  justify-content: 0;
+  align-items: center;
+  height: 70px;
+  font-size: 1rem;
+  font-weight: auto;
+}
+.block div .SecondaryColumn li:not(:first-child) {
+  font-size: 0.833rem;
+  font-family: "GilroyRegular", sans-serif;
+}
+
+@media (max-width: 1400px) {
+  .block {
+    padding: 2rem 1rem;
+  }
+}
+@media (max-width: 1200px) {
+  .block {
+    padding: 2rem 1rem;
+  }
+  .block div:first-child {
+    gap: 1rem;
+  }
+}
+@media (max-width: 992px) {
+  .block {
+    padding: 2rem 0.1rem;
+    text-align: center;
+  }
+  .block div ul {
+    margin-bottom: 0 !important;
+  }
+  .block div ul li:first-child {
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .block div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+  }
+  .block div:first-child ul li {
+    text-align: center;
+  }
+  .block div:last-child {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=Footer.module.css.map */

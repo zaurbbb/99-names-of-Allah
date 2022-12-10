@@ -9,11 +9,11 @@ import css from './Header.module.sass';
 
 const Header = (props) => {
     const location = useLocation();
-    const isBgShown = useShow(location, css.activeBg, css.inActiveBg);
+    const isBgShown = useShow(location, css.ActiveBg, css.InActiveBg);
     const isHeaderContentShown = useShow(location, <HeaderContent/>, '');
 
     return (
-        <header className={`${css.block} ${isBgShown}`}>
+        <header className={`${css.Block} ${isBgShown}`}>
             <Navbar {...props}/>
             {isHeaderContentShown}
         </header>

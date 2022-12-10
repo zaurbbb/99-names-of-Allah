@@ -5,7 +5,7 @@ import {FormattedMessage} from "react-intl";
 
 const HeaderContent = () => {
     return (
-        <div className={css.TextContainer}>
+        <div className={css.TextBlock}>
             <div>
                 <h1>
                     <FormattedMessage id='w.app_name'/>

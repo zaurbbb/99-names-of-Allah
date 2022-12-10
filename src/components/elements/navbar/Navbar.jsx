@@ -13,10 +13,10 @@ import SearchModal from "./searchModal/SearchModal";
 
 const Navbar = (props) => {
     const location = useLocation();
-    const isBgShown = useShow(location, css.inActiveBg, css.activeBg);
+    const isBgShown = useShow(location, css.InActiveBg, css.ActiveBg);
 
     const isLinkActive = (navData) => {
-        return navData.isActive ? css.activeLink : css.inActiveLink
+        return navData.isActive ? css.ActiveLink : css.InActiveLink
     };
 
     const [open, setOpen] = useState(false);
@@ -25,13 +25,13 @@ const Navbar = (props) => {
 
 
     return (
-        <nav className={`${css.block} ${isBgShown}`}>
-            <div className={css.firstColumn}>
+        <nav className={`${css.Block} ${isBgShown}`}>
+            <div className={css.FirstColumn}>
                 <NavLink to="/">
                     <img src={NavbarLogoIcon} alt="Site Logo"/>
                 </NavLink>
             </div>
-            <div className={css.secondColumn}>
+            <div className={css.SecondColumn}>
                 <NavLink to="/" className={isLinkActive}>
                     <FormattedMessage id='w.header_main'/>
                 </NavLink>
@@ -44,7 +44,7 @@ const Navbar = (props) => {
                     <FormattedMessage id='w.header_about'/>
                 </NavLink>
             </div>
-            <div className={css.thirdColumn}>
+            <div className={css.ThirdColumn}>
                 <img
                     src={NavbarSearchIcon}
                     alt="NavbarSearchIcon"

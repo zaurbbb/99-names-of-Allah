@@ -1,63 +1,64 @@
 @import "../../../../../Variables"
 
-.Container
+.Block
   a
-    text-decoration: none
     transition: all .2s
-
     &:hover
       background-color: $primary
 
   input
     @include font($fs4, auto)
-    background: none
     width: 100%
     height: 100%
+    padding: 0 1.5rem
     outline: none
     border: none
-    padding: 0 1.5rem
+    background: none
 
     &::placeholder
       padding: 0
 
-.InputBlock
+.InputElement
   display: flex
-  background-color: white
-  border: 0
-  border-radius: 0.5rem
-  font-size: 18px
+
   height: 3rem
   width: 100%
   padding: 0 0.2rem
+  border: 0
+  border-radius: 0.5rem
+
+  font-size: 18px
+  background-color: white
 
 input
   &:focus
     outline: none
 
-.DataResult
+.ResultsElement
   @include flex(column, 0.5rem)
-  margin-top: 0.5rem
   width: 100%
   max-height: 20rem
+  margin-top: 0.5rem
   padding: 0.5rem
   border-radius: 0.5rem
-  background-color: white
   overflow: hidden
   overflow-y: auto
+
+  background-color: white
 
   &::-webkit-scrollbar
     display: none
 
-  .DataItem
-    @include flex(row, 1rem)
-    @include flexAlignment(center, flex-start, center)
-    width: 100%
-    height: 100%
-    padding: 0.5rem 0.9rem
-    background: #D4F7FF
-    color: black
-    border-radius: 0.2rem
+.ResultItemElement
+  @include flex(row, 1rem)
+  @include flexAlignment(center, flex-start, center)
+  width: 100%
+  height: 100%
+  padding: 0.5rem 0.9rem
+  border-radius: 0.2rem
 
-    img
-      width: 1.2rem
+  background: #D4F7FF
+  color: black
+  img
+    width: 1.2rem
 

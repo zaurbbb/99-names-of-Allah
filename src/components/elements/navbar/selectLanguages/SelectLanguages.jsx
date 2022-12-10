@@ -1,9 +1,9 @@
 import React from 'react';
 import {FormControl, MenuItem, Select} from "@mui/material";
 import {LOCALES} from "../../../../i18n/locales";
-import FlagKZ from "../../../../assets/icons/navbar/flag_kz.webp";
-import FlagRU from "../../../../assets/icons/navbar/flag_ru.webp";
-import FlagTR from "../../../../assets/icons/navbar/flag_tr.webp";
+import FlagKZ from "../../../../assets/icons/navbar/flag_kz.svg";
+import FlagRU from "../../../../assets/icons/navbar/flag_ru.svg";
+import FlagTR from "../../../../assets/icons/navbar/flag_tr.svg";
 
 const SelectLanguages = ({currentLocale, handleChange}) => {
 
