@@ -3,20 +3,21 @@ import React from 'react';
 import { Badge } from "@mui/material";
 
 import FilledStar from "./filledStar.svg";
-import EmptyStar from "./emptyStar.svg";
+import UnfilledStar from "./unfilledStar.svg";
 
-const Star = ({ variant, color, filled }) => {
+const StarIcon = ({ variant, color, filled }) => {
+    const icon = filled ? FilledStar : UnfilledStar;
     return (
         <Badge
             variant={variant}
             color={color}
         >
             <img
-                src={filled ? FilledStar : EmptyStar}
-                alt="star icon for sharing to bookmarks"
+                src={icon}
+                alt="star icon"
             />
         </Badge>
     );
 };
 
-export default Star;
+export default StarIcon;

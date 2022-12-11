@@ -1,0 +1,20 @@
+@import '../../../variables'
+
+.Card
+  @include flex(column, 1rem)
+  background: #f8f8f8
+  border: 1px solid rgba(0, 0, 0, 0.1)
+  box-shadow: 0 0 4px 3px rgba(229, 229, 229, 0.05)
+  border-radius: 20px
+  text-align: center
+  padding: 0.8rem
+  width: 15rem
+  h1
+    font-family: $gilroyBold
+  div:nth-child(2)
+    display: flex
+    justify-content: center
+
+@media (max-width: $xxl)
+  .Card
+    width: 14rem

@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import { useChunks } from "../../../../hooks/useChunks";
 import { useNamesCollection } from "../../../../hooks/useNamesCollection";
 
-import NameCard from "../../../ui/NameCard/NameCard";
+import NameCard from "../../../cards/NameCard/NameCard";
 import SliderPrevButton from "../../../ui/SliderPrevButton/SliderPrevButton";
 import SliderNextButton from "../../../ui/SliderNextButton/SliderNextButton";
 

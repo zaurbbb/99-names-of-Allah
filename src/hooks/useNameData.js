@@ -1,6 +1,6 @@
-import { useNamesCollection } from "./useNamesCollection";
-import { useMosque } from "./useMosque";
-import { useParams } from "react-router-dom";
+import { useNamesCollection } from './useNamesCollection';
+import { useMosque } from './useMosque';
+import { useParams } from 'react-router-dom';
 
 export const useNameData = () => {
     const { nameId }    = useParams(),

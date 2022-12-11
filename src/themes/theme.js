@@ -174,12 +174,14 @@ export const theme = createTheme({
                 },
             },
         },
-        MuiSvgIcon: {
+        MuiInputBase: {
             styleOverrides: {
                 root: {
-                    filter: 'invert(100%)',
-                    [bk.breakpoints.down('sm')]: {
-                        display: 'none',
+                    '.MuiSvgIcon-root': {
+                        filter: 'grayscale(1) invert(1)',
+                        [bk.breakpoints.down('sm')]: {
+                            display: 'none',
+                        },
                     },
                 },
             },

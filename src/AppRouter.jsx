@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+    Navigate,
     Route,
     Routes
 } from "react-router-dom";
@@ -16,10 +17,10 @@ const AppRouter = () => {
                 />
             )}
 
-            {/*<Route*/}
-            {/*    path="*"*/}
-            {/*    element={<Navigate to="/" replace/>}*/}
-            {/*/>*/}
+            <Route
+                path="*"
+                element={<Navigate to="/unavailable" replace/>}
+            />
         </Routes>
     );
 };

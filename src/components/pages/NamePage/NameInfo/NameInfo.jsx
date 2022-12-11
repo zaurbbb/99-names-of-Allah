@@ -2,20 +2,21 @@ import React, { useState } from 'react';
 import { FormattedMessage } from "react-intl";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-import Star from "../../../ui/StarIcon/Star";
-import Play from "../../../ui/Play/Play";
+import StarIcon from "../../../ui/StarIcon/StarIcon";
+import PlayIcon from "../../../ui/PlayIcon/PlayIcon";
 import Share from "../../../ui/ShareIcon/ShareIcon";
 
 
-import css from "./NameCards.module.sass"
-import QuestionIcon from '../../../../assets/icons/namePage/question.svg'
+import css from "./NameInfo.module.sass"
+import QuestionIcon from '../../../../assets/icons/namePage/questionIcon.svg'
 import {
     Alert,
     Snackbar
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 
-const NameCards = ({
+const NameInfo = ({
                        meaning,
                        shortMeaning,
                        currentMosque,
@@ -23,7 +24,7 @@ const NameCards = ({
                        nameArabic,
                        zikrCount,
                    }) => {
-    console.log(name)
+
     const [openSnackbar, setOpenSnackbar] = useState(false);
     const handleClickSnackbar = () => {
         setOpenSnackbar(true);
@@ -43,7 +44,7 @@ const NameCards = ({
             <div className={css.FirstCard}>
                 <div>
                     <div>
-                        <Star />
+                        <StarIcon />
                     </div>
                     <div>
                         <h2>
@@ -57,10 +58,7 @@ const NameCards = ({
                     </CopyToClipboard>
                 </div>
                 <div>
-                    <img
-                        src={currentMosque}
-                        alt="mosque"
-                    />
+                    {currentMosque}
                 </div>
                 <div>
                     <div>
@@ -72,9 +70,9 @@ const NameCards = ({
                         </h3>
                     </div>
                     <div>
-                        <a href="https://google.com">
-                            <Play />
-                        </a>
+                        <Link to='/unavailable'>
+                            <PlayIcon />
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -167,4 +165,4 @@ const NameCards = ({
     );
 };
 
-export default NameCards;
+export default NameInfo;

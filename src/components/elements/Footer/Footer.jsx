@@ -3,10 +3,11 @@ import React from 'react';
 import { FormattedMessage } from "react-intl";
 
 import css from './Footer.module.sass';
-import FooterLogo from '../../../assets/icons/footer/logo.svg';
+import FooterLogo from '../../../assets/icons/footer/footer_logo.svg';
 import IconFacebook from '../../../assets/icons/footer/social_facebook.svg';
 import IconTwitter from '../../../assets/icons/footer/social_twitter.svg';
 import IconInstagram from '../../../assets/icons/footer/social_instagram.svg';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -49,19 +50,19 @@ const Footer = () => {
                         <FormattedMessage id='w.footer_help' />
                     </li>
                     <li>
-                        <a href="#">
+                        <Link to='/unavailable'>
                             <FormattedMessage id='w.footer_policy' />
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#">
+                        <Link to='/unavailable'>
                             FeedBack
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#">
+                        <Link to='/unavailable'>
                             <FormattedMessage id='w.footer_contact' />
-                        </a>
+                        </Link>
                     </li>
                 </ul>
                 <ul className={css.SecondaryColumn}>

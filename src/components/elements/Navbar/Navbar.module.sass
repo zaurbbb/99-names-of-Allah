@@ -18,6 +18,10 @@
     @include flexAlignment(flex-start, center, center)
     &:hover
       cursor: pointer
+  a
+    display: flex
+    @include flexAlignment(center, center, center)
+    text-align: center
 
 .ModalContainer
   display: block
@@ -52,7 +56,7 @@
     .FirstColumn
         display: none
     .SecondColumn
-        @include flex(row, 1rem)
+        @include flex(row, 0.8rem)
     .ThirdColumn
         @include flex(row, 0.5rem)
 

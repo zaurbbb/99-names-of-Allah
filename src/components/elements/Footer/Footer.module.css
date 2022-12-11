@@ -116,6 +116,10 @@
   .block div:last-child {
     text-align: center;
   }
+  .SecondaryColumn li:first-child {
+    align-items: flex-end !important;
+    height: 40px !important;
+  }
 }
 
 /*# sourceMappingURL=Footer.module.css.map */

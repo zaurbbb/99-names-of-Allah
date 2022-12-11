@@ -1,0 +1,16 @@
+import React from 'react';
+import { FormattedMessage } from "react-intl";
+
+import css from './UnavailablePage.module.sass'
+
+const UnavailablePage = () => {
+    return (
+        <section className={css.Block}>
+            <h1>
+                <FormattedMessage id='w.unavailable_text' />
+            </h1>
+        </section>
+    );
+};
+
+export default UnavailablePage;

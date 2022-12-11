@@ -53,6 +53,9 @@
   font-family: "GilroyRegular", sans-serif;
   font-weight: 500;
 }
+.FirstCard div:last-child a img {
+  width: 2rem;
+}
 
 .FirstCard div:first-child, .ThirdCard div:first-child {
   display: flex;
@@ -137,4 +140,4 @@
   }
 }
 
-/*# sourceMappingURL=NameCards.module.css.map */
+/*# sourceMappingURL=NameInfo.module.css.map */

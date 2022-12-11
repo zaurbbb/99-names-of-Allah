@@ -2,7 +2,7 @@ import React from 'react';
 
 import Heading from "../../ui/Heading/Heading";
 import NamesList from "./NamesList/NamesList";
-import Star from "../../ui/StarIcon/Star";
+import StarIcon from "../../ui/StarIcon/StarIcon";
 import { Link } from "react-router-dom";
 
 const MainPage = () => {
@@ -10,7 +10,7 @@ const MainPage = () => {
         <section>
             <Heading value={'w.the_most_beautiful_names_text'}>
                 <Link to='/bookmarks'>
-                    <Star
+                    <StarIcon
                         variant="dot"
                         color="success"
                         filled={true}

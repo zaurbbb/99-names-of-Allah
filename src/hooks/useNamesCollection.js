@@ -1,6 +1,6 @@
-import { messages } from "../i18n/messages";
-import { useContext } from "react";
-import { LanguageContext } from "../context";
+import { useContext } from 'react';
+import { LanguageContext } from '../context';
+import { messages } from '../i18n/messages';
 
 export const useNamesCollection = () => {
     const { currentLocale } = useContext(LanguageContext);

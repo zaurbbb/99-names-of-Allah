@@ -1,14 +1,14 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-import Star from "../StarIcon/Star";
-import Play from "../Play/Play";
+import StarIcon from "../../ui/StarIcon/StarIcon";
+import PlayIcon from "../../ui/PlayIcon/PlayIcon";
 
 import css from './NameCard.module.sass'
 import {useMosque} from "../../../hooks/useMosque";
 
 const NameCard = ({name, id, nameArabic, shortMeaning}) => {
-    const currentMosque = useMosque(id)
+    const currentMosque = useMosque(id-1)
 
     return (
         <div className={css.Block}>
@@ -20,11 +20,11 @@ const NameCard = ({name, id, nameArabic, shortMeaning}) => {
                     {nameArabic}
                 </div>
                 <div>
-                    <Star filled={true}/>
+                    <StarIcon filled={true}/>
                 </div>
             </div>
             <div className={css.MiddleElement}>
-                <img src={currentMosque} alt=""/>
+                {currentMosque}
             </div>
 
             <Link to={`/name/${id}`} className={css.LowerElement}>
@@ -38,7 +38,7 @@ const NameCard = ({name, id, nameArabic, shortMeaning}) => {
                     </h5>
                 </div>
                 <div>
-                    <Play/>
+                    <PlayIcon/>
                 </div>
             </Link>
 

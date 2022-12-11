@@ -5,7 +5,7 @@ import { FormattedMessage } from "react-intl";
 import DownloadButton from "./DownloadButton/DownloadButton";
 
 import css from './AboutApp.module.sass';
-import AppDemo from '../../../assets/icons/aboutApp/appDemo.svg'
+import AppDemo from '../../../assets/images/appDemo.svg'
 import GooglePlayLogo from '../../../assets/icons/aboutApp/googlePlay.webp'
 import AppStoreLogo from '../../../assets/icons/aboutApp/appStore.webp'
 
@@ -24,7 +24,7 @@ const AboutApp = () => {
                 <div className={css.ButtonsGroup}>
                     <a href="https://play.google.com/store/apps/details?id=com.alimapps.allahnames">
                         <DownloadButton
-                            title="Google Play"
+                            title="Google PlayIcon"
                             logo={GooglePlayLogo}
                         />
                     </a>

@@ -3,7 +3,7 @@ import React from 'react';
 import { useNameData } from "../../../hooks/useNameData";
 
 import Heading from "../../ui/Heading/Heading";
-import NameCards from "./NameCards/NameCards";
+import NameInfo from "./NameInfo/NameInfo";
 
 
 const NamePage = () => {
@@ -21,7 +21,7 @@ const NamePage = () => {
     return (
         <section>
             <Heading value={headingMessage} />
-            <NameCards
+            <NameInfo
                 meaning={meaning}
                 shortMeaning={shortMeaning}
                 currentMosque={currentMosque}

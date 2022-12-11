@@ -1,0 +1,27 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #f8f8f8;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 4px 3px rgba(229, 229, 229, 0.05);
+  border-radius: 20px;
+  text-align: center;
+  padding: 0.8rem;
+  width: 15rem;
+}
+.Card h1 {
+  font-family: "GilroyBold", sans-serif;
+}
+.Card div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1400px) {
+  .Card {
+    width: 14rem;
+  }
+}
+
+/*# sourceMappingURL=TestCard.module.css.map */

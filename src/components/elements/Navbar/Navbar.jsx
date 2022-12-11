@@ -8,7 +8,7 @@ import { FormattedMessage } from "react-intl";
 import { useShow } from "../../../hooks/useShow";
 
 import css from './Navbar.module.sass';
-import NavbarLogoIcon from '../../../assets/icons/navbar/logo.webp'
+import NavbarLogoIcon from '../../../assets/icons/navbar/navbar_logo.webp'
 import NavbarSearchIcon from '../../../assets/icons/navbar/search_light.webp'
 import SelectLanguages from "./selectLanguages/SelectLanguages";
 import SearchModal from "./searchModal/SearchModal";

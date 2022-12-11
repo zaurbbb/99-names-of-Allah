@@ -2,7 +2,7 @@ import React from 'react';
 
 import PlayBtn from './playButton.svg'
 
-const Play = () => {
+const PlayIcon = () => {
     return (
         <img
             src={PlayBtn}
@@ -11,4 +11,4 @@ const Play = () => {
     );
 };
 
-export default Play;
+export default PlayIcon;
