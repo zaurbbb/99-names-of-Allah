@@ -1,5 +1,5 @@
 export const useShow = (location, firstState, secondState) => {
-    return location.pathname === '/home'
+    return location.pathname === '/'
         ? firstState
         : secondState;
 };

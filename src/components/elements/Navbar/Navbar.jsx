@@ -27,11 +27,10 @@ const Navbar = (props) => {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-
     return (
         <nav className={`${css.Block} ${isBgShown}`}>
             <div className={css.FirstColumn}>
-                <NavLink to="/home">
+                <NavLink to="/">
                     <img
                         src={NavbarLogoIcon}
                         alt="Site Logo"
@@ -40,7 +39,7 @@ const Navbar = (props) => {
             </div>
             <div className={css.SecondColumn}>
                 <NavLink
-                    to="/home"
+                    to="/"
                     className={isLinkActive}
                 >
                     <FormattedMessage id='w.header_main' />

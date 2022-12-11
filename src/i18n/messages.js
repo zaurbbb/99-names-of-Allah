@@ -9,8 +9,7 @@ export const messages = {
             "main_block_title": "Расында, жүзге жетпей, Алланың 99 есімі бар – оларды атағандар жәннатқа кіреді",
             "name": "есім",
             "unavailable_text": "Бұл бет қолжетімсіз.",
-            "unavailable_subtext": ".",
-
+            "unavailable_subtext": "Негізгі бетке өту",
 
             "header_main": "Басты бет",
             "header_test": "Тест",
@@ -2447,6 +2446,7 @@ export const messages = {
             "main_block_title": "Воистину, у Аллаха есть 99 имён – сто без одного, и тот, кто перечислит их, войдёт в Рай",
             "name": "имя",
             "unavailable_text": "В настоящее время страница недоступна.",
+            "unavailable_subtext": "Перейти на главную страницу",
 
             "header_main": "Главная",
             "header_test": "Тест",
@@ -4883,6 +4883,7 @@ export const messages = {
             "main_block_title": "Şüphesiz Allah'ın, biri olmadan yüz tane olmak üzere 99 ismi vardır ve kim onları sayarsa Cennete girecektir",
             "name": "isim",
             "unavailable_text": "Bu sayfa kullanılamaz.",
+            "unavailable_subtext": "Ana sayfaya git",
 
             "header_main": "Ana",
             "header_test": "Test",
