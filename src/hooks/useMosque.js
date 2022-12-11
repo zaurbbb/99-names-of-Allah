@@ -1,15 +1,16 @@
-import Name1 from '../assets/mosques/NameImg10.webp';
-import Name2 from '../assets/mosques/NameImg1.webp';
-import Name3 from '../assets/mosques/NameImg2.webp';
-import Name4 from '../assets/mosques/NameImg3.webp';
-import Name5 from '../assets/mosques/NameImg4.webp';
-import Name6 from '../assets/mosques/NameImg5.webp';
-import Name7 from '../assets/mosques/NameImg6.webp';
-import Name8 from '../assets/mosques/NameImg7.webp';
-import Name9 from '../assets/mosques/NameImg8.webp';
-import Name10 from '../assets/mosques/NameImg9.webp';
+import Mosque1 from '../assets/mosques/Mosque1.webp';
+import Mosque2 from '../assets/mosques/Mosque2.webp';
+import Mosque3 from '../assets/mosques/Mosque3.webp';
+import Mosque4 from '../assets/mosques/Mosque4.webp';
+import Mosque5 from '../assets/mosques/Mosque5.webp';
+import Mosque6 from '../assets/mosques/Mosque6.webp';
+import Mosque7 from '../assets/mosques/Mosque7.webp';
+import Mosque8 from '../assets/mosques/Mosque8.webp';
+import Mosque9 from '../assets/mosques/Mosque9.webp';
+import Mosque10 from '../assets/mosques/Mosque10.webp';
 
-const mosquesArr = [Name1, Name2, Name3, Name4, Name5, Name6, Name7, Name8, Name9, Name10];
+
+const mosquesArr = [Mosque1, Mosque2, Mosque3, Mosque4, Mosque5, Mosque6, Mosque7, Mosque8, Mosque9, Mosque10];
 export const useMosque = (id) => {
     return <img
         src={mosquesArr[id % 10]}

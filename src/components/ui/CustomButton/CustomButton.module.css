@@ -4,9 +4,9 @@
   font-size: 1rem;
   box-shadow: none;
   text-transform: none;
-  line-height: 1.5;
   transition: all 0.2s ease;
   font-family: "GilroyBold", sans-serif;
+  line-height: 49.52px;
 }
 
 .Filled {
@@ -27,7 +27,7 @@
 }
 
 .SmallButton {
-  padding: 0.5rem 2rem;
+  padding: 0.2rem 1rem;
 }
 
 /*# sourceMappingURL=CustomButton.module.css.map */

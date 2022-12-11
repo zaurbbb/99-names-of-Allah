@@ -5,6 +5,7 @@ import flatten from 'flat';
 import { messages } from "./i18n/messages";
 import { LOCALES } from "./i18n/locales";
 import { LanguageContext } from "./context";
+import ScrollToTop from './helpers/scrollToTop';
 
 import AppRouter from "./AppRouter";
 import Header from "./components/elements/Header/Header";
@@ -47,6 +48,7 @@ function App() {
                     <AboutApp />
                 </main>
                 <Footer />
+                <ScrollToTop />
             </IntlProvider>
         </LanguageContext.Provider>
     );
