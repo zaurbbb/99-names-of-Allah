@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/99-names-of-Allah/static/css/main.94b602a7.css",
-    "main.js": "/99-names-of-Allah/static/js/main.50e447cd.js",
-    "static/css/746.5ccc8ca2.chunk.css": "/99-names-of-Allah/static/css/746.5ccc8ca2.chunk.css",
-    "static/js/746.38a04893.chunk.js": "/99-names-of-Allah/static/js/746.38a04893.chunk.js",
+    "main.css": "/99-names-of-Allah/static/css/main.c4478864.css",
+    "main.js": "/99-names-of-Allah/static/js/main.81864473.js",
+    "static/css/746.e2edbd10.chunk.css": "/99-names-of-Allah/static/css/746.e2edbd10.chunk.css",
+    "static/js/746.b6b5123d.chunk.js": "/99-names-of-Allah/static/js/746.b6b5123d.chunk.js",
     "static/css/305.8dc2a5a2.chunk.css": "/99-names-of-Allah/static/css/305.8dc2a5a2.chunk.css",
-    "static/js/305.016c4fdc.chunk.js": "/99-names-of-Allah/static/js/305.016c4fdc.chunk.js",
+    "static/js/305.ec7ae8fd.chunk.js": "/99-names-of-Allah/static/js/305.ec7ae8fd.chunk.js",
     "static/js/342.370010ca.chunk.js": "/99-names-of-Allah/static/js/342.370010ca.chunk.js",
     "static/js/708.3f13d28b.chunk.js": "/99-names-of-Allah/static/js/708.3f13d28b.chunk.js",
     "static/media/appDemo.svg": "/99-names-of-Allah/static/media/appDemo.dd3011110b240811edee4bc24e7f3dad.svg",
@@ -49,17 +49,17 @@
     "static/media/appStore.webp": "/99-names-of-Allah/static/media/appStore.18e2df988243e445a9dc.webp",
     "static/media/search_light.webp": "/99-names-of-Allah/static/media/search_light.73dabed9ee67e1245978.webp",
     "static/media/search_dark.svg": "/99-names-of-Allah/static/media/search_dark.5a9cca862ba63cded7f79e3b8be231f4.svg",
-    "main.94b602a7.css.map": "/99-names-of-Allah/static/css/main.94b602a7.css.map",
-    "main.50e447cd.js.map": "/99-names-of-Allah/static/js/main.50e447cd.js.map",
-    "746.5ccc8ca2.chunk.css.map": "/99-names-of-Allah/static/css/746.5ccc8ca2.chunk.css.map",
-    "746.38a04893.chunk.js.map": "/99-names-of-Allah/static/js/746.38a04893.chunk.js.map",
+    "main.c4478864.css.map": "/99-names-of-Allah/static/css/main.c4478864.css.map",
+    "main.81864473.js.map": "/99-names-of-Allah/static/js/main.81864473.js.map",
+    "746.e2edbd10.chunk.css.map": "/99-names-of-Allah/static/css/746.e2edbd10.chunk.css.map",
+    "746.b6b5123d.chunk.js.map": "/99-names-of-Allah/static/js/746.b6b5123d.chunk.js.map",
     "305.8dc2a5a2.chunk.css.map": "/99-names-of-Allah/static/css/305.8dc2a5a2.chunk.css.map",
-    "305.016c4fdc.chunk.js.map": "/99-names-of-Allah/static/js/305.016c4fdc.chunk.js.map",
+    "305.ec7ae8fd.chunk.js.map": "/99-names-of-Allah/static/js/305.ec7ae8fd.chunk.js.map",
     "342.370010ca.chunk.js.map": "/99-names-of-Allah/static/js/342.370010ca.chunk.js.map",
     "708.3f13d28b.chunk.js.map": "/99-names-of-Allah/static/js/708.3f13d28b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.94b602a7.css",
-    "static/js/main.50e447cd.js"
+    "static/css/main.c4478864.css",
+    "static/js/main.81864473.js"
   ]
 }
