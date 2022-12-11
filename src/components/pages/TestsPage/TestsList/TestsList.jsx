@@ -11,6 +11,7 @@ const TestsList = () => {
         <div className={css.Block}>
             {testNumbers.map((item, id) => (
                 <TestCard
+                    key={id}
                     value={item.value}
                     id={item.id}
                 />
