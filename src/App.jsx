@@ -1,19 +1,24 @@
-import React, { useState } from 'react';
+import React, {
+    useState,
+    Suspense
+} from 'react';
 import { IntlProvider } from 'react-intl';
 import flatten from 'flat';
 
 import { messages } from './i18n/messages';
 import { LOCALES } from './i18n/locales';
 import { LanguageContext } from './context';
-import ScrollToTop from './helpers/scrollToTop';
+import { ScrollToTop } from './helpers/scrollToTop';
 
-import AppRouter from './AppRouter';
 import Header from './components/elements/Header/Header';
 import Footer from './components/elements/Footer/Footer';
 import AboutApp from './components/elements/AboutApp/AboutApp';
+import SectionLoader from "./components/ui/SectionLoader/SectionLoader";
 
 import './styles/swiper.sass';
 import './styles/app.sass';
+
+const AppRouter = React.lazy(() => import('./AppRouter.jsx'));
 
 function App() {
     const [currentLocale, setCurrentLocale] = useState(getInitialLocale());
@@ -45,12 +50,15 @@ function App() {
                 />
 
                 <main className='container'>
-                    <AppRouter />
+                    <Suspense fallback={<SectionLoader />}>
+                        <AppRouter />
+                    </Suspense>
                     <AboutApp />
                 </main>
 
                 <Footer />
                 <ScrollToTop />
+
             </IntlProvider>
         </LanguageContext.Provider>
     );

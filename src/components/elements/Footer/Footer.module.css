@@ -76,7 +76,7 @@
   font-family: "GilroyRegular", sans-serif;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
   .block {
     padding: 2rem 1rem;
   }

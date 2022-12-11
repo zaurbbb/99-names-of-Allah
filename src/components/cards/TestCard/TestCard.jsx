@@ -1,11 +1,13 @@
 import React from 'react';
-import css from "./TestCard.module.css";
 
-import { testNumbers } from "../../../data/testNumbers";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
-import CustomButton from "../../ui/CustomButton/CustomButton";
+
 import { useMosque } from "../../../hooks/useMosque";
+
+import CustomButton from "../../ui/CustomButton/CustomButton";
+
+import css from "./TestCard.module.css";
 
 const TestCard = ({value, id}) => {
     console.log(value, id)

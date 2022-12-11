@@ -8,6 +8,7 @@ import { FormattedMessage } from "react-intl";
 import { useShow } from "../../../hooks/useShow";
 
 import css from './Navbar.module.sass';
+
 import NavbarLogoIcon from '../../../assets/icons/navbar/navbar_logo.webp'
 import NavbarSearchIcon from '../../../assets/icons/navbar/search_light.webp'
 import SelectLanguages from "./selectLanguages/SelectLanguages";
@@ -30,7 +31,7 @@ const Navbar = (props) => {
     return (
         <nav className={`${css.Block} ${isBgShown}`}>
             <div className={css.FirstColumn}>
-                <NavLink to="/">
+                <NavLink to="/home">
                     <img
                         src={NavbarLogoIcon}
                         alt="Site Logo"
@@ -39,7 +40,7 @@ const Navbar = (props) => {
             </div>
             <div className={css.SecondColumn}>
                 <NavLink
-                    to="/"
+                    to="/home"
                     className={isLinkActive}
                 >
                     <FormattedMessage id='w.header_main' />

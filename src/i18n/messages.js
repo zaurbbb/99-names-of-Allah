@@ -9,6 +9,8 @@ export const messages = {
             "main_block_title": "Расында, жүзге жетпей, Алланың 99 есімі бар – оларды атағандар жәннатқа кіреді",
             "name": "есім",
             "unavailable_text": "Бұл бет қолжетімсіз.",
+            "unavailable_subtext": ".",
+
 
             "header_main": "Басты бет",
             "header_test": "Тест",

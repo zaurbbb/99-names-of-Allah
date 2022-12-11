@@ -1,6 +1,6 @@
-.swiper {
+.mySwiper {
   width: 100%;
-  padding: 1rem 0 4rem 0;
+  padding: 1rem 0 4rem 0 !important;
 }
 
 .swiper-slide {
@@ -90,7 +90,7 @@
   border-radius: 1rem !important;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
   .swiper-pagination {
     left: 0 !important;
   }

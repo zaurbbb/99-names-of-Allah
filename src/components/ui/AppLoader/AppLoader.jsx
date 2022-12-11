@@ -1,8 +1,8 @@
 import React from 'react';
-import './Loader.sass'
-import css from './Loader.module.sass';
+import './AppLoader.sass'
+import css from './AppLoader.module.sass';
 
-function Loader() {
+function AppLoader() {
     return (
         <div className={css.Block}>
             <p className={css.ArabicText}>بِسۡمِ ٱللهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ</p>
@@ -18,4 +18,4 @@ function Loader() {
     );
 }
 
-export default Loader;
+export default AppLoader;

@@ -8,6 +8,7 @@ const TestsPage = () => {
         <section>
             <Heading value={'w.test_page_title'} />
             <TestsList />
+
         </section>
     );
 };

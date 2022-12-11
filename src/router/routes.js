@@ -7,7 +7,7 @@ import BookmarksPage from '../components/pages/BookmarksPage/BookmarksPage';
 import UnavailablePage from '../components/pages/UnavailablePage/UnavailablePage';
 
 export const routes = [
-    {path: '/', component: <MainPage/>},
+    {path: '/home', component: <MainPage/>},
     {path: '/bookmarks', component: <BookmarksPage/>},
     {path: '/name/:nameId', component: <NamePage/>},
     {path: '/tests', component: <TestsPage/>},

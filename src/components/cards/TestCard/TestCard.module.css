@@ -19,7 +19,7 @@
   justify-content: center;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
   .Card {
     width: 14rem;
   }

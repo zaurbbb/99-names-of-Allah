@@ -83,7 +83,7 @@
   width: 80%;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
   .Block {
     width: 14rem;
   }
