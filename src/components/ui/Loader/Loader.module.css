@@ -1,0 +1,21 @@
+.Block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #00D2FF;
+}
+
+.ArabicText {
+  font-size: 1.728rem;
+}
+
+.KazakhText {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=Loader.module.css.map */

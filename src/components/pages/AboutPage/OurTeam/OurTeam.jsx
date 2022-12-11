@@ -26,8 +26,8 @@ const OurTeam = () => {
                 flexWrap      : 'wrap'
             }}
         >
-            {list.map((person) =>
-                <div className={css.Block}>
+            {list.map((person, index) =>
+                <div className={css.Block} key={index}>
                     <div
                         className={css.ImageElement}
                         style={{

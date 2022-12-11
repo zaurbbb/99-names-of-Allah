@@ -3,8 +3,8 @@ import {
     Navigate,
     Route,
     Routes
-} from "react-router-dom";
-import { routes } from "./router/routes";
+} from 'react-router-dom';
+import { routes } from './router/routes';
 
 const AppRouter = () => {
     return (
@@ -18,8 +18,8 @@ const AppRouter = () => {
             )}
 
             <Route
-                path="*"
-                element={<Navigate to="/unavailable" replace/>}
+                path='*'
+                element={<Navigate to='/unavailable' replace/>}
             />
         </Routes>
     );
