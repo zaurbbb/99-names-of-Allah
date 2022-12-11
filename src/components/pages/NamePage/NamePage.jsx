@@ -1,33 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { useNameData } from "../../../hooks/useNameData";
+import { useNameData } from '../../../hooks/useNameData';
 
-import Heading from "../../ui/Heading/Heading";
-import NameInfo from "./NameInfo/NameInfo";
-
+import NameDataCard from '../../cards/NameDataCard/NameDataCard';
+import SourceModal from './SourceModal/SourceModal';
+import SnackbarWindow from '../../ui/SnackbarWindow/SnackbarWindow';
 
 const NamePage = () => {
-    const [
-              meaning,
-              shortMeaning,
-              nameId,
-              currentMosque,
-              name,
-              nameArabic,
-              zikrCount,
-          ] = useNameData();
-    const headingMessage = `${nameId} имя — ${name}`;
+    const nameData = useNameData();
+
+    const [openModal, setOpenModal] = useState(false);
+    const handleOpenModal = () => setOpenModal(true);
+    const handleCloseModal = () => setOpenModal(false);
+
+    const [openSnackbar, setOpenSnackbar] = useState(false);
+    const handleClickSnackbar = () => {
+        setOpenSnackbar(true);
+    };
+
+    const handleCloseSnackbar = (event, reason) => {
+        if (reason === 'clickaway') return;
+
+        setOpenSnackbar(false);
+    };
 
     return (
         <section>
-            <Heading value={headingMessage} />
-            <NameInfo
-                meaning={meaning}
-                shortMeaning={shortMeaning}
-                currentMosque={currentMosque}
-                name={name}
-                nameArabic={nameArabic}
-                zikrCount={zikrCount}
+
+            <NameDataCard
+                handleClickSnackbar={handleClickSnackbar}
+                handleOpenModal={handleOpenModal}
+                nameData={nameData}
+            />
+
+            <SourceModal
+                open={openModal}
+                onClose={handleCloseModal}
+            />
+
+            <SnackbarWindow
+                openSnackbar={openSnackbar}
+                handleCloseSnackbar={handleCloseSnackbar}
             />
         </section>
     );

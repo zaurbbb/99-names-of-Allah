@@ -24,7 +24,7 @@ const AboutApp = () => {
                 <div className={css.ButtonsGroup}>
                     <a href="https://play.google.com/store/apps/details?id=com.alimapps.allahnames">
                         <DownloadButton
-                            title="Google PlayIcon"
+                            title="Google Play"
                             logo={GooglePlayLogo}
                         />
                     </a>

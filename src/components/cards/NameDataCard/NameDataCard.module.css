@@ -1,0 +1,110 @@
+.Block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+}
+
+.UpperCard, .MiddleCard, .LowerCard {
+  display: flex;
+  flex-direction: column;
+  gap: auto;
+  background: #fffefe;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 1rem;
+  width: 50%;
+}
+
+.UpperCard {
+  gap: 0.5rem;
+}
+.UpperCard div:first-child img {
+  width: 1.8rem;
+  cursor: pointer;
+}
+.UpperCard div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.UpperCard div:last-child {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  align-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+}
+.UpperCard div:last-child div {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.UpperCard div:last-child div h3:first-child {
+  font-family: "GilroyBold", sans-serif;
+}
+.UpperCard div:last-child div h3:last-child {
+  font-family: "GilroyRegular", sans-serif;
+  font-weight: 500;
+}
+.UpperCard div:last-child a img {
+  width: 2rem;
+}
+
+.UpperCard div:first-child, .LowerCard div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.UpperCard div:first-child div:nth-child(odd), .LowerCard div:first-child div:nth-child(odd) {
+  width: 40px;
+}
+
+.MiddleCard, .LowerCard {
+  gap: 1.5rem;
+}
+.MiddleCard div h3, .MiddleCard div .zikrCount, .LowerCard div h3, .LowerCard div .zikrCount {
+  color: #00D2FF;
+  font-family: "GilroyBold", sans-serif;
+  text-align: center;
+}
+.MiddleCard div h4, .LowerCard div h4 {
+  font-family: "GilroyRegular", sans-serif;
+  font-weight: 100;
+}
+.MiddleCard div h4 .zikrCount, .LowerCard div h4 .zikrCount {
+  font-family: "GilroyBold", sans-serif;
+  font-size: 1.44rem;
+}
+
+@media (max-width: 1600px) {
+  .UpperCard, .MiddleCard, .LowerCard {
+    width: 60%;
+  }
+}
+@media (max-width: 1200px) {
+  .UpperCard, .MiddleCard, .LowerCard {
+    width: 70%;
+  }
+}
+@media (max-width: 992px) {
+  .UpperCard, .MiddleCard, .LowerCard {
+    width: 80%;
+  }
+  .UpperCard div:first-child img, .LowerCard div:first-child img {
+    width: 2rem;
+  }
+}
+@media (max-width: 576px) {
+  .UpperCard, .MiddleCard, .LowerCard {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=NameDataCard.module.css.map */

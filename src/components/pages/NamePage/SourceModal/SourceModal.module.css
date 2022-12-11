@@ -1,0 +1,11 @@
+.ModalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.ModalContent h3 {
+  font-family: "GilroyBold", sans-serif;
+  text-align: center;
+}
+
+/*# sourceMappingURL=SourceModal.module.css.map */

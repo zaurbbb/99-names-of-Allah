@@ -1,9 +1,9 @@
 import React from 'react';
-
-import css from "./SourceApp.module.sass"
-
-import BookCover from "../../../../assets/images/bookCover.webp"
 import { FormattedMessage } from "react-intl";
+
+import BookCoverImg from "../../../ui/BookCoverImg/BookCoverImg";
+
+import css from "./SourceApp.module.sass";
 
 const SourceApp = () => {
     return (
@@ -14,10 +14,7 @@ const SourceApp = () => {
                 <FormattedMessage id='w.about_page_subtitle_2' />
             </h3>
             <br />
-            <img
-                src={BookCover}
-                alt="view of the book"
-            />
+            <BookCoverImg />
         </div>
     );
 };

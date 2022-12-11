@@ -1,7 +1,7 @@
 {
   "name": "99-names",
   "version": "0.1.0",
-  "homepage": "https://zaurbbb.github.io/99-names-of-Allah",
+  "homepage": "https://zaurbbb.github.io/99-names-of-Allah/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",

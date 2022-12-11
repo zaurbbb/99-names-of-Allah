@@ -9,6 +9,7 @@
   background: #000000;
   color: white;
   border-radius: 0.4rem;
+  text-align: left;
 }
 .button div {
   display: flex;

@@ -1,7 +1,7 @@
 @import "../../../variables"
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap")
 
-.Block
+.block
   @include flex(column, 2rem)
   width: 100%
   height: auto
@@ -16,7 +16,7 @@
     padding: 0 1rem
     ul
       li:first-child
-          font-weight: $fwB
+        font-weight: $fwB
     &:first-child
       @include flex(row, 4rem)
       border-bottom: 1px solid rgba(255, 255, 255, 0.2)
@@ -38,7 +38,7 @@
           @include flex(row, 1rem)
           @include flexAlignment(flex-start, center, flex-start)
     .SecondaryColumn
-      @include flex(column, 20px)
+      @include flex(column, 0)
       li
         &:first-child
           display: flex
@@ -63,6 +63,7 @@
 @media (max-width: $lg)
   .block
     padding: 2rem 0.1rem
+
     text-align: center
     div
       ul
@@ -77,8 +78,3 @@
             text-align: center
       &:last-child
         text-align: center
-  .SecondaryColumn
-    li
-      &:first-child
-        align-items: flex-end!important
-        height: 40px!important

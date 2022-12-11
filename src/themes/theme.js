@@ -40,9 +40,6 @@ export const theme = createTheme({
                     style: {
                         textAlign: 'center',
                         fontFamily: 'GilroyBold, sans-serif',
-                        '&:hover': {
-                            color: 'red'
-                        }
 
                     },
                 },

@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className={css.Block}>
+        <footer className={css.block}>
             <div>
                 <ul className={css.MainColumn}>
                     <li>
