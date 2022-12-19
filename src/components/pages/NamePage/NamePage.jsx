@@ -4,7 +4,7 @@ import { useNameData } from '../../../hooks/useNameData';
 
 import NameDataCard from '../../cards/NameDataCard/NameDataCard';
 import SourceModal from './SourceModal/SourceModal';
-import SnackbarWindow from '../../ui/SnackbarWindow/SnackbarWindow';
+import SnackbarWindow from '../../ui/windows/SnackbarWindow/SnackbarWindow';
 
 const NamePage = () => {
     const nameData = useNameData();

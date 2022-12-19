@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Heading from "../../ui/Heading/Heading";
+import CustomHeading from "../../ui/custom/CustomHeading/CustomHeading";
 import NamesList from "./NamesList/NamesList";
-import StarIcon from "../../ui/StarIcon/StarIcon";
+import StarIcon from "../../ui/svg/StarIcon/StarIcon";
 import { Link } from "react-router-dom";
 
 const MainPage = () => {
     return (
         <section>
-            <Heading value={'w.the_most_beautiful_names_text'}>
+            <CustomHeading value={'w.the_most_beautiful_names_text'}>
                 <Link to='/bookmarks'>
                     <StarIcon
                         variant="dot"
@@ -16,7 +16,7 @@ const MainPage = () => {
                         filled={true}
                     />
                 </Link>
-            </Heading>
+            </CustomHeading>
             <NamesList />
         </section>
     );

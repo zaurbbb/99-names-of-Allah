@@ -1,7 +1,7 @@
 @import "../../../variables"
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap")
 
-.block
+.Block
   @include flex(column, 2rem)
   width: 100%
   height: auto
@@ -49,19 +49,15 @@
           font-size: $fs5
           font-family: $gilroyRegular
 
-@media (max-width: $xxl)
-  .block
-    padding: 2rem 1rem
-
 @media (max-width: $xl)
-  .block
+  .Block
     padding: 2rem 1rem
     div
       &:first-child
         gap: 1rem
 
 @media (max-width: $lg)
-  .block
+  .Block
     padding: 2rem 0.1rem
 
     text-align: center

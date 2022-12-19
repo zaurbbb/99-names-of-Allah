@@ -54,9 +54,6 @@
     align-items: center;
     text-align: center;
   }
-  .ImgElement {
-    height: 4rem !important;
-  }
 }
 @media (max-width: 768px) {
   .Block {
