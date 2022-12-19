@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FormattedMessage } from "react-intl";
+// import { FormattedMessage } from "react-intl";
 
 import css from './Footer.module.sass';
 import FooterLogo from '../../../assets/icons/footer/footer_logo.svg';
@@ -19,10 +19,10 @@ const Footer = () => {
                             src={FooterLogo}
                             alt="Footer Logo"
                         />
-                        <FormattedMessage id='w.app_name' />
+                        {/*<FormattedMessage id='w.app_name' />*/}
                     </li>
                     <li>
-                        <FormattedMessage id='w.footer_title' />
+                        {/*<FormattedMessage id='w.footer_title' />*/}
                     </li>
                     <li>
                         <a href="https://ru-ru.facebook.com/">
@@ -47,11 +47,11 @@ const Footer = () => {
                 </ul>
                 <ul className={css.SecondaryColumn}>
                     <li>
-                        <FormattedMessage id='w.footer_help' />
+                        {/*<FormattedMessage id='w.footer_help' />*/}
                     </li>
                     <li>
                         <Link to='/unavailable'>
-                            <FormattedMessage id='w.footer_policy' />
+                            {/*<FormattedMessage id='w.footer_policy' />*/}
                         </Link>
                     </li>
                     <li>
@@ -61,29 +61,29 @@ const Footer = () => {
                     </li>
                     <li>
                         <Link to='/unavailable'>
-                            <FormattedMessage id='w.footer_contact' />
+                            {/*<FormattedMessage id='w.footer_contact' />*/}
                         </Link>
                     </li>
                 </ul>
                 <ul className={css.SecondaryColumn}>
                     <li>
-                        <FormattedMessage id='w.footer_apps' />
+                        {/*<FormattedMessage id='w.footer_apps' />*/}
                     </li>
                     <li>
                         <a href="https://play.google.com/store/apps/details?id=com.alimapps.allahnames">
-                            <FormattedMessage id='w.footer_android' />
+                            {/*<FormattedMessage id='w.footer_android' />*/}
                         </a>
                     </li>
                     <li>
                         <a href="https://apps.apple.com/app/id1273554579">
-                            <FormattedMessage id='w.footer_ios' />
+                            {/*<FormattedMessage id='w.footer_ios' />*/}
                         </a>
                     </li>
                     <br />
                 </ul>
             </div>
             <div>
-                ©Allanyn99esimi. <FormattedMessage id='w.footer_subtitle' />
+                {/*©Allanyn99esimi. <FormattedMessage id='w.footer_subtitle' />*/}
             </div>
         </footer>
     );

@@ -3,8 +3,8 @@ import React, {
     Suspense
 } from 'react';
 import { IntlProvider } from 'react-intl';
-import flatten from 'flat';
 
+import { flattenMessages } from './helpers/flattenMessages';
 import { messages } from './i18n/messages';
 import { LOCALES } from './i18n/locales';
 import { LanguageContext } from './context';
@@ -40,9 +40,8 @@ function App() {
             }}
         >
             <IntlProvider
-                messages={flatten(messages[currentLocale])}
+                messages={flattenMessages(messages[currentLocale])}
                 locale={currentLocale}
-                defaultLocale={LOCALES.KAZAKH}
             >
                 <Header
                     currentLocale={currentLocale}
