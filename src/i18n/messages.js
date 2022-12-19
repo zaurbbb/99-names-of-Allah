@@ -67,13 +67,13 @@ export const messages = {
             "meruert_description": "Басшы және CEO",
 
             "kudaibergen_name": "Алимтаев Құдайберген",
-            "kudaibergen_description": "Android разработчик",
+            "kudaibergen_description": "Android бағдарламашы",
 
             "elaman_name": "Елмұратов Еламан",
             "elaman_description": "UX/UI дизайнер",
 
             "zaur_name": "Бердибеков Заур",
-            "zaur_description": "WEB разработчик",
+            "zaur_description": "WEB бағдарламашы",
         },
         n: [
             {
