@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from "react-intl";
 
-import BookCoverImg from "../../../ui/BookCoverImg/BookCoverImg";
+import BookCoverImg from "../../../ui/svg/BookCoverImg/BookCoverImg";
 
 import css from "./SourceApp.module.sass";
 

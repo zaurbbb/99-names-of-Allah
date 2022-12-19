@@ -13,7 +13,7 @@ import { ScrollToTop } from './helpers/scrollToTop';
 import Header from './components/elements/Header/Header';
 import Footer from './components/elements/Footer/Footer';
 import AboutApp from './components/elements/AboutApp/AboutApp';
-import SectionLoader from "./components/ui/SectionLoader/SectionLoader";
+import SectionLoader from "./components/ui/loaders/SectionLoader/SectionLoader";
 
 import './styles/swiper.sass';
 import './styles/app.sass';

@@ -5,8 +5,8 @@ import {
 } from '@mui/material';
 import { FormattedMessage } from 'react-intl';
 
-import BookCoverImg from '../../../ui/BookCoverImg/BookCoverImg';
-import ModalWindow from '../../../ui/ModalWindow/ModalWindow';
+import BookCoverImg from '../../../ui/svg/BookCoverImg/BookCoverImg';
+import ModalWindow from '../../../ui/windows/ModalWindow/ModalWindow';
 
 import css from './SourceModal.module.sass';
 

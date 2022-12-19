@@ -3,13 +3,13 @@ import { FormattedMessage } from "react-intl";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { Link } from "react-router-dom";
 
-import StarIcon from "../../ui/StarIcon/StarIcon";
-import Share from "../../ui/ShareIcon/ShareIcon";
-import PlayIcon from "../../ui/PlayIcon/PlayIcon";
+import StarIcon from "../../ui/svg/StarIcon/StarIcon";
+import Share from "../../ui/svg/ShareIcon/ShareIcon";
+import PlayIcon from "../../ui/svg/PlayIcon/PlayIcon";
 
 import css from "./NameDataCard.module.sass";
 import QuestionIcon from "../../../assets/icons/namePage/questionIcon.svg";
-import Heading from '../../ui/Heading/Heading';
+import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
 
 const NameDataCard = ({ nameData, handleClickSnackbar, handleOpenModal }) => {
     const [
@@ -27,7 +27,7 @@ const NameDataCard = ({ nameData, handleClickSnackbar, handleOpenModal }) => {
 
     return (
         <>
-            <Heading value={headingMessage} />
+            <CustomHeading value={headingMessage} />
             <div className={css.Block}>
                 <div className={css.UpperCard}>
                     <div>

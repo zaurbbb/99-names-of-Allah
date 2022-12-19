@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import { useMosque } from "../../../hooks/useMosque";
 
-import CustomButton from "../../ui/CustomButton/CustomButton";
+import CustomButton from "../../ui/custom/CustomButton/CustomButton";
 
 import css from "./TestCard.module.css";
 

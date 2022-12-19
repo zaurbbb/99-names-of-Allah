@@ -11,8 +11,8 @@ import { useChunks } from "../../../../hooks/useChunks";
 import { useNamesCollection } from "../../../../hooks/useNamesCollection";
 
 import NameCard from "../../../cards/NameCard/NameCard";
-import SliderPrevButton from "../../../ui/SliderPrevButton/SliderPrevButton";
-import SliderNextButton from "../../../ui/SliderNextButton/SliderNextButton";
+import SliderPrevButton from "../../../ui/slider/SliderPrevButton/SliderPrevButton";
+import SliderNextButton from "../../../ui/slider/SliderNextButton/SliderNextButton";
 
 import "swiper/css";
 import "swiper/css/pagination";

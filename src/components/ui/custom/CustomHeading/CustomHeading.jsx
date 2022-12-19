@@ -1,9 +1,9 @@
 import React from 'react';
 import { FormattedMessage } from "react-intl";
 
-import css from './Heading.module.sass'
+import css from './CustomHeading.sass'
 
-const Heading = ({ children, value }) => {
+const CustomHeading = ({ children, value }) => {
     return (
         <div className={css.Block}>
             <h1>
@@ -14,4 +14,4 @@ const Heading = ({ children, value }) => {
     );
 };
 
-export default Heading;
+export default CustomHeading;

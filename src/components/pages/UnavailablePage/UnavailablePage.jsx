@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from "react-intl";
 
 import css from './UnavailablePage.module.sass'
-import CustomButton from "../../ui/CustomButton/CustomButton";
+import CustomButton from "../../ui/custom/CustomButton/CustomButton";
 import { Link } from "react-router-dom";
 
 const UnavailablePage = () => {

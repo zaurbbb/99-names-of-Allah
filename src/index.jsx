@@ -5,7 +5,7 @@ import { ThemeProvider } from '@mui/material';
 
 import { theme } from './themes/theme';
 
-import AppLoader from "./components/ui/AppLoader/AppLoader";
+import AppLoader from "./components/ui/loaders/AppLoader/AppLoader";
 
 import './styles/index.css';
 import './styles/reset.css';

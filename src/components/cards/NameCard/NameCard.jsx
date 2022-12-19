@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-import StarIcon from "../../ui/StarIcon/StarIcon";
-import PlayIcon from "../../ui/PlayIcon/PlayIcon";
+import StarIcon from "../../ui/svg/StarIcon/StarIcon";
+import PlayIcon from "../../ui/svg/PlayIcon/PlayIcon";
 
 import css from './NameCard.module.sass'
 import {useMosque} from "../../../hooks/useMosque";
