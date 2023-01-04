@@ -11,9 +11,8 @@ import css from './Navbar.module.sass';
 
 import NavbarLogoIcon from '../../../assets/icons/navbar/navbar_logo.webp'
 import NavbarSearchIcon from '../../../assets/icons/navbar/search_light.webp'
-import SelectLanguages from "./selectLanguages/SelectLanguages";
-import SearchModal from "./searchModal/SearchModal";
-
+import SelectLanguages from "./SelectLanguages/SelectLanguages";
+import SearchModal from "./SearchModal/SearchModal";
 
 const Navbar = (props) => {
     const location = useLocation();

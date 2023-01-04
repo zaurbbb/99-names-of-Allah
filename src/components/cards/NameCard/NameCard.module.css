@@ -35,6 +35,9 @@
   border: 0.1rem solid #6BBED0;
   border-radius: 1rem;
 }
+.UpperElement div:nth-child(3) {
+  cursor: pointer;
+}
 .UpperElement img {
   width: 1.7rem;
 }
@@ -86,6 +89,11 @@
 @media (max-width: 1600px) {
   .Block {
     width: 14rem;
+  }
+}
+@media (max-width: 768px) {
+  .MiddleElement img {
+    height: 5rem;
   }
 }
 

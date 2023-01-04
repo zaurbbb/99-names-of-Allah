@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FormattedMessage } from "react-intl";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { Link } from "react-router-dom";
+import {
+    Link,
+    useParams
+} from "react-router-dom";
 
 import StarIcon from "../../ui/svg/StarIcon/StarIcon";
 import Share from "../../ui/svg/ShareIcon/ShareIcon";
@@ -10,20 +13,46 @@ import PlayIcon from "../../ui/svg/PlayIcon/PlayIcon";
 import css from "./NameDataCard.module.sass";
 import QuestionIcon from "../../../assets/icons/namePage/questionIcon.svg";
 import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
+import { BookmarksContext } from '../../../context';
+import { useMosque } from '../../../hooks/useMosque';
 
-const NameDataCard = ({ nameData, handleClickSnackbar, handleOpenModal }) => {
-    const [
-              meaning,
-              shortMeaning,
-              nameId,
-              currentMosque,
-              name,
-              nameArabic,
-              zikrCount,
-          ] = nameData;
+const NameDataCard = ({ name, item, id, nameArabic, shortMeaning, meaning, zikrCount, handleClickSnackbar, handleOpenModal }) => {
+    const { nameId } = useParams();
+    console.log('nameData', item);
+    const url = window.location.href;
+    const headingMessage = `${nameId} имя — ${name}`;
+    const currentMosque = useMosque(nameId - 1);
 
-    const url            = window.location.href,
-          headingMessage = `${nameId} имя — ${name}`;
+
+    const { bookmarks, setBookmarks } = useContext(BookmarksContext);
+    console.log(bookmarks);
+    const bookmarkName = ({ item, id }) => {
+        let array = bookmarks;
+        let addArray = true;
+
+        array.forEach((item, idx) => {
+            if (item === id) {
+                array.splice(idx, 1);
+                addArray = false;
+            }
+        })
+
+        if (addArray) {
+            array.push(id);
+        }
+
+        setBookmarks([...array]);
+
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+        let storage = localStorage.getItem('bookmarkItem' + (id) || null);
+        if (storage === null) {
+            localStorage.setItem(('bookmarkItem' + (id)), JSON.stringify(item));
+        } else {
+            localStorage.removeItem('bookmarkItem' + (id));
+        }
+        console.log("доходит")
+    }
+
 
     return (
         <>
@@ -31,7 +60,12 @@ const NameDataCard = ({ nameData, handleClickSnackbar, handleOpenModal }) => {
             <div className={css.Block}>
                 <div className={css.UpperCard}>
                     <div>
-                        <div><StarIcon /></div>
+                        <div>
+                            <StarIcon
+                                filled={!!bookmarks.includes(id)}
+                                onClick={() => bookmarkName({ item, id })}
+                            />
+                        </div>
                         <div>
                             <h2>{nameArabic}</h2>
                         </div>

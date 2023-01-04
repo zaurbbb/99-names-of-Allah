@@ -60,7 +60,7 @@
 .Block div .SecondaryColumn {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 10px;
 }
 .Block div .SecondaryColumn li:first-child {
   display: flex;

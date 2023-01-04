@@ -1,14 +1,42 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import React, { useContext } from 'react';
+import { Link } from "react-router-dom";
 
 import StarIcon from "../../ui/svg/StarIcon/StarIcon";
 import PlayIcon from "../../ui/svg/PlayIcon/PlayIcon";
 
 import css from './NameCard.module.sass'
-import {useMosque} from "../../../hooks/useMosque";
+import { useMosque } from "../../../hooks/useMosque";
+import { BookmarksContext } from '../../../context';
 
-const NameCard = ({name, id, nameArabic, shortMeaning}) => {
-    const currentMosque = useMosque(id-1)
+const NameCard = ({ name, item, id, nameArabic, shortMeaning }) => {
+    const currentMosque = useMosque(id - 1);
+    const { bookmarks, setBookmarks } = useContext(BookmarksContext);
+
+    const bookmarkName = ({ item, id }) => {
+        let array = bookmarks;
+        let addArray = true;
+
+        array.forEach((item, idx) => {
+            if (item === id) {
+                array.splice(idx, 1);
+                addArray = false;
+            }
+        })
+
+        if (addArray) {
+            array.push(id);
+        }
+
+        setBookmarks([...array]);
+
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+        let storage = localStorage.getItem('bookmarkItem' + (id) || null);
+        if (storage === null) {
+            localStorage.setItem(('bookmarkItem' + (id)), JSON.stringify(item));
+        } else {
+            localStorage.removeItem('bookmarkItem' + (id));
+        }
+    }
 
     return (
         <div className={css.Block}>
@@ -20,14 +48,20 @@ const NameCard = ({name, id, nameArabic, shortMeaning}) => {
                     {nameArabic}
                 </div>
                 <div>
-                    <StarIcon filled={true}/>
+                    <StarIcon
+                        filled={!!bookmarks.includes(id)}
+                        onClick={() => bookmarkName({ item, id })}
+                    />
                 </div>
             </div>
             <div className={css.MiddleElement}>
                 {currentMosque}
             </div>
 
-            <Link to={`/name/${id}`} className={css.LowerElement}>
+            <Link
+                to={`/name/${id}`}
+                className={css.LowerElement}
+            >
                 <div>
                     <h4>
                         {name}
@@ -38,7 +72,7 @@ const NameCard = ({name, id, nameArabic, shortMeaning}) => {
                     </h5>
                 </div>
                 <div>
-                    <PlayIcon/>
+                    <PlayIcon />
                 </div>
             </Link>
 

@@ -26,11 +26,17 @@ const NamePage = () => {
 
     return (
         <section>
-
             <NameDataCard
+                key={nameData.id}
+                item={nameData}
+                id={nameData.id}
+                nameArabic={nameData.nameArabic}
+                name={nameData.name}
+                shortMeaning={nameData.shortMeaning}
+                meaning={nameData.meaning}
+                zikrCount={nameData.zikrCount}
                 handleClickSnackbar={handleClickSnackbar}
                 handleOpenModal={handleOpenModal}
-                nameData={nameData}
             />
 
             <SourceModal

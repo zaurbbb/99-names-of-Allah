@@ -4,7 +4,7 @@ import {
     Modal
 } from "@mui/material";
 
-import SearchBar from "./searchBar/SearchBar";
+import SearchBar from "./SearchBar/SearchBar";
 
 import css from "../Navbar.module.sass";
 

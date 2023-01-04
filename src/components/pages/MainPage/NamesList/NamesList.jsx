@@ -7,8 +7,6 @@ import {
 } from "swiper/react";
 
 import "swiper/css/navigation";
-import { useChunks } from "../../../../hooks/useChunks";
-import { useNamesCollection } from "../../../../hooks/useNamesCollection";
 
 import NameCard from "../../../cards/NameCard/NameCard";
 import SliderPrevButton from "../../../ui/slider/SliderPrevButton/SliderPrevButton";
@@ -17,10 +15,7 @@ import SliderNextButton from "../../../ui/slider/SliderNextButton/SliderNextButt
 import "swiper/css";
 import "swiper/css/pagination";
 
-const NamesList = () => {
-    const namesCollection = useNamesCollection();
-    const result = useChunks(namesCollection, 9);
-
+const NamesList = ({ result }) => {
 
     return (
         <Swiper
@@ -33,6 +28,7 @@ const NamesList = () => {
                     {collection.map(item => (
                         <NameCard
                             key={item.id}
+                            item={item}
                             id={item.id}
                             nameArabic={item.nameArabic}
                             name={item.name}

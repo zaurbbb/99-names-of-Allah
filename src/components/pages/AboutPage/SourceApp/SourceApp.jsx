@@ -10,7 +10,7 @@ const SourceApp = () => {
         <div className={css.Block}>
             <h3>
                 <FormattedMessage id='w.about_page_subtitle_1' />
-                <a href="http://fatua.kz/">fatua.kz</a>
+                <a href="http://fatua.kz/">fatua.kzNames</a>
                 <FormattedMessage id='w.about_page_subtitle_2' />
             </h3>
             <br />

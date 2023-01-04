@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
     Navigate,
     Route,
@@ -7,6 +7,7 @@ import {
 import { routes } from './router/routes';
 
 const AppRouter = () => {
+
     return (
         <Routes>
             {routes.map(route =>

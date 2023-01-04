@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 import css from './SearchBar.module.css'
 import SearchIconBlack from "../../../../../assets/icons/navbar/search_dark.svg";
 import { useNamesCollection } from "../../../../../hooks/useNamesCollection";
+import { useIntl } from 'react-intl';
 
 const SearchBar = () => {
+    const intl = useIntl();
     const data = useNamesCollection();
     const [filteredData, setFilteredData] = useState([]);
     const [wordEntered, setWordEntered] = useState("");
@@ -31,6 +33,7 @@ const SearchBar = () => {
                     type="text"
                     value={wordEntered}
                     onChange={handleFilter}
+                    placeholder={intl.formatMessage({ id: 'w.search_input' })}
                 />
             </div>
             {filteredData.length !== 0 && (

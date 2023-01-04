@@ -16,15 +16,18 @@
 .UpperElement
   @include flex(row, 0)
   @include flexAlignment(flex-start, space-between, center)
-  div:first-child
-    display: flex
-    @include flexAlignment(flex-start, center, center)
-    @include font($fs4, $fwB)
-    color: #6BBED0
-    width: 1.7rem
-    height: 1.7rem
-    border: 0.1rem solid #6BBED0
-    border-radius: 1rem
+  div
+    &:first-child
+      display: flex
+      @include flexAlignment(flex-start, center, center)
+      @include font($fs4, $fwB)
+      color: #6BBED0
+      width: 1.7rem
+      height: 1.7rem
+      border: 0.1rem solid #6BBED0
+      border-radius: 1rem
+    &:nth-child(3)
+      cursor: pointer
   img
     width: 1.7rem
 
@@ -60,4 +63,9 @@
 @media (max-width: $xxl)
   .Block
     width: 14rem
+
+@media (max-width: $md)
+  .MiddleElement
+    img
+      height: 5rem
 
