@@ -1,5 +1,5 @@
 import {createTheme} from '@mui/material';
-import GilroyBold from '../assets/fonts/Gilroy-Bold.ttf';
+import GilroyBold from '../assets/fonts/Gilroy-SemiBold.ttf';
 
 const lightBlue = '#32B6CE';
 const bk = createTheme({

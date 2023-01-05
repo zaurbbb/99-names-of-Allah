@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["TestCard.module.sass","../../../variables.sass"],"names":[],"mappings":"AAEA;ECqDE;EACA,gBDrDc;ECsDd,KDtDsB;EACtB;EAEA;EACA;EAEA;EACA;EACA;EAEA;EACA;;AACA;EACE,aCfS;;ADgBX;EACE;EACA;;;AAEJ;EACE;IACE","file":"TestCard.module.css"}
+{"version":3,"sourceRoot":"","sources":["TestCard.module.sass","../../../variables.sass"],"names":[],"mappings":"AAEA;ECqDE;EACA,gBDrDc;ECsDd,KDtDsB;EACtB;EAEA;EACA;EAEA;EACA;EACA;EAEA;EACA;;AACA;EACE,aCfa;;ADgBf;EACE;EACA;;;AAEJ;EACE;IACE","file":"TestCard.module.css"}
