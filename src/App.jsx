@@ -38,7 +38,6 @@ function App() {
         if (getBookmarks !== 0) {
             setBookmarks([...getBookmarks])
         }
-        console.log('assass')
     }, []);
 
 

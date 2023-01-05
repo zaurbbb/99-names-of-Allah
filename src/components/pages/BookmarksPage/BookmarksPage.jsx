@@ -14,18 +14,18 @@ const BookmarksPage = () => {
 
     for (let i = 0; i < getBookmarks.length; i++) {
         let item = localStorage.getItem('bookmarkItem' + getBookmarks[i]);
-        console.log('getItem bookmarkItem' + getBookmarks[i], JSON.parse(item));
         if (item === null) {
-            console.error('err, no bookmarks')
+            console.error('err, no bookmarks');
         } else {
             bookmarksList.push(JSON.parse(localStorage.getItem('bookmarkItem' + getBookmarks[i]) || ''));
         }
     }
-    const result = useChunks(bookmarksList, 6);
+    const result = useChunks(bookmarksList, 3);
 
-    if (bookmarks === null) {
+    if (bookmarks.length === 0) {
         return <SectionLoader />
     }
+    console.log('bookmarks', bookmarks)
 
     return (
         <section>

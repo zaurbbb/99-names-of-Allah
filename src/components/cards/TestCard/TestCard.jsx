@@ -10,7 +10,6 @@ import CustomButton from "../../ui/custom/CustomButton/CustomButton";
 import css from "./TestCard.module.css";
 
 const TestCard = ({value, id}) => {
-    console.log(value, id)
     const currentMosque = useMosque(id-1);
     return (
         <div className={css.Card}>

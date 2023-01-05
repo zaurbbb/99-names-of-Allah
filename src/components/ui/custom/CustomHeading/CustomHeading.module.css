@@ -9,6 +9,9 @@
   font-family: "GilroyBold", sans-serif;
   padding: 3rem 0 1.5rem 0;
 }
+.Block img {
+  width: 80%;
+}
 
 @media (max-width: 992px) {
   .Block {
