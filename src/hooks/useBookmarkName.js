@@ -1,9 +1,13 @@
-import { useContext } from 'react';
+import {
+    useCallback,
+    useContext
+} from 'react';
 import { BookmarksContext } from '../context';
 
 export const useBookmarkName = () => {
     const { bookmarks, setBookmarks } = useContext(BookmarksContext);
-    const bookmarkName = ({ item, id }) => {
+
+    const bookmarkName = useCallback(({ item, id }) => {
         let array = bookmarks;
         let addArray = true;
 
@@ -27,8 +31,7 @@ export const useBookmarkName = () => {
         } else {
             localStorage.removeItem('bookmarkItem' + (id));
         }
-    };
+    }, [bookmarks, setBookmarks]);
 
-    return {bookmarkName};
-
+    return { bookmarkName };
 }

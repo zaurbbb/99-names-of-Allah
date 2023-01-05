@@ -8,9 +8,9 @@ import {
 
 import "swiper/css/navigation";
 
-import NameCard from "../../../cards/NameCard/NameCard";
-import SliderPrevButton from "../../../ui/slider/SliderPrevButton/SliderPrevButton";
-import SliderNextButton from "../../../ui/slider/SliderNextButton/SliderNextButton";
+import NameCard from "../../cards/NameCard/NameCard";
+import SliderPrevButton from "../../ui/slider/SliderPrevButton/SliderPrevButton";
+import SliderNextButton from "../../ui/slider/SliderNextButton/SliderNextButton";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -22,6 +22,7 @@ const NamesList = ({ result }) => {
             pagination={true}
             modules={[Pagination]}
             className="mySwiper"
+            loop={true}
         >
             {result.map((collection, index) => (
                 <SwiperSlide key={index}>

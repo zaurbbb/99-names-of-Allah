@@ -10,6 +10,7 @@ import AppLoader from "./components/ui/loaders/AppLoader/AppLoader";
 import './styles/index.css';
 import './styles/reset.css';
 
+
 const App = React.lazy(() => import('./App.jsx'));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

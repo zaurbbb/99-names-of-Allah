@@ -71,6 +71,7 @@
 }
 .LowerElement div:first-child h4 {
   font-family: "GilroyBold", sans-serif;
+  font-weight: 100;
 }
 .LowerElement div:first-child h5 {
   font-family: "GilroyRegular", sans-serif;

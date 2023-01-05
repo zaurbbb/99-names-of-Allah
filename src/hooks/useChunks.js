@@ -9,5 +9,5 @@ export const useChunks = (arr, perChunk) => {
         resultArr[chunkIndex].push(item)
 
         return resultArr
-    }, [])
+    }, []);
 };

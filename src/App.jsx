@@ -1,7 +1,8 @@
 import React, {
     useState,
     Suspense,
-    useEffect
+    useEffect,
+    useMemo
 } from 'react';
 import {
     IntlProvider,
@@ -28,9 +29,9 @@ import './styles/app.sass';
 import { useBookmarks } from './hooks/useBookmarks';
 
 const AppRouter = React.lazy(() => import('./AppRouter.jsx'));
-
 function App() {
-    const [currentLocale, setCurrentLocale] = useState(getInitialLocale());
+
+    const [currentLocale, setCurrentLocale] = useState(useMemo(() => getInitialLocale(), []));
     const [bookmarks, setBookmarks] = useState([]);
     const getBookmarks = useBookmarks();
     // localStorage.clear();
@@ -58,6 +59,7 @@ function App() {
         console.error(e)
     }
 
+
     return (
         <LanguageContext.Provider value={{ currentLocale }}>
             <BookmarksContext.Provider value={{ bookmarks, setBookmarks }}>
@@ -81,7 +83,6 @@ function App() {
 
                     <Footer />
                     <ScrollToTop />
-
                 </IntlProvider>
             </BookmarksContext.Provider>
         </LanguageContext.Provider>

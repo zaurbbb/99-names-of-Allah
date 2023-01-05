@@ -48,10 +48,11 @@
 }
 .UpperCard div:last-child div h3:first-child {
   font-family: "GilroyBold", sans-serif;
+  font-weight: 100;
 }
 .UpperCard div:last-child div h3:last-child {
   font-family: "GilroyRegular", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .UpperCard div:last-child a img {
   width: 2rem;
@@ -72,14 +73,16 @@
 .MiddleCard div h3, .MiddleCard div .zikrCount, .LowerCard div h3, .LowerCard div .zikrCount {
   color: #00D2FF;
   font-family: "GilroyBold", sans-serif;
+  font-weight: 100;
   text-align: center;
 }
 .MiddleCard div h4, .LowerCard div h4 {
   font-family: "GilroyRegular", sans-serif;
-  font-weight: 100;
+  font-weight: 400;
 }
 .MiddleCard div h4 .zikrCount, .LowerCard div h4 .zikrCount {
   font-family: "GilroyBold", sans-serif;
+  font-weight: 400;
   font-size: 1.44rem;
 }
 

@@ -15,6 +15,7 @@ import QuestionIcon from "../../../assets/icons/namePage/questionIcon.svg";
 import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
 import { BookmarksContext } from '../../../context';
 import { useMosque } from '../../../hooks/useMosque';
+import { useBookmarkName } from '../../../hooks/useBookmarkName';
 
 const NameDataCard = ({ name, item, id, nameArabic, shortMeaning, meaning, zikrCount, handleClickSnackbar, handleOpenModal }) => {
     const { nameId } = useParams();
@@ -24,34 +25,8 @@ const NameDataCard = ({ name, item, id, nameArabic, shortMeaning, meaning, zikrC
     const currentMosque = useMosque(nameId - 1);
 
 
-    const { bookmarks, setBookmarks } = useContext(BookmarksContext);
-    console.log(bookmarks);
-    const bookmarkName = ({ item, id }) => {
-        let array = bookmarks;
-        let addArray = true;
-
-        array.forEach((item, idx) => {
-            if (item === id) {
-                array.splice(idx, 1);
-                addArray = false;
-            }
-        })
-
-        if (addArray) {
-            array.push(id);
-        }
-
-        setBookmarks([...array]);
-
-        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
-        let storage = localStorage.getItem('bookmarkItem' + (id) || null);
-        if (storage === null) {
-            localStorage.setItem(('bookmarkItem' + (id)), JSON.stringify(item));
-        } else {
-            localStorage.removeItem('bookmarkItem' + (id));
-        }
-        console.log("доходит")
-    }
+    const { bookmarks } = useContext(BookmarksContext);
+    const { bookmarkName } = useBookmarkName();
 
 
     return (

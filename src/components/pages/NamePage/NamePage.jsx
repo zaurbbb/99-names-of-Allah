@@ -23,7 +23,6 @@ const NamePage = () => {
 
         setOpenSnackbar(false);
     };
-
     return (
         <section>
             <NameDataCard

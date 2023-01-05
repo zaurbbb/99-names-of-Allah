@@ -13,7 +13,7 @@ const NameCard = ({ name, item, id, nameArabic, shortMeaning }) => {
     const currentMosque = useMosque(id - 1);
 
     const { bookmarks } = useContext(BookmarksContext);
-    const { bookmarkName } = useBookmarkName({ item, id });
+    const { bookmarkName } = useBookmarkName();
 
     return (
         <div className={css.Block}>

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import CustomHeading from "../../ui/custom/CustomHeading/CustomHeading";
-import NamesList from "./NamesList/NamesList";
+import NamesList from "../../elements/NamesList/NamesList";
 import StarIcon from "../../ui/svg/StarIcon/StarIcon";
 import { Link } from "react-router-dom";
 import { BookmarksContext } from '../../../context';

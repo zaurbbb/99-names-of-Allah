@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import SectionLoader from '../../ui/loaders/SectionLoader/SectionLoader';
 import { BookmarksContext } from '../../../context';
 import { useBookmarks } from '../../../hooks/useBookmarks';
-import NamesList from '../MainPage/NamesList/NamesList';
+import NamesList from '../../elements/NamesList/NamesList';
 import { useChunks } from '../../../hooks/useChunks';
 import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
 

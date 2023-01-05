@@ -2,6 +2,7 @@ import { LOCALES } from './locales'
 import { kzNames } from './names/kzNames';
 import { ruNames } from './names/ruNames';
 import { trNames } from './names/trNames';
+
 // w - words, n- names
 export const messages = {
     [LOCALES.KAZAKH]: {
@@ -36,7 +37,7 @@ export const messages = {
             "bookmarks_page_title": "Бетбелгілер",
 
             "test_page_title": "Біліміңді тексер",
-            "test_page_start_test": "Тістілеуді баста",
+            "test_page_start_test": "Тестілеуді баста",
 
             "about_page_title_1": "Біздің команда",
             "about_page_title_2": "Мобильді қосымша туралы",

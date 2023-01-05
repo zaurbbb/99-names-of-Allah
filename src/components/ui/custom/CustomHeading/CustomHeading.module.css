@@ -6,7 +6,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  font-family: "GilroyBold", sans-serif;
+  font-family: "GilroyRegular", sans-serif;
+  font-weight: 900;
   padding: 3rem 0 1.5rem 0;
 }
 .Block img {
