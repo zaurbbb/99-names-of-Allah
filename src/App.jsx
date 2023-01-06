@@ -31,7 +31,6 @@ import { useBookmarks } from './hooks/useBookmarks';
 
 const AppRouter = React.lazy(() => import('./AppRouter.jsx'));
 function App() {
-
     const [currentLocale, setCurrentLocale] = useState(useMemo(() => getInitialLocale(), []));
     const [bookmarks, setBookmarks] = useState([]);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);

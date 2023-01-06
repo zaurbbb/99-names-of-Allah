@@ -1,5 +1,5 @@
 export const LOCALES = {
     RUSSIAN: 'ru-RU',
-    KAZAKH: 'kzNames-KZ',
+    KAZAKH: 'kz-KZ',
     TURKISH: 'tr-TR',
 };

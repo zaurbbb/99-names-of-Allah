@@ -94,7 +94,7 @@ export const theme = createTheme({
                     },
                     [bk.breakpoints.down('sm')]: {
                         height: '1rem',
-                        marginLeft: '-0.2.5rem',
+                        marginLeft: '-0.2rem',
                     },
                     [bk.breakpoints.down('sm')]: {
                         height: '1rem',
@@ -117,7 +117,7 @@ export const theme = createTheme({
                         [bk.breakpoints.down('sm')]: {
                             height: '1.8rem',
                             width: '1rem',
-                            marginLeft: '-0.2.5rem',
+                            marginLeft: '-0.2rem',
                         },
                         'img': {
                             [bk.breakpoints.down('md')]: {
@@ -160,7 +160,7 @@ export const theme = createTheme({
                             marginLeft: '-0.3rem',
                         },
                         [bk.breakpoints.down('sm')]: {
-                            marginLeft: '-0.2.5rem',
+                            marginLeft: '-0.2rem',
                         },
                     },
                 },
