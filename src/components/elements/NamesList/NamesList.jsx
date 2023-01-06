@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { Pagination } from "swiper";
 import {
@@ -14,8 +14,10 @@ import SliderNextButton from "../../ui/slider/SliderNextButton/SliderNextButton"
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { WindowWidthContext } from '../../../context';
 
 const NamesList = ({ result }) => {
+    const { windowWidth } = useContext(WindowWidthContext);
 
     return (
         <Swiper
@@ -23,19 +25,33 @@ const NamesList = ({ result }) => {
             modules={[Pagination]}
             className="mySwiper"
             loop={true}
+            slidesPerView={windowWidth && 2}
+
+            slidesPerGroup={windowWidth && 1}
+            centeredSlides={windowWidth && true}
+            spaceBetween={windowWidth && 40}
         >
             {result.map((collection, index) => (
                 <SwiperSlide key={index}>
-                    {collection.map(item => (
-                        <NameCard
-                            key={item.id}
-                            item={item}
-                            id={item.id}
-                            nameArabic={item.nameArabic}
-                            name={item.name}
-                            shortMeaning={item.shortMeaning}
-                        />
-                    ))}
+                    {windowWidth > 576 ?
+                        collection.map(item => (
+                            <NameCard
+                                key={item.id}
+                                item={item}
+                                id={item.id}
+                                nameArabic={item.nameArabic}
+                                name={item.name}
+                                shortMeaning={item.shortMeaning}
+                            />
+                        )) : <NameCard
+                            key={collection.id}
+                            item={collection}
+                            id={collection.id}
+                            nameArabic={collection.nameArabic}
+                            name={collection.name}
+                            shortMeaning={collection.shortMeaning}
+                        />}
+
                 </SwiperSlide>
             ))}
             <div className='swiper-navigation-button'>

@@ -13,6 +13,9 @@
   object-fit: cover;
   overflow: hidden;
 }
+.Block h4, .Block h5 {
+  overflow-wrap: break-word;
+}
 
 .UpperElement {
   display: flex;
@@ -49,7 +52,7 @@
 
 .LowerElement {
   display: grid;
-  grid-template-columns: 2fr 0.5fr;
+  grid-template-columns: 80% 20%;
   grid-template-rows: auto;
   gap: 0;
   background: white;
@@ -89,12 +92,12 @@
 
 @media (max-width: 1600px) {
   .Block {
-    width: 14rem;
+    width: 14rem !important;
   }
 }
 @media (max-width: 768px) {
   .MiddleElement img {
-    height: 5rem;
+    height: 4rem;
   }
 }
 

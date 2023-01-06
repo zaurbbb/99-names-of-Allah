@@ -13,5 +13,5 @@ export const flattenMessages = ((nestedMessages, prefix = '') => {
         }
 
         return messages
-    }, {})
+    }, {});
 })

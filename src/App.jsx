@@ -1,8 +1,8 @@
 import React, {
-    useState,
     Suspense,
     useEffect,
-    useMemo
+    useMemo,
+    useState
 } from 'react';
 import {
     IntlProvider,
@@ -14,7 +14,8 @@ import { messages } from './i18n/messages';
 import { LOCALES } from './i18n/locales';
 import {
     BookmarksContext,
-    LanguageContext
+    LanguageContext,
+    WindowWidthContext
 } from './context';
 import '@formatjs/intl-numberformat/locale-data/ru';
 import { ScrollToTop } from './helpers/scrollToTop';
@@ -33,12 +34,20 @@ function App() {
 
     const [currentLocale, setCurrentLocale] = useState(useMemo(() => getInitialLocale(), []));
     const [bookmarks, setBookmarks] = useState([]);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
     const getBookmarks = useBookmarks();
     // localStorage.clear();
     useEffect(() => {
         if (getBookmarks !== 0) {
             setBookmarks([...getBookmarks])
         }
+
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
 
@@ -63,27 +72,29 @@ function App() {
     return (
         <LanguageContext.Provider value={{ currentLocale }}>
             <BookmarksContext.Provider value={{ bookmarks, setBookmarks }}>
-                <IntlProvider
-                    messages={flattenMessages(messages[currentLocale])}
-                    locale={'kzNames-KZ'}
-                    defaultLocale={'ru-RU'}
-                    onError={onError}
-                >
-                    <Header
-                        currentLocale={currentLocale}
-                        handleChange={handleChange}
-                    />
+                <WindowWidthContext.Provider value={{ windowWidth }}>
+                    <IntlProvider
+                        messages={flattenMessages(messages[currentLocale])}
+                        locale={'kzNames-KZ'}
+                        defaultLocale={'ru-RU'}
+                        onError={onError}
+                    >
+                        <Header
+                            currentLocale={currentLocale}
+                            handleChange={handleChange}
+                        />
 
-                    <main className='container'>
-                        <Suspense fallback={<SectionLoader />}>
-                            <AppRouter />
-                        </Suspense>
-                        <AboutApp />
-                    </main>
+                        <main className='container'>
+                            <Suspense fallback={<SectionLoader />}>
+                                <AppRouter />
+                            </Suspense>
+                            <AboutApp />
+                        </main>
 
-                    <Footer />
-                    <ScrollToTop />
-                </IntlProvider>
+                        <Footer />
+                        <ScrollToTop />
+                    </IntlProvider>
+                </WindowWidthContext.Provider>
             </BookmarksContext.Provider>
         </LanguageContext.Provider>
     );

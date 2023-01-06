@@ -1,16 +1,20 @@
 import React, { useContext } from 'react';
-import SectionLoader from '../../ui/loaders/SectionLoader/SectionLoader';
-import { BookmarksContext } from '../../../context';
+import {
+    BookmarksContext,
+    WindowWidthContext
+} from '../../../context';
 import { useBookmarks } from '../../../hooks/useBookmarks';
 import NamesList from '../../elements/NamesList/NamesList';
 import { useChunks } from '../../../hooks/useChunks';
 import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
+import { Navigate } from 'react-router-dom';
 
 const BookmarksPage = () => {
 
     let bookmarksList = [];
     const getBookmarks = useBookmarks();
     const { bookmarks } = useContext(BookmarksContext);
+    const { windowWidth } = useContext(WindowWidthContext);
 
     for (let i = 0; i < getBookmarks.length; i++) {
         let item = localStorage.getItem('bookmarkItem' + getBookmarks[i]);
@@ -23,14 +27,13 @@ const BookmarksPage = () => {
     const result = useChunks(bookmarksList, 3);
 
     if (bookmarks.length === 0) {
-        return <SectionLoader />
+        return <Navigate to='/' replace/>
     }
-    console.log('bookmarks', bookmarks)
 
     return (
         <section>
             <CustomHeading value='w.bookmarks_page_title'/>
-            <NamesList result={result} />
+            <NamesList result={windowWidth > 576 ? result : bookmarksList } />
         </section>
     );
 };

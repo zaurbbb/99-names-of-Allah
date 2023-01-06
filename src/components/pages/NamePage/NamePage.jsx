@@ -8,8 +8,8 @@ import SnackbarWindow from '../../ui/windows/SnackbarWindow/SnackbarWindow';
 
 const NamePage = () => {
     const nameData = useNameData();
-
     const [openModal, setOpenModal] = useState(false);
+
     const handleOpenModal = () => setOpenModal(true);
     const handleCloseModal = () => setOpenModal(false);
 
