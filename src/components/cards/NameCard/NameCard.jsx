@@ -31,9 +31,12 @@ const NameCard = ({ name, item, id, nameArabic, shortMeaning }) => {
                     />
                 </div>
             </div>
-            <div className={css.MiddleElement}>
+            <Link
+                to={`/name/${id}`}
+                className={css.MiddleElement}
+            >
                 {currentMosque}
-            </div>
+            </Link>
 
             <Link
                 to={`/name/${id}`}
@@ -48,7 +51,7 @@ const NameCard = ({ name, item, id, nameArabic, shortMeaning }) => {
                         {shortMeaning}
                     </h5>
                 </div>
-                <div>
+                <div className={css.PlayIconDiv}>
                     <PlayIcon />
                 </div>
             </Link>

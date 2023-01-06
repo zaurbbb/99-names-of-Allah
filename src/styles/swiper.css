@@ -120,7 +120,7 @@
 @media (max-width: 576px) {
   .mySwiper {
     width: 100%;
-    padding: 2rem 0 3rem !important;
+    padding: 1rem 0 !important;
   }
   .swiper-wrapper {
     display: flex;
@@ -128,25 +128,8 @@
   .swiper-slide {
     padding: 0 !important;
   }
-  .swiper-slide-active {
-    transform: scale(1.2);
-    z-index: 2;
-  }
   .swiper-pagination {
     display: none;
-  }
-  .swiper-pagination-bullet {
-    width: 10px !important;
-    height: 10px !important;
-    margin: 0 6px !important;
-  }
-  .swiper-pagination-bullet-active {
-    width: 40px !important;
-  }
-}
-@media (max-width: 380px) {
-  .swiper-pagination-bullet-active {
-    width: 10px !important;
   }
 }
 

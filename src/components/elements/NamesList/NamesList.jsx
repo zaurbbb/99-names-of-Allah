@@ -16,20 +16,22 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { WindowWidthContext } from '../../../context';
 
-const NamesList = ({ result }) => {
+const   NamesList = ({ result }) => {
     const { windowWidth } = useContext(WindowWidthContext);
-
+    const sm = 576;
+    const xs = 380;
+    const isSmallDevice = windowWidth <= sm;
+    const isXSmallDevice = windowWidth <= xs;
     return (
         <Swiper
             pagination={true}
             modules={[Pagination]}
             className="mySwiper"
             loop={true}
-            slidesPerView={windowWidth && 2}
-
-            slidesPerGroup={windowWidth && 1}
-            centeredSlides={windowWidth && true}
-            spaceBetween={windowWidth && 40}
+            slidesPerView={isXSmallDevice ? 1 : isSmallDevice ? 2 : 1}
+            slidesPerGroup={1}
+            centeredSlides={true}
+            spaceBetween={10}
         >
             {result.map((collection, index) => (
                 <SwiperSlide key={index}>
@@ -50,7 +52,8 @@ const NamesList = ({ result }) => {
                             nameArabic={collection.nameArabic}
                             name={collection.name}
                             shortMeaning={collection.shortMeaning}
-                        />}
+                        />
+                    }
 
                 </SwiperSlide>
             ))}

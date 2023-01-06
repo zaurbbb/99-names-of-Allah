@@ -15,6 +15,7 @@
   h4, h5
     overflow-wrap: break-word
 
+
 .UpperElement
   @include flex(row, 0)
   @include flexAlignment(flex-start, space-between, center)
@@ -42,7 +43,7 @@
   background: white
   border: 1px solid rgba(0, 0, 0, 0.05)
   box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.05)
-  border-radius: 25px
+  border-radius: 20px
   height: 5rem
   padding: 0 0.8rem
   color: black
@@ -65,10 +66,23 @@
 
 @media (max-width: $xxl)
   .Block
-    width: 14rem!important
+    width: 14rem
+
+@media (max-width: $lg)
+  .Block
+    width: 12rem
 
 @media (max-width: $md)
   .MiddleElement
     img
       height: 4rem
 
+@media (max-width: $sm)
+  .Block
+    padding: 0.6rem
+  .LowerElement
+    @include grid(100%, auto, 0)
+    text-align: center
+    padding: 0 0.6rem
+    .PlayIconDiv
+      display: none

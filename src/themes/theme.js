@@ -67,49 +67,6 @@ export const theme = createTheme({
                     },
                     `,
         },
-        MuiOutlinedInput: {
-            styleOverrides: {
-                root: {
-                    display: 'flex',
-                    flexDirection: 'row',
-                    gap: '0.6rem',
-                    borderRadius: '1rem',
-                    width: '4.5rem',
-                    height: '2rem',
-                    padding: '0',
-                    backgroundColor: `${lightBlue}`,
-                    fontSize: '0.7rem',
-                    letterSpacing: '2px',
-                    color: 'white',
-                    [bk.breakpoints.down('xs')]: {
-                        height: '1.6rem',
-                        width: '3rem',
-                    },
-                    [bk.breakpoints.down('sm')]: {
-                        height: '1.8rem',
-                        width: '3.2rem',
-                    },
-                    'div': {
-                        display: 'flex',
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                        gap: '0.3rem',
-                        marginLeft: '-0.1rem',
-                        [bk.breakpoints.down('xs')]: {
-                            marginLeft: '-0.3rem',
-                        },
-                        [bk.breakpoints.down('sm')]: {
-                            marginLeft: '-0.2.5rem',
-                        },
-                    },
-                    '&:hover': {
-                        border: 'none',
-                        outline: 'none',
-                    }
-
-                },
-            },
-        },
         MuiList: {
             styleOverrides: {
                 root: {
@@ -171,6 +128,47 @@ export const theme = createTheme({
                 },
             },
         },
+        MuiOutlinedInput: {
+            styleOverrides: {
+                root: {
+                    display: 'flex',
+                    flexDirection: 'row',
+                    gap: '0.6rem',
+                    borderRadius: '1rem',
+                    width: '4.5rem',
+                    height: '2rem',
+                    padding: '0',
+                    backgroundColor: `${lightBlue}`,
+                    fontSize: '0.7rem',
+                    letterSpacing: '2px',
+                    color: 'white',
+                    [bk.breakpoints.down('xs')]: {
+                        height: '1.6rem',
+                        width: '3rem',
+                    },
+                    [bk.breakpoints.down('sm')]: {
+                        height: '1.8rem',
+                        width: '3.2rem',
+                    },
+                    'div': {
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        gap: '0.3rem',
+                        marginLeft: '-0.1rem',
+                        [bk.breakpoints.down('xs')]: {
+                            marginLeft: '-0.3rem',
+                        },
+                        [bk.breakpoints.down('sm')]: {
+                            marginLeft: '-0.2.5rem',
+                        },
+                    },
+                },
+                notchedOutline: {
+                    border: 'none',
+                }
+            },
+        },
         MuiInputBase: {
             styleOverrides: {
                 root: {
@@ -180,7 +178,9 @@ export const theme = createTheme({
                             display: 'none',
                         },
                     },
+                    // css-zv58lj-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root
                 },
+
             },
         },
         MuiPaper: {
@@ -205,7 +205,7 @@ export const theme = createTheme({
                     }
                 },
             }
-        }
+        },
     },
     typography: {
         'fontFamily': `GilroyRegular, sans-serif`,
