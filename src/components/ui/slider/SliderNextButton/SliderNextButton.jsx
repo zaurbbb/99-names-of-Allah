@@ -7,10 +7,9 @@ const SliderNextButton = () => {
 
     return (
         <div
+            className="swiper-button-next"
             onClick={() => swiper.slideNext()}
-        >
-            <div className="swiper-button-next"></div>
-        </div>
+        ></div>
     );
 }
 

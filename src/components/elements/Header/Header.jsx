@@ -1,9 +1,10 @@
 import React from 'react';
-import { useLocation } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
-import Navbar from "../Navbar/Navbar";
-import HeaderContent from "./HeaderContent";
-import { useShow } from "../../../hooks/useShow";
+import { useShow } from '../../../hooks/useShow';
+
+import Navbar from '../Navbar/Navbar';
+import HeaderContent from './HeaderContent';
 
 import css from './Header.module.sass';
 

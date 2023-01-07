@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { FormattedMessage } from "react-intl";
-import { Link } from "react-router-dom";
+import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router-dom';
 
-import { useMosque } from "../../../hooks/useMosque";
+import { useMosque } from '../../../hooks/useMosque';
 
-import CustomButton from "../../ui/custom/CustomButton/CustomButton";
+import CustomButton from '../../ui/custom/CustomButton/CustomButton';
 
-import css from "./TestCard.module.css";
+import css from './TestCard.module.css';
 
 const TestCard = ({value, id}) => {
     const currentMosque = useMosque(id-1);

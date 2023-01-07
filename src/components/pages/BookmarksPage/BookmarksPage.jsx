@@ -1,20 +1,20 @@
 import React, { useContext } from 'react';
-import {
-    BookmarksContext,
-    WindowWidthContext
-} from '../../../context';
+
+import { BookmarksContext } from '../../../context/bookmarks';
+import { WindowWidthContext } from '../../../context/windowWidth';
+
 import { useBookmarks } from '../../../hooks/useBookmarks';
-import NamesList from '../../elements/NamesList/NamesList';
 import { useChunks } from '../../../hooks/useChunks';
-import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
 import { Navigate } from 'react-router-dom';
 
-const BookmarksPage = () => {
+import NamesList from '../../elements/NamesList/NamesList';
+import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
 
-    let bookmarksList = [];
-    const getBookmarks = useBookmarks();
+const BookmarksPage = () => {
     const { bookmarks } = useContext(BookmarksContext);
     const { windowWidth } = useContext(WindowWidthContext);
+    let bookmarksList = [];
+    const getBookmarks = useBookmarks();
 
     for (let i = 0; i < getBookmarks.length; i++) {
         let item = localStorage.getItem('bookmarkItem' + getBookmarks[i]);

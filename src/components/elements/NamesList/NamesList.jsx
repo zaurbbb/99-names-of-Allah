@@ -1,37 +1,38 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 
-import { Pagination } from "swiper";
+import { Pagination } from 'swiper';
 import {
     Swiper,
     SwiperSlide
-} from "swiper/react";
+} from 'swiper/react';
 
-import "swiper/css/navigation";
+import { WindowWidthContext } from '../../../context/windowWidth';
 
-import NameCard from "../../cards/NameCard/NameCard";
-import SliderPrevButton from "../../ui/slider/SliderPrevButton/SliderPrevButton";
-import SliderNextButton from "../../ui/slider/SliderNextButton/SliderNextButton";
+import NameCard from '../../cards/NameCard/NameCard';
+import SliderPrevButton from '../../ui/slider/SliderPrevButton/SliderPrevButton';
+import SliderNextButton from '../../ui/slider/SliderNextButton/SliderNextButton';
 
-import "swiper/css";
-import "swiper/css/pagination";
-import { WindowWidthContext } from '../../../context';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import './swiper.sass';
 
-const   NamesList = ({ result }) => {
+
+const NamesList = ({ result }) => {
     const { windowWidth } = useContext(WindowWidthContext);
     const sm = 576;
-    const xs = 380;
     const isSmallDevice = windowWidth <= sm;
-    const isXSmallDevice = windowWidth <= xs;
+
     return (
         <Swiper
             pagination={true}
             modules={[Pagination]}
-            className="mySwiper"
+            className='mySwiper'
             loop={true}
-            slidesPerView={isXSmallDevice ? 1 : isSmallDevice ? 2 : 1}
+            slidesPerView={isSmallDevice ? 2 : 1}
             slidesPerGroup={1}
             centeredSlides={true}
-            spaceBetween={10}
+            spaceBetween={30}
         >
             {result.map((collection, index) => (
                 <SwiperSlide key={index}>

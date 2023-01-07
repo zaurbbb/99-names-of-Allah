@@ -2,7 +2,7 @@ import {
     useCallback,
     useContext
 } from 'react';
-import { BookmarksContext } from '../context';
+import { BookmarksContext } from '../context/bookmarks';
 
 export const useBookmarkName = () => {
     const { bookmarks, setBookmarks } = useContext(BookmarksContext);

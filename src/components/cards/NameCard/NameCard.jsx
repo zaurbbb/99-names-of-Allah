@@ -1,13 +1,15 @@
 import React, { useContext } from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import StarIcon from "../../ui/svg/StarIcon/StarIcon";
-import PlayIcon from "../../ui/svg/PlayIcon/PlayIcon";
+import { BookmarksContext } from '../../../context/bookmarks';
+
+import { useMosque } from '../../../hooks/useMosque';
+import { useBookmarkName } from '../../../hooks/useBookmarkName';
+
+import StarIcon from '../../ui/svg/StarIcon/StarIcon';
+import PlayIcon from '../../ui/svg/PlayIcon/PlayIcon';
 
 import css from './NameCard.module.sass'
-import { useMosque } from "../../../hooks/useMosque";
-import { useBookmarkName } from '../../../hooks/useBookmarkName';
-import { BookmarksContext } from '../../../context';
 
 const NameCard = ({ name, item, id, nameArabic, shortMeaning }) => {
     const currentMosque = useMosque(id - 1);

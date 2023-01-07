@@ -1,9 +1,11 @@
 import React from 'react';
-import { FormattedMessage } from "react-intl";
+
+import { Link } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
+
+import CustomButton from '../../ui/custom/CustomButton/CustomButton';
 
 import css from './UnavailablePage.module.sass'
-import CustomButton from "../../ui/custom/CustomButton/CustomButton";
-import { Link } from "react-router-dom";
 
 const UnavailablePage = () => {
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import css from './Header.module.sass'
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage } from 'react-intl';
 
 const HeaderContent = () => {
     return (

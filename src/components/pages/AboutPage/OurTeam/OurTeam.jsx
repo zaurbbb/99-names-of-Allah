@@ -1,8 +1,10 @@
 import React from 'react';
-import { FormattedMessage } from "react-intl";
+
 import { Box } from "@mui/material";
+import { FormattedMessage } from "react-intl";
 
 import css from "./OurTeam.module.sass"
+
 import Zaur from '../../../../assets/images/Zaur.webp';
 import Meruert from '../../../../assets/images/Meruert.webp';
 import Elaman from '../../../../assets/images/Elaman.webp';

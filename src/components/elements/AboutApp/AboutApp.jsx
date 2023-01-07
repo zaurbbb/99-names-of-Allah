@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage } from 'react-intl';
 
-import DownloadButton from "./DownloadButton/DownloadButton";
+import DownloadButton from './DownloadButton/DownloadButton';
 
 import css from './AboutApp.module.sass';
+
 import AppDemo from '../../../assets/images/appDemo.svg'
 import GooglePlayLogo from '../../../assets/icons/aboutApp/googlePlay.webp'
 import AppStoreLogo from '../../../assets/icons/aboutApp/appStore.webp'
@@ -22,15 +23,15 @@ const AboutApp = () => {
                 </h3>
                 <br />
                 <div className={css.ButtonsGroup}>
-                    <a href="https://play.google.com/store/apps/details?id=com.alimapps.allahnames">
+                    <a href='https://play.google.com/store/apps/details?id=com.alimapps.allahnames'>
                         <DownloadButton
-                            title="Google Play"
+                            title='Google Play'
                             logo={GooglePlayLogo}
                         />
                     </a>
-                    <a href="https://apps.apple.com/app/id1273554579">
+                    <a href='https://apps.apple.com/app/id1273554579'>
                         <DownloadButton
-                            title="App Store"
+                            title='App Store'
                             logo={AppStoreLogo}
                         />
                     </a>
@@ -39,7 +40,7 @@ const AboutApp = () => {
             <div className={css.ImgElement}>
                 <img
                     src={AppDemo}
-                    alt={"demonstration of app"}
+                    alt={'demonstration of app'}
                 />
             </div>
         </article>

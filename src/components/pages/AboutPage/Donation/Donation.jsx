@@ -1,9 +1,8 @@
 import React from 'react';
 
-import css from "./Donation.module.sass";
-
 import { FormattedMessage } from "react-intl";
 
+import css from "./Donation.module.sass";
 
 const Donation = () => {
     return (

@@ -1,10 +1,13 @@
 import React from 'react';
+
 import {
     FormControl,
     MenuItem,
     Select
 } from "@mui/material";
+
 import { LOCALES } from "../../../../i18n/locales";
+
 import FlagKZ from "../../../../assets/icons/navbar/flag_kz.svg";
 import FlagRU from "../../../../assets/icons/navbar/flag_ru.svg";
 import FlagTR from "../../../../assets/icons/navbar/flag_tr.svg";
@@ -33,7 +36,9 @@ const SelectLanguages = ({currentLocale, handleChange}) => {
                                 src={icon}
                                 alt={`flag of ${name}`}
                             />
-                            {name}
+                            <span>
+                                {name}
+                            </span>
                         </div>
                     </MenuItem>
                 ))}

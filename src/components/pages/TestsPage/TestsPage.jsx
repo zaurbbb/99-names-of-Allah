@@ -1,7 +1,7 @@
 import React from 'react';
 
-import TestsList from "./TestsList/TestsList";
-import CustomHeading from "../../ui/custom/CustomHeading/CustomHeading";
+import TestsList from './TestsList/TestsList';
+import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
 
 const TestsPage = () => {
     return (

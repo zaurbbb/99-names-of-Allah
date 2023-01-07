@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage } from 'react-intl';
 
 import css from './Footer.module.sass';
+
 import FooterLogo from '../../../assets/icons/footer/footer_logo.svg';
 import IconFacebook from '../../../assets/icons/footer/social_facebook.svg';
 import IconTwitter from '../../../assets/icons/footer/social_twitter.svg';
 import IconInstagram from '../../../assets/icons/footer/social_instagram.svg';
-import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -17,7 +18,7 @@ const Footer = () => {
                     <li>
                         <img
                             src={FooterLogo}
-                            alt="Footer Logo"
+                            alt='Footer Logo'
                         />
                         <FormattedMessage id='w.app_name' />
                     </li>
@@ -25,22 +26,22 @@ const Footer = () => {
                         <FormattedMessage id='w.footer_title' />
                     </li>
                     <li>
-                        <a href="https://ru-ru.facebook.com/">
+                        <a href='https://ru-ru.facebook.com/'>
                             <img
                                 src={IconFacebook}
-                                alt="Facebook Icon"
+                                alt='Facebook Icon'
                             />
                         </a>
-                        <a href="https://twitter.com/">
+                        <a href='https://twitter.com/'>
                             <img
                                 src={IconTwitter}
-                                alt="Twitter Icon"
+                                alt='Twitter Icon'
                             />
                         </a>
-                        <a href="https://www.instagram.com/">
+                        <a href='https://www.instagram.com/'>
                             <img
                                 src={IconInstagram}
-                                alt="Instagram Icon"
+                                alt='Instagram Icon'
                             />
                         </a>
                     </li>
@@ -70,12 +71,12 @@ const Footer = () => {
                         <FormattedMessage id='w.footer_apps' />
                     </li>
                     <li>
-                        <a href="https://play.google.com/store/apps/details?id=com.alimapps.allahnames">
+                        <a href='https://play.google.com/store/apps/details?id=com.alimapps.allahnames'>
                             <FormattedMessage id='w.footer_android' />
                         </a>
                     </li>
                     <li>
-                        <a href="https://apps.apple.com/app/id1273554579">
+                        <a href='https://apps.apple.com/app/id1273554579'>
                             <FormattedMessage id='w.footer_ios' />
                         </a>
                     </li>

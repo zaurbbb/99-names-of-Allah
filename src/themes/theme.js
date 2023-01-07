@@ -90,7 +90,7 @@ export const theme = createTheme({
                     transition: 'all .2s ease',
                     [bk.breakpoints.down('xs')]: {
                         height: '1rem',
-                        marginLeft: '-0.3rem',
+                        marginLeft: '-0.4rem',
                     },
                     [bk.breakpoints.down('sm')]: {
                         height: '1rem',
@@ -156,12 +156,17 @@ export const theme = createTheme({
                         alignItems: 'center',
                         gap: '0.3rem',
                         marginLeft: '-0.1rem',
-                        [bk.breakpoints.down('xs')]: {
-                            marginLeft: '-0.3rem',
-                        },
                         [bk.breakpoints.down('sm')]: {
                             marginLeft: '-0.2rem',
                         },
+                        [bk.breakpoints.down('xs')]: {
+                            marginLeft: '-0.3rem',
+                        },
+                        'span': {
+                            [bk.breakpoints.down('sm')]: {
+                                paddingTop: '2px'
+                            },
+                        }
                     },
                 },
                 notchedOutline: {

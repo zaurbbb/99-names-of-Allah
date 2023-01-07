@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import "./SectionLoader.sass"
+import './SectionLoader.sass'
 
 const SectionLoader = () => {
     return (
-        <div className="loaderBlock">
-            <div className="loader">
+        <div className='loaderBlock'>
+            <div className='loader'>
             </div>
         </div>
     );

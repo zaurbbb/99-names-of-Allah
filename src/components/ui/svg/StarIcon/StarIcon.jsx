@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Badge } from "@mui/material";
+import { Badge } from '@mui/material';
 
-import FilledStar from "./filledStar.svg";
-import UnfilledStar from "./unfilledStar.svg";
+import FilledStar from './filledStar.svg';
+import UnfilledStar from './unfilledStar.svg';
 
 const StarIcon = ({ variant, color, filled, onClick }) => {
     const icon = filled ? FilledStar : UnfilledStar;
@@ -15,7 +15,7 @@ const StarIcon = ({ variant, color, filled, onClick }) => {
         >
             <img
                 src={icon}
-                alt="star icon"
+                alt='star icon'
             />
         </Badge>
     );

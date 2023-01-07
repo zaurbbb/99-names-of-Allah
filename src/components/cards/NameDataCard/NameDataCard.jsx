@@ -1,21 +1,25 @@
 import React, { useContext } from 'react';
-import { FormattedMessage } from "react-intl";
-import { CopyToClipboard } from "react-copy-to-clipboard";
 import {
     Link,
     useParams
-} from "react-router-dom";
+} from 'react-router-dom';
 
-import StarIcon from "../../ui/svg/StarIcon/StarIcon";
-import Share from "../../ui/svg/ShareIcon/ShareIcon";
-import PlayIcon from "../../ui/svg/PlayIcon/PlayIcon";
+import { FormattedMessage } from 'react-intl';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-import css from "./NameDataCard.module.sass";
-import QuestionIcon from "../../../assets/icons/namePage/questionIcon.svg";
-import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
-import { BookmarksContext } from '../../../context';
+import { BookmarksContext } from '../../../context/bookmarks';
+
 import { useMosque } from '../../../hooks/useMosque';
 import { useBookmarkName } from '../../../hooks/useBookmarkName';
+
+import StarIcon from '../../ui/svg/StarIcon/StarIcon';
+import Share from '../../ui/svg/ShareIcon/ShareIcon';
+import PlayIcon from '../../ui/svg/PlayIcon/PlayIcon';
+import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
+
+import css from './NameDataCard.module.sass';
+
+import QuestionIcon from '../../../assets/icons/namePage/questionIcon.svg';
 
 const NameDataCard = ({ name, item, id, nameArabic, shortMeaning, meaning, zikrCount, handleClickSnackbar, handleOpenModal }) => {
     const { nameId } = useParams();
@@ -75,8 +79,8 @@ const NameDataCard = ({ name, item, id, nameArabic, shortMeaning, meaning, zikrC
                         <h3><FormattedMessage id='w.one_name_zikr_text1' /></h3>
                         <img
                             src={QuestionIcon}
-                            alt="question icon for opening modal window"
-                            style={{ float: "right" }}
+                            alt='question icon for opening modal window'
+                            style={{ float: 'right' }}
                             onClick={handleOpenModal}
                         />
                     </div>

@@ -1,15 +1,16 @@
 import React, { useContext } from 'react';
 
-import CustomHeading from "../../ui/custom/CustomHeading/CustomHeading";
-import NamesList from "../../elements/NamesList/NamesList";
-import StarIcon from "../../ui/svg/StarIcon/StarIcon";
-import { Link } from "react-router-dom";
-import {
-    BookmarksContext,
-    WindowWidthContext
-} from '../../../context';
+import { Link } from 'react-router-dom';
+
+import { BookmarksContext } from '../../../context/bookmarks';
+import { WindowWidthContext } from '../../../context/windowWidth';
+
 import { useNamesCollection } from '../../../hooks/useNamesCollection';
 import { useChunks } from '../../../hooks/useChunks';
+
+import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
+import NamesList from '../../elements/NamesList/NamesList';
+import StarIcon from '../../ui/svg/StarIcon/StarIcon';
 
 const MainPage = () => {
     const { bookmarks } = useContext(BookmarksContext);
@@ -23,14 +24,14 @@ const MainPage = () => {
                 {bookmarks.length !== 0 ?
                     <Link to='/bookmarks'>
                         <StarIcon
-                            variant="dot"
-                            color="success"
+                            variant='dot'
+                            color='success'
                             badgeContent={0}
                             filled={true}
                         />
                     </Link> : <StarIcon
-                        variant="dot"
-                        color="secondary"
+                        variant='dot'
+                        color='secondary'
                         filled={false}
                     />
                 }

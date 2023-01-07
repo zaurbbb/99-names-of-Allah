@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
-import css from './SearchBar.module.css'
-import SearchIconBlack from "../../../../../assets/icons/navbar/search_dark.svg";
-import { useNamesCollection } from "../../../../../hooks/useNamesCollection";
 import { useIntl } from 'react-intl';
+import { useNamesCollection } from "../../../../../hooks/useNamesCollection";
+
+import css from './SearchBar.module.css'
+
+import SearchIconBlack from "../../../../../assets/icons/navbar/search_dark.svg";
 
 const SearchBar = () => {
     const intl = useIntl();

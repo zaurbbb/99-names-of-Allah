@@ -1,9 +1,9 @@
 import React from 'react';
 
-import CustomHeading from "../../ui/custom/CustomHeading/CustomHeading";
-import Donation from "./Donation/Donation";
-import SourceApp from "./SourceApp/SourceApp";
-import OurTeam from "./OurTeam/OurTeam";
+import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
+import Donation from './Donation/Donation';
+import SourceApp from './SourceApp/SourceApp';
+import OurTeam from './OurTeam/OurTeam';
 
 const AboutPage = () => {
     return (

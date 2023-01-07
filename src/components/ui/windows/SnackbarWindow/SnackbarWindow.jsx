@@ -1,8 +1,10 @@
 import React from 'react';
+
 import {
     Alert,
     Snackbar
 } from "@mui/material";
+
 import { FormattedMessage } from "react-intl";
 
 const SnackbarWindow = ({ openSnackbar, handleCloseSnackbar }) => {

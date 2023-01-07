@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
-
 import {
     NavLink,
     useLocation
-} from "react-router-dom";
-import { FormattedMessage } from "react-intl";
-import { useShow } from "../../../hooks/useShow";
+} from 'react-router-dom';
+
+import { FormattedMessage } from 'react-intl';
+
+import { useShow } from '../../../hooks/useShow';
+
+import SelectLanguages from './SelectLanguages/SelectLanguages';
+import SearchModal from './SearchModal/SearchModal';
 
 import css from './Navbar.module.sass';
 
 import NavbarLogoIcon from '../../../assets/icons/navbar/navbar_logo.webp'
 import NavbarSearchIcon from '../../../assets/icons/navbar/search_light.webp'
-import SelectLanguages from "./SelectLanguages/SelectLanguages";
-import SearchModal from "./SearchModal/SearchModal";
 
 const Navbar = (props) => {
     const location = useLocation();
@@ -29,30 +31,30 @@ const Navbar = (props) => {
     return (
         <nav className={`${css.Block} ${isBgShown}`}>
             <div className={css.FirstColumn}>
-                <NavLink to="/">
+                <NavLink to='/'>
                     <img
                         src={NavbarLogoIcon}
-                        alt="Site Logo"
+                        alt='Site Logo'
                     />
                 </NavLink>
             </div>
             <div className={css.SecondColumn}>
                 <NavLink
-                    to="/"
+                    to='/'
                     className={isLinkActive}
                 >
                     <FormattedMessage id='w.header_main' />
                 </NavLink>
 
                 <NavLink
-                    to="/tests"
+                    to='/tests'
                     className={isLinkActive}
                 >
                     <FormattedMessage id='w.header_test' />
                 </NavLink>
 
                 <NavLink
-                    to="/about"
+                    to='/about'
                     className={isLinkActive}
                 >
                     <FormattedMessage id='w.header_about' />
@@ -61,7 +63,7 @@ const Navbar = (props) => {
             <div className={css.ThirdColumn}>
                 <img
                     src={NavbarSearchIcon}
-                    alt="NavbarSearchIcon"
+                    alt='NavbarSearchIcon'
                     onClick={handleOpen}
                 />
 

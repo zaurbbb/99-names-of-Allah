@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { FormattedMessage } from "react-intl";
 
 import BookCoverImg from "../../../ui/svg/BookCoverImg/BookCoverImg";

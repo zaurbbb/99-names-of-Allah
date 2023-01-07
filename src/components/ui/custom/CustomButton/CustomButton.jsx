@@ -1,7 +1,8 @@
 import React from 'react';
 
+import { FormattedMessage } from 'react-intl';
+
 import css from './CustomButton.module.sass';
-import { FormattedMessage } from "react-intl";
 
 const CustomButton = ({text, size, filled}) => {
     const filledStatus = filled ? css.Filled : css.Unfilled;
