@@ -13,7 +13,7 @@ import './styles/reset.css';
 import { LanguageProvider } from './context/language';
 import { BookmarksProvider } from './context/bookmarks';
 import { WindowWidthProvider } from './context/windowWidth';
-
+import { SnackbarProvider } from './context/snackbar';
 
 const App = React.lazy(() => import('./App.jsx'));
 
@@ -24,9 +24,11 @@ root.render(
             <LanguageProvider>
                 <BookmarksProvider>
                     <WindowWidthProvider>
-                        <Suspense fallback={<AppLoader />}>
-                            <App />
-                        </Suspense>
+                        <SnackbarProvider>
+                            <Suspense fallback={<AppLoader />}>
+                                <App />
+                            </Suspense>
+                        </SnackbarProvider>
                     </WindowWidthProvider>
                 </BookmarksProvider>
             </LanguageProvider>

@@ -26,6 +26,14 @@
   color: #00D2FF;
 }
 
+.BigButton {
+  padding: 1rem 2rem;
+}
+
+.RegularButton {
+  padding: 0.5rem 1.5rem;
+}
+
 .SmallButton {
   padding: 0.2rem 1rem;
 }

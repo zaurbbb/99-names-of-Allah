@@ -4,11 +4,14 @@ import { FormattedMessage } from 'react-intl';
 
 import css from './CustomButton.module.sass';
 
-const CustomButton = ({text, size, filled}) => {
+const CustomButton = ({ text, size, filled, onClick }) => {
     const filledStatus = filled ? css.Filled : css.Unfilled;
     const sizeStatus = size === 'big' ? css.BigButton : size === 'regular' ? css.RegularButton : css.SmallButton;
     return (
-        <button className={`${css.Button} ${filledStatus} ${sizeStatus}`}>
+        <button
+            onClick={onClick}
+            className={`${css.Button} ${filledStatus} ${sizeStatus}`}
+        >
             <FormattedMessage id={`w.${text}`} />
         </button>
     );

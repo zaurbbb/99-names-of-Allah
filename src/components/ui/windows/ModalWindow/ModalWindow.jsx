@@ -9,13 +9,11 @@ import css from './ModalWindow.module.sass';
 
 const ModalWindow = (props) => {
     return (
-        <Modal
-            {...props}
-            // aria-labelledby="modal-modal-title"
-            // aria-describedby="modal-modal-description"
-        >
+        <Modal {...props}>
+             {/*aria-labelledby="modal-modal-title"*/}
+             {/*aria-describedby="modal-modal-description"*/}
             <Box className={css.ModalContainer}>
-            {props.children}
+                {props.children}
             </Box>
         </Modal>
     );

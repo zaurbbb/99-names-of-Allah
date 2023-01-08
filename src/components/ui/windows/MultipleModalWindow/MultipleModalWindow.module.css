@@ -1,0 +1,29 @@
+.ModalContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 90%;
+  overflow: scroll;
+  max-width: 34rem;
+  border: none;
+  outline: none;
+}
+.ModalContainer::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@media (max-width: 992px) {
+  .ModalContainer {
+    max-width: 80%;
+    padding: 0.8rem;
+  }
+}
+@media (max-width: 576px) {
+  .ModalContainer {
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=MultipleModalWindow.module.css.map */

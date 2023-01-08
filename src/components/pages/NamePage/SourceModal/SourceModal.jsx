@@ -12,11 +12,8 @@ import ModalWindow from '../../../ui/windows/ModalWindow/ModalWindow';
 import css from './SourceModal.module.sass';
 
 const SourceModal = (props) => {
-
     return (
-        <ModalWindow
-            {...props}
-        >
+        <ModalWindow {...props}>
             <Box className={css.ModalContent}>
                 <Typography
                     variant='h6'

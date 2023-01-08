@@ -1,0 +1,50 @@
+.Block {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  align-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NameIndex {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #00D2FF;
+  width: 2rem;
+  height: 2rem;
+  border: 0.1rem solid #00D2FF;
+  border-radius: 1rem;
+}
+
+.Answers {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.Answers span:first-child {
+  font-size: 1rem;
+  font-family: "GilroySemibold", sans-serif;
+}
+.Answers span:nth-child(2) {
+  color: #797979;
+}
+.Answers span:last-child {
+  color: #21D238;
+}
+.Answers span:nth-child(2), .Answers span:last-child {
+  font-size: 0.694rem;
+}
+
+.AnswerStatus img {
+  width: 2rem;
+}
+
+/*# sourceMappingURL=QuestionResult.module.css.map */

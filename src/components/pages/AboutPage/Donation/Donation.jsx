@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage } from 'react-intl';
 
-import css from "./Donation.module.sass";
+import css from './Donation.module.sass';
 
 const Donation = () => {
     return (
@@ -20,7 +20,7 @@ const Donation = () => {
                 <h5><FormattedMessage id='w.about_page_donation_subtitle' /></h5>
             </div>
             <div className={css.ImgElement}>
-                <img src="https://i.ibb.co/pRM9Zjy/hangs-img.webp"  alt='pic'/>
+                <img src='https://i.ibb.co/pRM9Zjy/hangs-img.webp'  alt='pic'/>
             </div>
         </div>
     );

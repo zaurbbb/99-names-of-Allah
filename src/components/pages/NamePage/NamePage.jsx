@@ -1,30 +1,32 @@
-import React, { useState } from 'react';
+import React, {
+    useContext,
+    useState
+} from 'react';
+
+import { SnackbarContext } from '../../../context/snackbar';
 
 import { useNameData } from '../../../hooks/useNameData';
 
 import NameDataCard from '../../cards/NameDataCard/NameDataCard';
 import SourceModal from './SourceModal/SourceModal';
 import SnackbarWindow from '../../ui/windows/SnackbarWindow/SnackbarWindow';
+import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
+import { useParams } from 'react-router-dom';
 
 const NamePage = () => {
+    const { nameId } = useParams();
+    const { openSnackbar, handleClickSnackbar, handleCloseSnackbar } = useContext(SnackbarContext);
     const nameData = useNameData();
-    const [openModal, setOpenModal] = useState(false);
 
+    const [openModal, setOpenModal] = useState(false);
     const handleOpenModal = () => setOpenModal(true);
     const handleCloseModal = () => setOpenModal(false);
 
-    const [openSnackbar, setOpenSnackbar] = useState(false);
-    const handleClickSnackbar = () => {
-        setOpenSnackbar(true);
-    };
+    const headingMessage = `${nameId} имя — ${nameData.name}`;
 
-    const handleCloseSnackbar = (event, reason) => {
-        if (reason === 'clickaway') return;
-
-        setOpenSnackbar(false);
-    };
     return (
         <section>
+            <CustomHeading value={headingMessage} />
             <NameDataCard
                 key={nameData.id}
                 item={nameData}

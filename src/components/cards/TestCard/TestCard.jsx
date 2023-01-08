@@ -19,11 +19,12 @@ const TestCard = ({value, id}) => {
                 </h1>
                 <FormattedMessage id='w.the_most_beautiful_names_text' />
             </div>
+
             <div>
                 {currentMosque}
             </div>
 
-            <Link to={`/test/${id}`}>
+            <Link to={`/test/${value}`}>
                 <CustomButton
                     text='test_page_start_test'
                     size='small'

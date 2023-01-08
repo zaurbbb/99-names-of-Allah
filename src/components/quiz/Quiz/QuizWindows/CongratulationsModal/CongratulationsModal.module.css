@@ -1,0 +1,42 @@
+.ModalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: flex-end;
+  width: 20rem;
+  height: 24rem;
+  padding: 1rem 3rem;
+  background: #FAFAFA url("../../../../../assets/backgrounds/congratulationsModal_bg.svg") no-repeat top;
+  background-size: 20rem;
+  text-align: center;
+}
+.ModalContent h2, .ModalContent h4, .ModalContent h5 {
+  font-family: "GilroySemibold", sans-serif;
+  text-align: center;
+}
+.ModalContent h4 span {
+  color: #00D2FF;
+}
+.ModalContent div:last-child {
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .ModalContent {
+    width: 24rem;
+    height: 25rem;
+  }
+}
+@media (max-width: 768px) {
+  .ModalContent {
+    width: 30rem;
+    background-size: 100%;
+  }
+}
+@media (max-width: 380px) {
+  .ModalContent {
+    padding: 1rem;
+  }
+}
+
+/*# sourceMappingURL=CongratulationsModal.module.css.map */

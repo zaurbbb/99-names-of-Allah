@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["ModalWindow.module.sass"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EAEA;EACA;EAEA;EACA;EACA;EACA;;AACA;EACE;EACA;;;AAEJ;EACE;IACE;IACA","file":"ModalWindow.module.css"}
+{"version":3,"sourceRoot":"","sources":["ModalWindow.module.sass"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EAEA;EACA;EAEA;EACA;EAEA;EACA;EACA;EACA;;AAEA;EACE;EACA;;;AAEJ;EACE;IACE;IACA;;;AAEJ;EACE;IACE","file":"ModalWindow.module.css"}

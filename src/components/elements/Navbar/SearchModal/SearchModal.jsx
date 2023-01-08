@@ -3,11 +3,11 @@ import React from 'react';
 import {
     Box,
     Modal
-} from "@mui/material";
+} from '@mui/material';
 
-import SearchBar from "./SearchBar/SearchBar";
+import SearchBar from './SearchBar/SearchBar';
 
-import css from "../Navbar.module.sass";
+import css from '../Navbar.module.sass';
 
 const SearchModal = ({open, handleClose}) => {
 
@@ -15,9 +15,8 @@ const SearchModal = ({open, handleClose}) => {
         <Modal
             open={open}
             onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-
+            aria-labelledby='modal-modal-title'
+            aria-describedby='modal-modal-description'
         >
             <Box className={css.ModalContainer}>
                 <SearchBar />

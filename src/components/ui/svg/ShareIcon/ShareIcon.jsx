@@ -1,13 +1,32 @@
 import React from 'react';
 
-import ShareButton from './shareButton.svg';
+import css from './ShareIcon.module.sass';
 
-const ShareIcon = (props) => {
+import LightShareButton from './lightShareButton.svg';
+import DarkShareButton from './darkShareButton.svg';
+
+const ShareIcon = ({ onClick, color }) => {
+    let icon;
+    switch (color) {
+        case 'light': {
+            icon = LightShareButton;
+            break;
+        }
+        case 'dark': {
+            icon = DarkShareButton;
+            break;
+        }
+        default: {
+            icon = LightShareButton;
+        }
+    }
     return (
         <img
-            {...props}
-            src={ShareButton}
+            onClick={onClick}
+            src={icon}
             alt='icon'
+            className={css.ShareIcon}
+            style={{cursor: 'pointer'}}
         />
     );
 };

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage } from 'react-intl';
 
-import css from "./DownloadButton.module.sass"
+import css from './DownloadButton.module.sass'
 
 const DownloadButton = ({ title, logo }) => {
     return (
@@ -10,7 +10,7 @@ const DownloadButton = ({ title, logo }) => {
             <div>
                 <img
                     src={logo}
-                    alt="logo of store"
+                    alt='logo of store'
                 />
             </div>
             <div>

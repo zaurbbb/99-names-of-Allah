@@ -3,9 +3,9 @@ import React from 'react';
 import {
     Alert,
     Snackbar
-} from "@mui/material";
+} from '@mui/material';
 
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage } from 'react-intl';
 
 const SnackbarWindow = ({ openSnackbar, handleCloseSnackbar }) => {
 
@@ -17,9 +17,9 @@ const SnackbarWindow = ({ openSnackbar, handleCloseSnackbar }) => {
         >
             <Alert
                 onClose={handleCloseSnackbar}
-                severity="success"
+                severity='success'
             >
-                <FormattedMessage id='w.one_name_copy_to_clipboard' />
+                <FormattedMessage id='w.copy_to_clipboard' />
             </Alert>
         </Snackbar>
     );

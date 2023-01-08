@@ -1,0 +1,27 @@
+@import "../../../../variables"
+
+.ModalContainer
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  max-height: 90%
+  overflow: scroll
+
+  max-width: 34rem
+
+  border: none
+  outline: none
+
+  &::-webkit-scrollbar
+    width: 0
+    height: 0
+
+@media (max-width: $lg)
+  .ModalContainer
+    max-width: 80%
+    padding: 0.8rem
+
+@media (max-width: $sm)
+  .ModalContainer
+    max-width: 100%

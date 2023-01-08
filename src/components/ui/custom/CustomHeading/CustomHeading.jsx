@@ -4,11 +4,11 @@ import { FormattedMessage } from 'react-intl';
 
 import css from './CustomHeading.module.sass';
 
-const CustomHeading = ({ children, value }) => {
+const CustomHeading = ({ children, value, before }) => {
     return (
         <div className={css.Block}>
             <h1>
-                <FormattedMessage
+                {before} <FormattedMessage
                     id={value}
                     defaultMessage={value}
                 />

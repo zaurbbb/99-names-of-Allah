@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TestsList from './TestsList/TestsList';
+import TestsList from '../../elements/TestsList/TestsList';
 import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
 
 const TestsPage = () => {
@@ -8,7 +8,6 @@ const TestsPage = () => {
         <section>
             <CustomHeading value={'w.test_page_title'} />
             <TestsList />
-
         </section>
     );
 };

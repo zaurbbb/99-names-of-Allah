@@ -1,5 +1,5 @@
-import {createTheme} from '@mui/material';
-import GilroyBold from '../assets/fonts/Gilroy-SemiBold.ttf';
+import { createTheme } from '@mui/material';
+import GilroySemiBold from '../assets/fonts/Gilroy-SemiBold.ttf';
 
 const lightBlue = '#32B6CE';
 const bk = createTheme({
@@ -36,15 +36,15 @@ export const theme = createTheme({
         MuiTypography: {
             variants: [
                 {
-                    props: {variant: 'h6'},
+                    props: { variant: 'h6' },
                     style: {
                         textAlign: 'center',
-                        fontFamily: 'GilroyBold, sans-serif',
+                        fontFamily: 'GilroySemiBold, sans-serif',
 
                     },
                 },
                 {
-                    props: {variant: 'subtitle1'},
+                    props: { variant: 'subtitle1' },
                     style: {
                         lineHeight: '1rem',
                         fontWeight: '100',
@@ -58,11 +58,11 @@ export const theme = createTheme({
         MuiCssBaseline: {
             styleOverrides:
                 `@font-face {
-                        font-family: 'GilroyBold';
+                        font-family: 'GilroySemiBold';
                         font-style: normal;
                         font-display: swap;
                         font-weight: 400;
-                        src: local('GilroyBold'), local('GilroyBold'), url(${GilroyBold}) format('woff2');
+                        src: local('GilroySemiBold'), local('GilroySemiBold'), url(${GilroySemiBold}) format('woff2');
                         unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
                     },
                     `,
@@ -211,6 +211,14 @@ export const theme = createTheme({
                 },
             }
         },
+        MuiCircularProgress: {
+            styleOverrides: {
+                circle: {
+                    strokeLinejoin: 'round',
+                    // stroke: '#78bec7',
+                },
+            }
+        }
     },
     typography: {
         'fontFamily': `GilroyRegular, sans-serif`,
