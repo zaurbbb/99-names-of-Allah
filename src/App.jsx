@@ -9,7 +9,6 @@ import {
     ReactIntlErrorCode
 } from 'react-intl';
 
-
 import { BookmarksContext } from './context/bookmarks';
 import { LanguageContext } from './context/language';
 import { WindowWidthContext } from './context/windowWidth';
