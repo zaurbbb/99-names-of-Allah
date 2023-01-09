@@ -3,15 +3,13 @@ import React, { useContext } from 'react';
 import { QuizContext } from '../../../../context/quiz';
 
 import Question from './Question/Question';
+import ProgressBar from './ProgressBar/ProgressBar';
 
 const ShowQuestions = () => {
     const [quizState, dispatch] = useContext(QuizContext);
     return (
         <div>
-            <div className='score'>
-                Question {quizState.currentQuestionIndex + 1}
-                / {quizState.questions.length}
-            </div>
+            <ProgressBar />
             <Question
                 questions={quizState.questions}
             />
