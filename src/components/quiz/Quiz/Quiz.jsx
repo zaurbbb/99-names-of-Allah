@@ -7,12 +7,13 @@ import ShowQuestions from './ShowQuestions/ShowQuestions';
 import QuizWindows from './QuizWindows/QuizWindows';
 
 import './index.css';
+import css from './Quiz.module.sass';
 
 const Quiz = () => {
     const [quizState] = useContext(QuizContext);
 
     return (
-        <div className='quiz'>
+        <div className={css.QuizBlock}>
             {/*When quiz is finished*/}
             {quizState.showResults && <ShowResults />}
 

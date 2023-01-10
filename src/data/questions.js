@@ -49,45 +49,49 @@ const questions = [
     ],
     correctAnswer: "Святой",
   },
-  // {
-  //   question: "What does CSS stand for?",
-  //   nameIndex: 2,
-  //   incorrectAnswers: [
-  //     "Computer Style Sheets",
-  //     "Creative Style Sheets",
-  //     "Colorful Style Sheets",
-  //   ],
-  //   correctAnswer: "Cascading Style Sheets",
-  // },
-  // {
-  //   question:
-  //     "Where in an HTML document is the correct place to refer to an external style sheet?",
-  //   incorrectAnswers: [
-  //     "In the <body> section",
-  //     "At the end of the document",
-  //     "You can't refer to an external style sheet",
-  //   ],
-  //   correctAnswer: "In the <head> section",
-  // },
-  // {
-  //   question: "Which HTML tag is used to define an internal style sheet?",
-  //   incorrectAnswers: ["<script>", "<headStyle>", "<css>"],
-  //   correctAnswer: "<style>",
-  // },
-  // {
-  //   question: "Which HTML attribute is used to define inline styles?",
-  //   incorrectAnswers: ["class", "font", "styles"],
-  //   correctAnswer: "style",
-  // },
-  // {
-  //   question: "Which is the correct CSS syntax?",
-  //   incorrectAnswers: [
-  //     "{body:color=black;}",
-  //     "{body;color:black;}",
-  //     "body:color=black;",
-  //   ],
-  //   correctAnswer: "body {color: black;}",
-  // },
+  {
+    question: "What does CSS stand for?",
+    nameIndex: 6,
+    incorrectAnswers: [
+      "Computer Style Sheets",
+      "Creative Style Sheets",
+      "Colorful Style Sheets",
+    ],
+    correctAnswer: "Cascading Style Sheets",
+  },
+  {
+    question:
+      "Where in an HTML document is the correct place to refer to an external style sheet?",
+    nameIndex: 7,
+    incorrectAnswers: [
+      "In the <body> section",
+      "At the end of the document",
+      "You can't refer to an external style sheet",
+    ],
+    correctAnswer: "In the <head> section",
+  },
+  {
+    question: "Which HTML tag is used to define an internal style sheet?",
+    nameIndex: 8,
+    incorrectAnswers: ["<script>", "<headStyle>", "<css>"],
+    correctAnswer: "<style>",
+  },
+  {
+    question: "Which HTML attribute is used to define inline styles?",
+    nameIndex: 9,
+    incorrectAnswers: ["class", "font", "styles"],
+    correctAnswer: "style",
+  },
+  {
+    question: "Which is the correct CSS syntax?",
+    nameIndex: 10 ,
+    incorrectAnswers: [
+      "{body:color=black;}",
+      "{body;color:black;}",
+      "body:color=black;",
+    ],
+    correctAnswer: "body {color: black;}",
+  },
   // {
   //   question: "How do you insert a comment in a CSS file?",
   //   incorrectAnswers: [

@@ -6,7 +6,7 @@ import { kzWords } from './words/kzWords';
 import { ruWords } from './words/ruWords';
 import { trWords } from './words/trWords';
 
-// w - words, n- names
+// w - words, n - names
 export const messages = {
     [LOCALES.KAZAKH]: {
         w: kzWords,

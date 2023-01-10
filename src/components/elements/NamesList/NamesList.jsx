@@ -9,19 +9,16 @@ import {
 import { WindowWidthContext } from '../../../context/windowWidth';
 
 import NameCard from '../../cards/NameCard/NameCard';
-import SliderPrevButton from '../../ui/slider/SliderPrevButton/SliderPrevButton';
-import SliderNextButton from '../../ui/slider/SliderNextButton/SliderNextButton';
+import SliderPrevButton from '../../ui/sliders/SliderPrevButton/SliderPrevButton';
+import SliderNextButton from '../../ui/sliders/SliderNextButton/SliderNextButton';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './swiper.sass';
 
-
 const NamesList = ({ result }) => {
-    const { windowWidth } = useContext(WindowWidthContext);
-    const sm = 576;
-    const isSmallDevice = windowWidth <= sm;
+    const { isSmallDevice } = useContext(WindowWidthContext);
 
     return (
         <Swiper
@@ -29,14 +26,14 @@ const NamesList = ({ result }) => {
             modules={[Pagination]}
             className='mySwiper'
             loop={true}
-            slidesPerView={isSmallDevice ? 2 : 1}
+            slidesPerView={isSmallDevice ? 1 : 2}
             slidesPerGroup={1}
             centeredSlides={true}
             spaceBetween={30}
         >
             {result.map((collection, index) => (
                 <SwiperSlide key={index}>
-                    {windowWidth > 576 ?
+                    {isSmallDevice ?
                         collection.map(item => (
                             <NameCard
                                 key={item.id}

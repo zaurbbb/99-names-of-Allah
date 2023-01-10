@@ -7,8 +7,9 @@ export const WindowWidthContext = createContext(0);
 
 export const WindowWidthProvider = ({ children }) => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const isSmallDevice = windowWidth > 576;
 
-    return <WindowWidthContext.Provider value={{ windowWidth, setWindowWidth }}>
+    return <WindowWidthContext.Provider value={{ windowWidth, setWindowWidth, isSmallDevice }}>
         {children}
     </WindowWidthContext.Provider>
 }

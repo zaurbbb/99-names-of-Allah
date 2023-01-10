@@ -4,17 +4,19 @@ import { QuizContext } from '../../../../../context/quiz';
 
 import Answer from '../Answer/Answer';
 
+import css from './Question.module.sass';
+
 const Question = () => {
     const [quizState, dispatch] = useContext(QuizContext);
     const currentQuestion = quizState.questions[quizState.currentQuestionIndex];
-    console.log(quizState.answers);
+
     let clickCounter = 0;
     return (
-        <div>
-            <div className='question'>
+        <div className={css.QuestionBlock}>
+            <div className={css.NameBlock}>
                 {currentQuestion.question}
             </div>
-            <div className='answers'>
+            <div className={css.AnswersBlock}>
                 {quizState.answers.map((answer, index) => (
                     <Answer
                         key={index}

@@ -5,6 +5,8 @@
   align-content: flex-start;
   justify-content: center;
   align-items: center;
+  width: 75%;
+  margin: 0 auto;
   padding: 2rem;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 35px;

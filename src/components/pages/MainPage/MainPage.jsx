@@ -14,8 +14,8 @@ import StarIcon from '../../ui/svg/StarIcon/StarIcon';
 
 const MainPage = () => {
     const { bookmarks } = useContext(BookmarksContext);
-    const { windowWidth } = useContext(WindowWidthContext);
-    const namesCollection = useNamesCollection();
+    const { windowWidth, isSmallDevice } = useContext(WindowWidthContext);
+    const namesCollection = useNamesCollection( isSmallDevice ? undefined : 3);
     const result = useChunks(namesCollection, 9);
 
     return (
@@ -36,7 +36,7 @@ const MainPage = () => {
                     />
                 }
             </CustomHeading>
-            <NamesList result={windowWidth > 576 ? result : namesCollection} />
+            <NamesList result={isSmallDevice ? result : namesCollection} />
         </section>
     );
 };

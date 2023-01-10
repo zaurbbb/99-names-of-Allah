@@ -1,18 +1,20 @@
 import React from 'react';
 
-const Answer = ({ answerText, onSelectAnswer, index, correctAnswer, currentAnswer }) => {
+import css from './Answer.module.sass';
+
+const Answer = ({ answerText, onSelectAnswer, correctAnswer, currentAnswer }) => {
     const isCorrectAnswer = currentAnswer && answerText === correctAnswer;
     const isWrongAnswer = currentAnswer === answerText && currentAnswer !== correctAnswer;
-    const correctAnswerClass = isCorrectAnswer ? 'correct-answer': '';
-    const wrongAnswerClass = isWrongAnswer ? 'wrong-answer': '';
-    const disabledClass = currentAnswer ? 'disabled-answer' : '';
+    const correctAnswerClass = isCorrectAnswer ? css.CorrectAnswer : '';
+    const wrongAnswerClass = isWrongAnswer ? css.WrongAnswer : '';
+    const disabledClass = currentAnswer ? css.DisabledAnswer : '';
 
     return (
         <div
-            className={`answer ${correctAnswerClass} ${wrongAnswerClass} ${disabledClass}`}
+            className={`${css.AnswerBlock} ${correctAnswerClass} ${wrongAnswerClass} ${disabledClass}`}
             onClick={() => onSelectAnswer(answerText)}
         >
-            <div className='answer-text'>{answerText} <br/><br/></div>
+            <div className={css.AnswerText}>{answerText} <br/><br/></div>
         </div>
     );
 };
