@@ -5,10 +5,12 @@ import TestsPage from '../components/pages/TestsPage/TestsPage';
 import NamePage from '../components/pages/NamePage/NamePage';
 import BookmarksPage from '../components/pages/BookmarksPage/BookmarksPage';
 import UnavailablePage from '../components/pages/UnavailablePage/UnavailablePage';
+import AllNamesPage from '../components/pages/AllNamesPage/AllNamesPage';
 
 export const routes = [
     {path: '/', component: <MainPage/>},
     {path: '/bookmarks', component: <BookmarksPage/>},
+    {path: '/allNames', component: <AllNamesPage/>},
     {path: '/name/:nameId', component: <NamePage/>},
     {path: '/tests', component: <TestsPage/>},
     {path: '/test/:testId', component: <TestPage/>},

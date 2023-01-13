@@ -22,25 +22,15 @@
   align-items: center
   &[class~="swiper-slide-active"]
     z-index: 5
-    div
-      //background: #02001c
   &[class~="swiper-slide-prev"]
     z-index: 4
     transform: translateX(6%) scale(0.85)
-    div
-      //background: #21d238
   &[class~="swiper-slide-next"]
     z-index: 3
     transform: translateX(-6%) scale(0.85)
-    div
-      //background: #ea5fe8
     & + *
       transform: translateX(-16%) scale(0.75)
       z-index: 1
-      div
-        //background: #2f00ff
-
-
 
 .swiper-navigation-button, .swiper-pagination
   display: flex
@@ -109,8 +99,6 @@
     right: 0!important
 
 @media (max-width: $md)
-  .swiper-navigation-button
-    display: none!important
   .swiper-pagination
     @include flexAlignment(center, center, center)
     max-width: 100% !important
