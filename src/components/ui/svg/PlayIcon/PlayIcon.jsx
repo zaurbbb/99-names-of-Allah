@@ -1,11 +1,14 @@
 import React from 'react';
 
-import PlayBtn from './playButton.svg'
+import css from './PlayIcon.module.sass';
 
-const PlayIcon = () => {
+import PlayBtn from './playButton.svg';
+
+const PlayIcon = ({ reverse }) => {
     return (
         <img
             src={PlayBtn}
+            className={reverse && css.ReverseImg }
             alt='icon'
         />
     );

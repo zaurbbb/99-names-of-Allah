@@ -1,14 +1,17 @@
 import React from 'react';
 
-import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
+import { useNamesCollection } from '../../../hooks/useNamesCollection';
 
-import css from './AllNamesPage.module.sass';
+import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
+import AllNamesList from '../../list/AllNamesList/AllNamesList';
 
 const AllNamesPage = () => {
+    const namesCollection = useNamesCollection(99);
+
     return (
         <section>
-            <CustomHeading value='w.bookmarks_page_title'/>
-            {/*<NamesList result={windowWidth > 576 ? result : bookmarksList } />*/}
+            <CustomHeading value='w.bookmarks_page_title' />
+            <AllNamesList result={namesCollection}/>
         </section>
     );
 };

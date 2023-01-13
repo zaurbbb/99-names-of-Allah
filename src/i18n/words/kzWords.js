@@ -9,6 +9,7 @@ export const kzWords = {
     "header_main": "Басты бет",
     "header_test": "Тест",
     "header_about": "Біз туралы",
+    "header_allNames": "Есімдер тізімі",
 
     "search_button": "Іздеу",
     "search_input": "Алланың ең қасиетті 99 есімі",

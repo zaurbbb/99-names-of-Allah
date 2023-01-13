@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TestsList from '../../elements/TestsList/TestsList';
+import TestsList from '../../list/TestsList/TestsList';
 import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
 
 const TestsPage = () => {

@@ -1,8 +1,9 @@
-@import '../../../variables'
+@import "../variables"
 
-.mySwiper
+.swiper
   width: 100%
   padding: 1rem 0 4rem 0!important
+
 .swiper-slide
   display: -webkit-box
   display: -ms-flexbox
@@ -61,7 +62,6 @@
   background: #59DBF7
   z-index: 100!important
 
-
 .swiper-pagination
   @include flexAlignment(center, flex-start, center)
   left: 3rem!important
@@ -87,8 +87,6 @@
     right: 0!important
 
 @media (max-width: $md)
-  .swiper-navigation-button
-    display: none!important
   .swiper-pagination
     @include flexAlignment(center, center, center)
     max-width: 100% !important
@@ -100,6 +98,9 @@
     width: 60px!important
 
 @media (max-width: $sm)
+  .swiper
+    width: 100%
+    padding: 2rem 0!important
   .swiper-slide
     &::after
       box-shadow: none
@@ -132,9 +133,6 @@
     right: 0!important
     &:after
       right: 0!important
-  .mySwiper
-    width: 100%
-    padding: 2rem 0!important
   .swiper-wrapper
     display: flex
   .swiper-slide

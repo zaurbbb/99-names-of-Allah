@@ -9,6 +9,7 @@ export const ruWords = {
     "header_main": "Главная",
     "header_test": "Тест",
     "header_about": "О нас",
+    "header_allNames": "Список имён",
 
     "search_button": "Поиск",
     "search_input": "99 прекраснейших имен Аллаха...",

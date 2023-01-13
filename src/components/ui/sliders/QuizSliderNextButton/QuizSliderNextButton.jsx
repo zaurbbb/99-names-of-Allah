@@ -10,10 +10,10 @@ import { useSwiper } from 'swiper/react';
 const QuizSliderNextButton = () => {
     const [quizState, dispatch] = useContext(QuizContext);
     const swiper = useSwiper();
-    console.log(quizState.currentQuestionIndex)
+
     useEffect(() => {
         quizState.currentQuestionIndex !== 0 && swiper.slideNext();
-    }, [quizState.currentQuestionIndex]);
+    }, [quizState.currentQuestionIndex, swiper]);
 
     return (
         <div

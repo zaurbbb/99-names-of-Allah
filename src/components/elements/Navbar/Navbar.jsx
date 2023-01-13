@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, {
+    useContext,
+    useState
+} from 'react';
 import {
     NavLink,
     useLocation
 } from 'react-router-dom';
 
 import { FormattedMessage } from 'react-intl';
+
+import { WindowWidthContext } from '../../../context/windowWidth';
 
 import { useShow } from '../../../hooks/useShow';
 
@@ -17,6 +22,7 @@ import NavbarLogoIcon from '../../../assets/icons/navbar/navbar_logo.webp'
 import NavbarSearchIcon from '../../../assets/icons/navbar/search_light.webp'
 
 const Navbar = (props) => {
+    const { isSmallDevice } = useContext(WindowWidthContext)
     const location = useLocation();
     const isBgShown = useShow(location, css.InActiveBg, css.ActiveBg);
 
@@ -43,7 +49,12 @@ const Navbar = (props) => {
                     to='/'
                     className={isLinkActive}
                 >
-                    <FormattedMessage id='w.header_main' />
+                    {isSmallDevice ? <img
+                            src={NavbarLogoIcon}
+                            alt='Site Logo'
+                        /> :
+                        <FormattedMessage id='w.header_main' />
+                    }
                 </NavLink>
 
                 <NavLink
@@ -59,6 +70,15 @@ const Navbar = (props) => {
                 >
                     <FormattedMessage id='w.header_about' />
                 </NavLink>
+
+                {isSmallDevice &&
+                    <NavLink
+                        to='/allNames'
+                        className={isLinkActive}
+                    >
+                        <FormattedMessage id='w.header_allNames' />
+                    </NavLink>
+                }
             </div>
             <div className={css.ThirdColumn}>
                 <img

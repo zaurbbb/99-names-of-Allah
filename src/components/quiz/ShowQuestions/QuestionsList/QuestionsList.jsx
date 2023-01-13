@@ -21,7 +21,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/swiper-bundle.css';
-import './swiper.sass';
 
 const QuestionsList = () => {
     const [quizState] = useContext(QuizContext);

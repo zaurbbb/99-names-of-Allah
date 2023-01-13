@@ -1,4 +1,4 @@
-.mySwiper {
+.swiper {
   width: 100%;
   padding: 1rem 0 4rem 0 !important;
 }
@@ -99,9 +99,6 @@
   }
 }
 @media (max-width: 768px) {
-  .swiper-navigation-button {
-    display: none !important;
-  }
   .swiper-pagination {
     align-content: center;
     justify-content: center;
@@ -118,6 +115,10 @@
   }
 }
 @media (max-width: 576px) {
+  .swiper {
+    width: 100%;
+    padding: 2rem 0 !important;
+  }
   .swiper-slide::after {
     box-shadow: none;
     transition: all 1s ease-in-out;
@@ -159,10 +160,6 @@
   .swiper-button-next:after {
     right: 0 !important;
   }
-  .mySwiper {
-    width: 100%;
-    padding: 2rem 0 !important;
-  }
   .swiper-wrapper {
     display: flex;
   }
@@ -174,4 +171,4 @@
   }
 }
 
-/*# sourceMappingURL=swiper.css.map */
+/*# sourceMappingURL=namesSwiper.css.map */

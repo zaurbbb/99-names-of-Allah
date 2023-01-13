@@ -24,9 +24,6 @@ import Footer from './components/elements/Footer/Footer';
 import AboutApp from './components/elements/AboutApp/AboutApp';
 import SectionLoader from './components/ui/loaders/SectionLoader/SectionLoader';
 
-import './components/elements/NamesList/swiper.sass';
-import './styles/app.sass';
-
 const AppRouter = React.lazy(() => import('./AppRouter.jsx'));
 
 function App() {

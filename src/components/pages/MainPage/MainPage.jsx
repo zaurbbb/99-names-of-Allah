@@ -9,13 +9,13 @@ import { useNamesCollection } from '../../../hooks/useNamesCollection';
 import { useChunks } from '../../../hooks/useChunks';
 
 import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
-import NamesList from '../../elements/NamesList/NamesList';
+import NamesSwiperList from '../../list/NamesSwiperList/NamesSwiperList';
 import StarIcon from '../../ui/svg/StarIcon/StarIcon';
 
 const MainPage = () => {
     const { bookmarks } = useContext(BookmarksContext);
-    const { windowWidth, isSmallDevice } = useContext(WindowWidthContext);
-    const namesCollection = useNamesCollection( isSmallDevice ? undefined : 3);
+    const { isSmallDevice } = useContext(WindowWidthContext);
+    const namesCollection = useNamesCollection(isSmallDevice ? 3 : undefined);
     const result = useChunks(namesCollection, 9);
 
     return (
@@ -36,7 +36,7 @@ const MainPage = () => {
                     />
                 }
             </CustomHeading>
-            <NamesList result={isSmallDevice ? result : namesCollection} />
+            <NamesSwiperList result={isSmallDevice ? namesCollection : result} />
         </section>
     );
 };

@@ -21,8 +21,8 @@
 
 @media (max-width: 992px) {
   .ModalContainer {
-    max-width: 60%;
-    padding: 0.8rem;
+    max-width: 70%;
+    padding: 1rem;
   }
 }
 @media (max-width: 576px) {

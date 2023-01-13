@@ -6,13 +6,12 @@ import { WindowWidthContext } from '../../../context/windowWidth';
 import { useBookmarks } from '../../../hooks/useBookmarks';
 import { useChunks } from '../../../hooks/useChunks';
 import { Navigate } from 'react-router-dom';
-
-import NamesList from '../../elements/NamesList/NamesList';
 import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
+import BookmarksSwiperList from '../../list/BookmarksSwiperList/BookmarksSwiperList';
 
 const BookmarksPage = () => {
     const { bookmarks } = useContext(BookmarksContext);
-    const { windowWidth } = useContext(WindowWidthContext);
+    const { isSmallDevice } = useContext(WindowWidthContext);
     let bookmarksList = [];
     const getBookmarks = useBookmarks();
 
@@ -24,16 +23,19 @@ const BookmarksPage = () => {
             bookmarksList.push(JSON.parse(localStorage.getItem('bookmarkItem' + getBookmarks[i]) || ''));
         }
     }
-    const result = useChunks(bookmarksList, 3);
+    const result = useChunks(bookmarksList, isSmallDevice ? 4 : 9);
 
     if (bookmarks.length === 0) {
-        return <Navigate to='/' replace/>
+        return <Navigate
+            to='/'
+            replace
+        />
     }
 
     return (
         <section>
-            <CustomHeading value='w.bookmarks_page_title'/>
-            <NamesList result={windowWidth > 576 ? result : bookmarksList } />
+            <CustomHeading value='w.bookmarks_page_title' />
+            <BookmarksSwiperList result={isSmallDevice ? bookmarksList : result} />
         </section>
     );
 };

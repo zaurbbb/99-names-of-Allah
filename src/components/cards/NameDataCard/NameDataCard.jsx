@@ -1,10 +1,14 @@
 import React, { useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import {
+    Link,
+    useParams
+} from 'react-router-dom';
 
 import { FormattedMessage } from 'react-intl';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { BookmarksContext } from '../../../context/bookmarks';
+import { WindowWidthContext } from '../../../context/windowWidth';
 
 import { useMosque } from '../../../hooks/useMosque';
 import { useBookmarkName } from '../../../hooks/useBookmarkName';
@@ -32,7 +36,8 @@ const NameDataCard = ({
     const { bookmarks } = useContext(BookmarksContext);
     const { bookmarkName } = useBookmarkName();
     const currentMosque = useMosque(nameId - 1);
-
+    const nextNameId = +nameId === 99 ? 1 : +nameId + 1;
+    const prevNameId = +nameId === 1 ? 99 : +nameId - 1;
     const url = window.location.href;
 
 
@@ -55,15 +60,16 @@ const NameDataCard = ({
                 </div>
                 <div> {currentMosque} </div>
                 <div>
+                    <Link to={`/name/${prevNameId}`}>
+                        <PlayIcon reverse={true}/>
+                    </Link>
                     <div>
                         <h3>{name}</h3>
                         <h3>{shortMeaning}</h3>
                     </div>
-                    <div>
-                        {/*<Link to='/unavailable'>*/}
+                    <Link to={`/name/${nextNameId}`}>
                         <PlayIcon />
-                        {/*</Link>*/}
-                    </div>
+                    </Link>
                 </div>
             </div>
             <div className={css.MiddleCard}>

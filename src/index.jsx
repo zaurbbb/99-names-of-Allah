@@ -7,8 +7,10 @@ import { theme } from './themes/theme';
 
 import AppLoader from './components/ui/loaders/AppLoader/AppLoader';
 
-import './styles/index.css';
-import './styles/reset.css';
+import './styles/index.sass';
+import './styles/reset.sass';
+import './styles/app.sass';
+import './styles/swiper.sass';
 
 import { LanguageProvider } from './context/language';
 import { BookmarksProvider } from './context/bookmarks';
