@@ -20,6 +20,16 @@ Live demo: —
 - Responsive web design for all devices.
 - Internationalization. Support for Kazakh, Arabic and Turkish languages.
 
+
+## Tech Stack:
+
+- Viewing names, their meanings and the benefits of dhikr.
+- Passing tests on knowledge of the meanings of names.
+- Searching names and sharing a link to a name.
+- Ability to save names to bookmarks.
+- Responsive web design for all devices.
+- Internationalization. Support for Kazakh, Arabic and Turkish languages.
+
 ## Getting Started
 
 It's mandatory to install [NodeJS](https://nodejs.org/en/download/). After open the command line.

@@ -15,7 +15,7 @@ import StarIcon from '../../ui/svg/StarIcon/StarIcon';
 const MainPage = () => {
     const { bookmarks } = useContext(BookmarksContext);
     const { isSmallDevice } = useContext(WindowWidthContext);
-    const namesCollection = useNamesCollection(isSmallDevice ? 3 : undefined);
+    const namesCollection = useNamesCollection(0, isSmallDevice && 3);
     const result = useChunks(namesCollection, 9);
 
     return (
