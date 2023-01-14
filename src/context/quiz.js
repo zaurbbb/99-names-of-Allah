@@ -6,6 +6,8 @@ import {
 import questions from '../data/questions';
 import { shuffleAnswers } from '../helpers/shuffleAnswers';
 
+console.log(questions);
+
 export const QuizContext = createContext();
 
 const initialState = {
@@ -17,7 +19,6 @@ const initialState = {
     correctAnswersCount: 0,
     usersAnswers: [],
 };
-
 const reducer = (state, action) => {
     switch (action.type) {
         case 'SELECT_ANSWER': {

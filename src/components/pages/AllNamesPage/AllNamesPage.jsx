@@ -6,7 +6,7 @@ import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
 import AllNamesList from '../../lists/AllNamesList/AllNamesList';
 
 const AllNamesPage = () => {
-    const namesCollection = useNamesCollection(99);
+    const namesCollection = useNamesCollection(0, 99);
 
     return (
         <section>

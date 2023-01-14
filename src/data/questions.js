@@ -1,13 +1,13 @@
-const questions = [
+export const questions = [
   {
-    question: "Аллах",
-    nameIndex: 1,
-    incorrectAnswers: [
-      "Святой",
-      "Могучий",
-      "Сострадательный",
-    ],
-    correctAnswer: "Единый бог",
+      question: "Аллах",
+      nameIndex: 1,
+      incorrectAnswers: [
+          "Святой",
+          "Могучий",
+          "Сострадательный",
+      ],
+      correctAnswer: "Единый бог",
   },
   // {
   //   question: "Ар-Рахман",

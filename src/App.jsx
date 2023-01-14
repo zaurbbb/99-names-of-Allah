@@ -3,21 +3,22 @@ import React, {
     useContext,
     useEffect
 } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import {
     IntlProvider,
     ReactIntlErrorCode
 } from 'react-intl';
 
+import { useBookmarks } from './hooks/useBookmarks';
+
 import { BookmarksContext } from './context/bookmarks';
 import { LanguageContext } from './context/language';
 import { WindowWidthContext } from './context/windowWidth';
-import { messages } from './i18n/messages';
-import '@formatjs/intl-numberformat/locale-data/ru';
-import { ScrollToTop } from './helpers/scrollToTop';
-import { flattenMessages } from './helpers/flattenMessages';
 
-import { useBookmarks } from './hooks/useBookmarks';
+import { messages } from './i18n/messages';
+import { flattenMessages } from './helpers/flattenMessages';
+import '@formatjs/intl-numberformat/locale-data/ru';
 
 import Header from './components/elements/Header/Header';
 import Footer from './components/elements/Footer/Footer';
@@ -27,28 +28,33 @@ import SectionLoader from './components/ui/loaders/SectionLoader/SectionLoader';
 const AppRouter = React.lazy(() => import('./AppRouter.jsx'));
 
 function App() {
+    const routePath = useLocation();
+
     const { currentLocale, setCurrentLocale } = useContext(LanguageContext);
     const { setBookmarks } = useContext(BookmarksContext);
     const { setWindowWidth } = useContext(WindowWidthContext);
 
-
     const getBookmarks = useBookmarks();
-    // localStorage.clear();
+
     useEffect(() => {
+        // updates bookmarks
         if (getBookmarks !== 0) {
             setBookmarks([...getBookmarks])
         }
 
+        // updates windowWidth var in context
         function handleResize() {
             setWindowWidth(window.innerWidth)
         }
 
-        window.addEventListener('resize', handleResize);
+        // scrolls to the top
+        window.scrollTo(0, 0);
 
+        window.addEventListener('resize', handleResize);
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []);
+    }, [routePath]);
 
     const handleChange = ({ target: { value } }) => {
         setCurrentLocale(value);
@@ -83,7 +89,6 @@ function App() {
             </main>
 
             <Footer />
-            <ScrollToTop />
         </IntlProvider>
 
     );
