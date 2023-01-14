@@ -7,7 +7,7 @@
   overflow: hidden
 
 .questionsSwiper
-  width: 75%
+  width: 85%
   height: 24rem
 
   text-align: left
@@ -30,10 +30,22 @@
 .activeSlide, .inactiveSlide
   background: #ffffff!important
 
+@media (max-width: $lg)
+  .questionsSwiper
+    .swiper-slide
+      border-radius: 2rem
+
 @media (max-width: $md)
   .questionsSwiper
     width: 100%
+    height: 34rem
+    padding: 1rem 0 5rem 0!important
 
     text-align: center
     .swiper-slide
       border-radius: 2rem
+
+@media (max-width: $sm)
+  .questionsSwiper
+    height: 38rem
+    padding: 1rem 0 6rem 0!important

@@ -32,13 +32,13 @@ const QuestionsSwiperList = () => {
     const [quizState] = useContext(QuizContext);
     const effectValue = isTabletDevice ? null : 'cards';
 
+    // filling questions array with data
     const { testId } = useParams();
     const testObject = testList.find(object => object['value'] === testId);
     const allNamesCollection = useNamesCollection(99);
     const rangeNamesCollection = useNamesCollection(testObject.startIndex - 1, testObject.endIndex);
 
-    const questionsList = useGenerateQuestions(testId, allNamesCollection, rangeNamesCollection);
-    console.log(questionsList);
+    useGenerateQuestions(testId, allNamesCollection, rangeNamesCollection);
 
     return (
         <div className='swiperBlock'>

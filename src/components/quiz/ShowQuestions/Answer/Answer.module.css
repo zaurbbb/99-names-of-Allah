@@ -5,25 +5,18 @@
   align-items: center;
   height: 4rem;
   width: 48%;
-  margin-bottom: 30px;
-  padding: 0 1rem;
+  padding: 0 2rem;
   position: relative;
   font-size: 1rem;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 35px;
   cursor: pointer;
+  font-family: "GilroyLight", sans-serif;
+  font-weight: 600;
 }
 .AnswerBlock:nth-child(3), .AnswerBlock:nth-child(4) {
   margin-bottom: 0;
-}
-
-.Variant {
-  font-family: "GilroyLight", sans-serif;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  margin-left: 15px;
 }
 
 .CorrectAnswer {
@@ -38,8 +31,20 @@
   pointer-events: none;
 }
 
+@media (max-width: 992px) {
+  .AnswerBlock {
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    border-radius: 20px;
+    text-align: center;
+  }
+}
 @media (max-width: 768px) {
   .AnswerBlock {
+    width: 100%;
+    padding: 0 1rem;
     border-radius: 20px;
   }
 }

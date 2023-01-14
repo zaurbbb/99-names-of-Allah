@@ -19,13 +19,24 @@
 .AnswersBlock {
   display: flex;
   flex-wrap: wrap;
+  row-gap: 1rem;
   justify-content: space-between;
 }
 
+@media (max-width: 1200px) {
+  .QuestionBlock {
+    padding: 0 1rem;
+  }
+}
 @media (max-width: 768px) {
   .QuestionBlock {
     width: 100%;
     padding: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .AnswersBlock {
+    justify-content: space-between;
   }
 }
 

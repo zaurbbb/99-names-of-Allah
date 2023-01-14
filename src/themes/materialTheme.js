@@ -72,7 +72,7 @@ export const materialTheme = createTheme({
         MuiMenu: {
             styleOverrides: {
                 paper: {
-                    borderRadius: '25px',
+                    borderRadius: '35px',
                     [bk.breakpoints.down('sm')]: {
                         borderRadius: '15px',
                     },
@@ -194,8 +194,10 @@ export const materialTheme = createTheme({
             styleOverrides: {
                 root: {
                     backgroundColor: `${lightBlue}`,
+                    borderRadius: '50px',
                     'div': {
                         alignItems: 'center',
+                        // css-ohtw-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper
                     },
                 },
             },

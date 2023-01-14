@@ -15,7 +15,12 @@ export const useGenerateQuestions = (testId, allNamesCollection, rangeNamesColle
         let arr = [];
         while (arr.length < 3) {
             let randomizedIndex = Math.floor(Math.random() * allNamesCollection.length);
-            if (randomizedIndex !== correctAnswerIndex) {
+            if (
+                randomizedIndex !== correctAnswerIndex ||
+                randomizedIndex !== arr[0] ||
+                randomizedIndex !== arr[1] ||
+                randomizedIndex !== arr[2]
+            ) {
                 arr.push(randomizedIndex);
             }
         }
@@ -31,8 +36,5 @@ export const useGenerateQuestions = (testId, allNamesCollection, rangeNamesColle
             incorrectAnswers: randomShortMeanings(allNamesCollection, elem.id)
         })
     });
-    console.log(questions);
-
-    return questions;
 }
 

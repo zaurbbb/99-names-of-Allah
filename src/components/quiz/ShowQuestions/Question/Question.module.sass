@@ -15,9 +15,19 @@
 .AnswersBlock
   display: flex
   flex-wrap: wrap
+  row-gap: 1rem
   justify-content: space-between
+
+@media (max-width: $xl)
+  .QuestionBlock
+    padding: 0 1rem
 
 @media (max-width: $md)
   .QuestionBlock
     width: 100%
     padding: 1rem
+
+@media (max-width: $sm)
+  .AnswersBlock
+    //@include flex(column, 1rem  )
+    justify-content: space-between

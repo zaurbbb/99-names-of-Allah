@@ -14,7 +14,6 @@ const Answer = ({ answerText, onSelectAnswer, correctAnswer, currentAnswer }) =>
             className={`${css.AnswerBlock} ${correctAnswerClass} ${wrongAnswerClass} ${disabledClass}`}
             onClick={() => onSelectAnswer(answerText)}
         >
-            {/*<input type='radio' />*/}
             {answerText}
         </div>
     );
