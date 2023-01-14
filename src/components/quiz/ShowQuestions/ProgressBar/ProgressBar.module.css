@@ -11,11 +11,12 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 35px;
   background: #FAFAFA;
-  font-family: "GilroySemibold", sans-serif;
+  font-family: "GilroySemiBold", sans-serif;
   color: #59DBF7;
 }
-.CurrentQuestion .swiper {
-  background: black !important;
+.CurrentQuestion h1 {
+  font-family: "GilroyBold", sans-serif;
+  font-size: 1.8rem;
 }
 
 .ProgressBarOuter {
@@ -36,6 +37,12 @@
   border-radius: 15px;
   background: #59DBF7;
   transition: width 0.2s;
+}
+
+@media (max-width: 768px) {
+  .CurrentQuestion {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=ProgressBar.module.css.map */

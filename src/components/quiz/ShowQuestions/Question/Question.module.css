@@ -1,23 +1,32 @@
 .QuestionBlock {
-  background: #F7F6F6;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 100px;
-  width: 160rem;
-  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 3rem;
 }
 
-.NameBlock {
+.NameText {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   text-align: center;
-  font-size: 1.728rem;
-  font-family: "GilroySemibold", sans-serif;
+  font-size: 2rem;
+  font-family: "GilroyBold", sans-serif;
+  font-weight: 900;
 }
 
 .AnswersBlock {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .QuestionBlock {
+    width: 100%;
+    padding: 1rem;
+  }
 }
 
 /*# sourceMappingURL=Question.module.css.map */

@@ -10,7 +10,7 @@ import css from './Header.module.sass';
 
 const Header = (props) => {
     const location = useLocation();
-    const isBgShown = useShow(location, css.ActiveBg, css.InActiveBg);
+    const isBgShown = useShow(location, css.ActiveBg, css.InactiveBg);
     const isHeaderContentShown = useShow(location, <HeaderContent />, '');
 
     return (

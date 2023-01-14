@@ -13,9 +13,8 @@ const Question = () => {
     let clickCounter = 0;
     return (
         <div className={css.QuestionBlock}>
-            <div className={css.NameBlock}>
-                {currentQuestion.question}
-            </div>
+            <span className={css.NameText}>الله</span>
+            <span className={css.NameText}>{currentQuestion.question}</span>
             <div className={css.AnswersBlock}>
                 {quizState.answers.map((answer, index) => (
                     <Answer
@@ -25,7 +24,10 @@ const Question = () => {
                         correctAnswer={currentQuestion.correctAnswer}
                         currentAnswer={quizState.currentAnswer}
                         onSelectAnswer={answerText => {
-                            clickCounter === 0 ? dispatch({ type: 'SELECT_ANSWER', payload: answerText }) : clickCounter++;
+                            clickCounter === 0 ? dispatch({
+                                type: 'SELECT_ANSWER',
+                                payload: answerText
+                            }) : clickCounter++;
                         }}
                     />
                 ))}

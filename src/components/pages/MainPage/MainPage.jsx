@@ -9,7 +9,7 @@ import { useNamesCollection } from '../../../hooks/useNamesCollection';
 import { useChunks } from '../../../hooks/useChunks';
 
 import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
-import NamesSwiperList from '../../list/NamesSwiperList/NamesSwiperList';
+import NamesSwiperList from '../../lists/NamesSwiperList/NamesSwiperList';
 import StarIcon from '../../ui/svg/StarIcon/StarIcon';
 
 const MainPage = () => {

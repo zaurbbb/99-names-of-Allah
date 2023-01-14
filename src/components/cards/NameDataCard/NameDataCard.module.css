@@ -48,7 +48,7 @@
   align-items: flex-start;
 }
 .UpperCard div:last-child div h3:first-child {
-  font-family: "GilroySemibold", sans-serif;
+  font-family: "GilroySemiBold", sans-serif;
   font-weight: 100;
 }
 .UpperCard div:last-child div h3:last-child {
@@ -73,7 +73,7 @@
 }
 .MiddleCard div h3, .MiddleCard div .zikrCount, .LowerCard div h3, .LowerCard div .zikrCount {
   color: #00D2FF;
-  font-family: "GilroySemibold", sans-serif;
+  font-family: "GilroySemiBold", sans-serif;
   font-weight: 100;
   text-align: center;
 }
@@ -82,7 +82,7 @@
   font-weight: 400;
 }
 .MiddleCard div h4 .zikrCount, .LowerCard div h4 .zikrCount {
-  font-family: "GilroySemibold", sans-serif;
+  font-family: "GilroySemiBold", sans-serif;
   font-weight: 100;
   font-size: 1.44rem;
 }

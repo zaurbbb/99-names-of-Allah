@@ -1,0 +1,39 @@
+@import '../../../variables'
+
+.swiperBlock
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+
+.questionsSwiper
+  width: 75%
+  height: 24rem
+
+  text-align: right
+  .swiper-slide
+    display: flex
+    align-items: center
+    justify-content: center
+
+    border: 1px solid rgba(255, 255, 255, 0.2)
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1)
+    border-radius: 100px
+
+    background: #ffffff!important
+
+    font-size: 22px
+    font-weight: bold
+    &-active
+      background: #F7F6F6!important
+
+.activeSlide, .inactiveSlide
+  background: #ffffff!important
+
+@media (max-width: $md)
+  .questionsSwiper
+    width: 100%
+
+    text-align: center
+    .swiper-slide
+      border-radius: 2rem

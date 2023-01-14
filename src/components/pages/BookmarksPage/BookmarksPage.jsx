@@ -7,7 +7,7 @@ import { useBookmarks } from '../../../hooks/useBookmarks';
 import { useChunks } from '../../../hooks/useChunks';
 import { Navigate } from 'react-router-dom';
 import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
-import BookmarksSwiperList from '../../list/BookmarksSwiperList/BookmarksSwiperList';
+import BookmarksSwiperList from '../../lists/BookmarksSwiperList/BookmarksSwiperList';
 
 const BookmarksPage = () => {
     const { bookmarks } = useContext(BookmarksContext);

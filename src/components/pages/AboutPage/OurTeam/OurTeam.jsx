@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box } from "@mui/material";
-import { FormattedMessage } from "react-intl";
+import { Box } from '@mui/material';
+import { FormattedMessage } from 'react-intl';
 
 import {list} from '../../../../data/ourTeam';
 

@@ -5,32 +5,34 @@ import {
 } from 'react-router-dom';
 
 import { Box } from '@mui/material';
+import {
+    CssVarsProvider,
+    StyledEngineProvider
+} from '@mui/joy/styles';
 import { FormattedMessage } from 'react-intl';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { QuizContext } from '../../../../context/quiz';
-import { SnackbarContext } from '../../../../context/snackbar';
+
+import { joyTheme } from '../../../../themes/joyTheme';
 
 import MultipleModalWindow from '../../../ui/windows/MultipleModalWindow/MultipleModalWindow';
-import ShareIcon from '../../../ui/svg/ShareIcon/ShareIcon';
 import CircularResults from './CircularResults/CircularResults';
 import CustomButton from '../../../ui/custom/CustomButton/CustomButton';
+import QuestionResult from './AnswersResult/AnswersResult';
+import ShareUrl from '../../../elements/ShareUrl/ShareUrl';
 
 import css from './ResultsModal.module.sass';
-import QuestionResult from './AnswersResult/AnswersResult';
 
 const ResultsModal = (props) => {
     const [quizState, dispatch] = useContext(QuizContext);
-    const { handleClickSnackbar } = useContext(SnackbarContext);
+
     const { testId } = useParams();
     const navigate = useNavigate();
-    const url = window.location.href;
 
     function handleCloseModal() {
         props.onClose();
         navigate('/tests');
     }
-
     function handleRestartTest() {
         props.onClose();
         dispatch({ type: 'RESTART' });
@@ -47,16 +49,15 @@ const ResultsModal = (props) => {
                         </span>
                     </div>
                     <div>
-                        <CopyToClipboard text={url}>
-                            <ShareIcon
-                                onClick={handleClickSnackbar}
-                                color='dark'
-                            />
-                        </CopyToClipboard>
+                        <ShareUrl iconColor='dark'/>
                     </div>
                 </div>
                 <div className={css.LowerOverviewBlock}>
-                    <CircularResults />
+                    <StyledEngineProvider injectFirst>
+                        <CssVarsProvider theme={joyTheme}>
+                            <CircularResults />
+                        </CssVarsProvider>
+                    </StyledEngineProvider>
                     <div>
                         <FormattedMessage id='w.test_results_right_answers1' />
                         {quizState.correctAnswersCount}
@@ -67,7 +68,10 @@ const ResultsModal = (props) => {
 
             <Box className={`${css.ModalContent} ${css.ListBlock}`}>
                 {quizState.usersAnswers.map((obj, index) =>
-                    <QuestionResult key={index} obj={obj} />
+                    <QuestionResult
+                        key={index}
+                        obj={obj}
+                    />
                 )}
             </Box>
 

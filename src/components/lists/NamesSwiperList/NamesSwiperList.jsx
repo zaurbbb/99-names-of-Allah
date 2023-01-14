@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 
-import { Pagination } from 'swiper';
+import {
+    Pagination,
+    Keyboard
+} from 'swiper';
 import {
     Swiper,
     SwiperSlide
@@ -11,10 +14,12 @@ import { WindowWidthContext } from '../../../context/windowWidth';
 import NameCard from '../../cards/NameCard/NameCard';
 import SliderPrevButton from '../../ui/sliders/SliderPrevButton/SliderPrevButton';
 import SliderNextButton from '../../ui/sliders/SliderNextButton/SliderNextButton';
+import ShowMoreCard from '../../cards/ShowMoreCard/ShowMoreCard';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+
 import './namesSwiper.sass';
 
 const NamesSwiperList = ({ result }) => {
@@ -22,8 +27,9 @@ const NamesSwiperList = ({ result }) => {
 
     return (
         <Swiper
-            pagination={true}
-            modules={[Pagination]}
+            modules={[Pagination, Keyboard]}
+            pagination={{ clickable: true }}
+            keyboard={{ enabled: true }}
             className='namesSwiper'
             loop={true}
             slidesPerView={isSmallDevice ? 2 : 1}
@@ -57,13 +63,13 @@ const NamesSwiperList = ({ result }) => {
             ))}
             {isSmallDevice &&
                 <SwiperSlide>
-                    <NameCard
-                        key={"item.id"}
-                        item={"item"}
-                        id={"item.id"}
-                        nameArabic={"item.nameArabic"}
-                        name={"item.name"}
-                        shortMeaning={"item.shortMeaning"}
+                    <ShowMoreCard
+                        key={'item.id'}
+                        item={'item'}
+                        id={'item.id'}
+                        nameArabic={'item.nameArabic'}
+                        name={'item.name'}
+                        shortMeaning={'item.shortMeaning'}
                     />
                 </SwiperSlide>
             }

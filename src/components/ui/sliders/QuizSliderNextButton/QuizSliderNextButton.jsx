@@ -6,6 +6,7 @@ import React, {
 import { QuizContext } from '../../../../context/quiz';
 
 import { useSwiper } from 'swiper/react';
+import CustomButton from '../../custom/CustomButton/CustomButton';
 
 const QuizSliderNextButton = () => {
     const [quizState, dispatch] = useContext(QuizContext);
@@ -16,10 +17,13 @@ const QuizSliderNextButton = () => {
     }, [quizState.currentQuestionIndex, swiper]);
 
     return (
-        <div
-            className="swiper-button-next"
+        <CustomButton
+            text='test_next_question'
+            size='regular'
+            filled={true}
+            style={{margin: '0 auto'}}
             onClick={() => quizState.currentAnswer !== '' && dispatch({ type: 'NEXT_QUESTION' })}
-        ></div>
+        />
     );
 }
 

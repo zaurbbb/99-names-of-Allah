@@ -33,10 +33,12 @@ const QuizWindows = () => {
                 onClose={handleCloseCongratulationsModal}
                 openResults={handleOpenResultsModal}
             />
+
             <ResultsModal
                 open={openResultsModal}
                 onClose={handleCloseResultsModal}
             />
+
             <SnackbarWindow
                 openSnackbar={openSnackbar}
                 handleCloseSnackbar={handleCloseSnackbar}

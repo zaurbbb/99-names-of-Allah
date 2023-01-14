@@ -9,7 +9,7 @@
   text-align: center;
 }
 .ModalContent h2, .ModalContent h3, .ModalContent h4, .ModalContent h5 {
-  font-family: "GilroySemibold", sans-serif;
+  font-family: "GilroySemiBold", sans-serif;
   text-align: center;
 }
 .ModalContent h4 span {
@@ -35,7 +35,7 @@
   align-items: flex-end;
 }
 .UpperOverviewBlock p {
-  font-family: "GilroySemibold", sans-serif;
+  font-family: "GilroySemiBold", sans-serif;
   font-size: 1.4rem;
   margin-bottom: 10px;
 }
@@ -64,7 +64,7 @@
 }
 .LowerOverviewBlock > div:nth-child(2) {
   padding: 0 12px;
-  font-family: "GilroySemibold", sans-serif;
+  font-family: "GilroySemiBold", sans-serif;
   line-height: 150%;
 }
 

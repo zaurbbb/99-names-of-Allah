@@ -2,9 +2,11 @@ import { createTheme } from '@mui/material';
 import GilroySemiBold from '../assets/fonts/Gilroy-SemiBold.ttf';
 
 const lightBlue = '#32B6CE';
+
 const bk = createTheme({
     breakpoints: {
         values: {
+            xxs: 280,
             xs: 380,
             sm: 576,
             md: 768,
@@ -13,16 +15,8 @@ const bk = createTheme({
         },
     },
 });
-export const theme = createTheme({
-    breakpoints: {
-        values: {
-            xs: 380,
-            sm: 576,
-            md: 768,
-            lg: 992,
-            xl: 1200,
-        },
-    },
+
+export const materialTheme = createTheme({
     palette: {
         primary: {
             light: '#89ECFF',
@@ -65,7 +59,7 @@ export const theme = createTheme({
                         src: local('GilroySemiBold'), local('GilroySemiBold'), url(${GilroySemiBold}) format('woff2');
                         unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
                     },
-                    `,
+                `,
         },
         MuiList: {
             styleOverrides: {
@@ -74,6 +68,16 @@ export const theme = createTheme({
                     marginRight: '-2rem',
                 },
             },
+        },
+        MuiMenu: {
+            styleOverrides: {
+                paper: {
+                    borderRadius: '25px',
+                    [bk.breakpoints.down('sm')]: {
+                        borderRadius: '15px',
+                    },
+                }
+            }
         },
         MuiMenuItem: {
             styleOverrides: {
@@ -93,11 +97,7 @@ export const theme = createTheme({
                         marginLeft: '-0.4rem',
                     },
                     [bk.breakpoints.down('sm')]: {
-                        height: '1rem',
                         marginLeft: '-0.2rem',
-                    },
-                    [bk.breakpoints.down('sm')]: {
-                        height: '1rem',
                     },
                     '&:hover': {
                         border: 'none',
@@ -162,6 +162,9 @@ export const theme = createTheme({
                         [bk.breakpoints.down('xs')]: {
                             marginLeft: '-0.3rem',
                         },
+                        [bk.breakpoints.down('xxs')]: {
+                            marginLeft: '-0.4rem',
+                        },
                         'span': {
                             [bk.breakpoints.down('sm')]: {
                                 paddingTop: '2px'
@@ -183,7 +186,6 @@ export const theme = createTheme({
                             display: 'none',
                         },
                     },
-                    // css-zv58lj-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root
                 },
 
             },
@@ -192,10 +194,6 @@ export const theme = createTheme({
             styleOverrides: {
                 root: {
                     backgroundColor: `${lightBlue}`,
-                    borderRadius: '25px',
-                    [bk.breakpoints.down('sm')]: {
-                        borderRadius: '15px',
-                    },
                     'div': {
                         alignItems: 'center',
                     },
@@ -215,8 +213,26 @@ export const theme = createTheme({
             styleOverrides: {
                 circle: {
                     strokeLinejoin: 'round',
-                    // stroke: '#78bec7',
                 },
+            }
+        },
+        MuiDrawer: {
+            styleOverrides: {
+                paper: {
+                    background: 'linear-gradient(#6A5FEA, #B471E8)',
+                    borderRadius: '0',
+                    width: '40%'
+                }
+            }
+        },
+        MuiAlert: {
+            styleOverrides: {
+                root: {
+                    borderRadius: '2rem',
+                },
+                message: {
+                    textAlign: 'center',
+                }
             }
         }
     },

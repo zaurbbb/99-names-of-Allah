@@ -1,12 +1,12 @@
 import React from 'react';
 import ProgressBar from './ProgressBar/ProgressBar';
-import QuestionsList from './QuestionsList/QuestionsList';
+import QuestionsSwiperList from '../../lists/QuestionsSwiperList/QuestionsSwiperList';
 
 const ShowQuestions = () => {
     return (
         <>
             <ProgressBar />
-            <QuestionsList />
+            <QuestionsSwiperList />
         </>
     );
 };

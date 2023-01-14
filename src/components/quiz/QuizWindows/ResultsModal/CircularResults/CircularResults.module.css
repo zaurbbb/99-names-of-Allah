@@ -1,0 +1,35 @@
+.Block, .TextBlock {
+  display: flex;
+}
+
+.Block {
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.TextBlock {
+  display: flex;
+  font-family: "GilroyRegular", sans-serif;
+  align-content: flex-end;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.TextBlock span {
+  display: flex;
+  align-content: flex-end;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: black;
+}
+.TextBlock span:first-child {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.6rem;
+}
+.TextBlock span:last-child {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=CircularResults.module.css.map */

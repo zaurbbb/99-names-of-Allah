@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["SourceApp.module.sass","../../../../variables.sass"],"names":[],"mappings":"AAEA;ECqDE;EACA,gBDrDc;ECsDd,KDtDsB;ECiEtB,eDhEuB;ECiEvB,iBDjEmC;ECkEnC,aDlE2C;EAE3C;EAEA,aCLY;;ADOZ;EACE;;AAEF;EACE;;;AAEJ;EACE;IACE;IACA","file":"SourceApp.module.css"}
+{"version":3,"sourceRoot":"","sources":["SourceApp.module.sass","../../../../variables.sass"],"names":[],"mappings":"AAEA;ECsDE;EACA,gBDtDc;ECuDd,KDvDsB;ECkEtB,eDjEuB;ECkEvB,iBDlEmC;ECmEnC,aDnE2C;EAE3C;EAEA,aCJY;;ADMZ;EACE;;AAEF;EACE;;;AAEJ;EACE;IACE;IACA","file":"SourceApp.module.css"}

@@ -8,7 +8,6 @@ import { FormattedMessage } from 'react-intl';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { BookmarksContext } from '../../../context/bookmarks';
-import { WindowWidthContext } from '../../../context/windowWidth';
 
 import { useMosque } from '../../../hooks/useMosque';
 import { useBookmarkName } from '../../../hooks/useBookmarkName';
@@ -20,6 +19,7 @@ import PlayIcon from '../../ui/svg/PlayIcon/PlayIcon';
 import css from './NameDataCard.module.sass';
 
 import QuestionIcon from '../../../assets/icons/namePage/questionIcon.svg';
+import ShareUrl from '../../elements/ShareUrl/ShareUrl';
 
 const NameDataCard = ({
     name,
@@ -29,7 +29,6 @@ const NameDataCard = ({
     shortMeaning,
     meaning,
     zikrCount,
-    handleClickSnackbar,
     handleOpenModal
 }) => {
     const { nameId } = useParams();
@@ -54,9 +53,7 @@ const NameDataCard = ({
                     <div>
                         <h2>{nameArabic}</h2>
                     </div>
-                    <CopyToClipboard text={url}>
-                        <ShareIcon onClick={handleClickSnackbar} />
-                    </CopyToClipboard>
+                    <ShareUrl />
                 </div>
                 <div> {currentMosque} </div>
                 <div>

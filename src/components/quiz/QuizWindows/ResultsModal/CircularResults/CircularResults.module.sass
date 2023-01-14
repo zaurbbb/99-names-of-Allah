@@ -1,0 +1,24 @@
+@import "../../../../../variables"
+
+.Block, .TextBlock
+  display: flex
+
+.Block
+  @include flexAlignment(center, center, center)
+
+.TextBlock
+  display: flex
+  font-family: 'GilroyRegular', sans-serif
+  @include flexAlignment(flex-end, flex-end, flex-end)
+  span
+    display: flex
+    @include flexAlignment(flex-end, flex-end, flex-end)
+    //height: 2rem
+    color: black
+    &:first-child
+      font-weight: 700
+      font-size: 2rem
+      line-height: 1.6rem
+    &:last-child
+      font-weight: 600
+      font-size: 1rem

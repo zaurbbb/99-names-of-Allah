@@ -15,7 +15,7 @@ import { useParams } from 'react-router-dom';
 
 const NamePage = () => {
     const { nameId } = useParams();
-    const { openSnackbar, handleClickSnackbar, handleCloseSnackbar } = useContext(SnackbarContext);
+    const { openSnackbar, handleCloseSnackbar } = useContext(SnackbarContext);
     const nameData = useNameData();
 
     const [openModal, setOpenModal] = useState(false);
@@ -36,7 +36,6 @@ const NamePage = () => {
                 shortMeaning={nameData.shortMeaning}
                 meaning={nameData.meaning}
                 zikrCount={nameData.zikrCount}
-                handleClickSnackbar={handleClickSnackbar}
                 handleOpenModal={handleOpenModal}
             />
 

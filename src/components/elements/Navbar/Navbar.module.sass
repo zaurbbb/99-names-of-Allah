@@ -57,19 +57,18 @@
         display: none
     .SecondColumn
         @include flex(row, 0.8rem)
+        justify-content: flex-start
     .ThirdColumn
         @include flex(row, 0.5rem)
-
-.ActiveLink
-  color: $primary
-
-.InActiveLink
-  color: white
+        justify-content: flex-end
+    .SecondColumn, .ThirdColumn
+        margin: 0
+        padding: 0 2rem
 
 .ActiveBg
   background: linear-gradient(268.55deg, #6A5FEA 17.32%, #B471E8 86.43%)
 
-.InActiveBg
+.InactiveBg
   background: transparent
 
 

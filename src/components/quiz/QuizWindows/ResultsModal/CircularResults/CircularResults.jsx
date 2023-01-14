@@ -1,48 +1,33 @@
 import React, { useContext } from 'react';
-import {
-    Box,
-    CircularProgress,
-    Typography
-} from '@mui/material';
+import CircularProgress from '@mui/joy/CircularProgress';
+
 import { WindowWidthContext } from '../../../../../context/windowWidth';
 import { QuizContext } from '../../../../../context/quiz';
 
+import css from './CircularResults.module.sass';
+
 const CircularResults = () => {
-    const { windowWidth } = useContext(WindowWidthContext)
+    const { isSmallDevice } = useContext(WindowWidthContext);
     const [quizState] = useContext(QuizContext);
 
     return (
-        <Box sx={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+        <div className={css.Block}>
             <CircularProgress
-                variant="determinate"
+                determinate
                 value={quizState.correctAnswersCount * 10}
-                size={windowWidth <= 768 ? 110 : 160}
-                sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}
-                thickness={3}
-            />
-
-            <Box
-                sx={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                }}
+                size='lg'
+                thickness={isSmallDevice ? 8 : 10}
             >
-                <Typography
-                    variant="caption"
-                    component="div"
-                    color="text.secondary"
-                    sx={{textAlign: 'center'}}
-                >
-                    {quizState.correctAnswersCount} / 10
-                </Typography>
-            </Box>
-        </Box>
+                <p className={css.TextBlock}>
+                    <span>
+                        {quizState.correctAnswersCount}
+                    </span>
+                    <span>
+                        /10
+                    </span>
+                </p>
+            </CircularProgress>
+        </div>
     )
 };
 

@@ -12,7 +12,7 @@
   background: #f8f8f8;
 }
 .Card h1 {
-  font-family: "GilroySemibold", sans-serif;
+  font-family: "GilroySemiBold", sans-serif;
 }
 .Card div:nth-child(2) {
   display: flex;

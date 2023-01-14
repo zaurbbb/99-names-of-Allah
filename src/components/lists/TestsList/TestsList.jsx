@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { testNumbers } from "../../../data/testNumbers";
+import { testNumbers } from '../../../data/testNumbers';
 
-import TestCard from "../../cards/TestCard/TestCard";
+import TestCard from '../../cards/TestCard/TestCard';
 
 import css from './TestsList.module.sass';
 

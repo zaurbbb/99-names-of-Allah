@@ -7,14 +7,14 @@ import {
     useLocation
 } from 'react-router-dom';
 
-import { FormattedMessage } from 'react-intl';
-
 import { WindowWidthContext } from '../../../context/windowWidth';
 
 import { useShow } from '../../../hooks/useShow';
 
 import SelectLanguages from './SelectLanguages/SelectLanguages';
 import SearchModal from './SearchModal/SearchModal';
+import MobileDrawer from '../MobileDrawer/MobileDrawer';
+import NavList from './NavList/NavList';
 
 import css from './Navbar.module.sass';
 
@@ -24,11 +24,7 @@ import NavbarSearchIcon from '../../../assets/icons/navbar/search_light.webp'
 const Navbar = (props) => {
     const { isSmallDevice } = useContext(WindowWidthContext)
     const location = useLocation();
-    const isBgShown = useShow(location, css.InActiveBg, css.ActiveBg);
-
-    const isLinkActive = (navData) => {
-        return navData.isActive ? css.ActiveLink : css.InActiveLink
-    };
+    const isBgShown = useShow(location, css.InactiveBg, css.ActiveBg);
 
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -45,40 +41,7 @@ const Navbar = (props) => {
                 </NavLink>
             </div>
             <div className={css.SecondColumn}>
-                <NavLink
-                    to='/'
-                    className={isLinkActive}
-                >
-                    {isSmallDevice ? <img
-                            src={NavbarLogoIcon}
-                            alt='Site Logo'
-                        /> :
-                        <FormattedMessage id='w.header_main' />
-                    }
-                </NavLink>
-
-                <NavLink
-                    to='/tests'
-                    className={isLinkActive}
-                >
-                    <FormattedMessage id='w.header_test' />
-                </NavLink>
-
-                <NavLink
-                    to='/about'
-                    className={isLinkActive}
-                >
-                    <FormattedMessage id='w.header_about' />
-                </NavLink>
-
-                {isSmallDevice &&
-                    <NavLink
-                        to='/allNames'
-                        className={isLinkActive}
-                    >
-                        <FormattedMessage id='w.header_allNames' />
-                    </NavLink>
-                }
+                {isSmallDevice ? <MobileDrawer /> : <NavList />}
             </div>
             <div className={css.ThirdColumn}>
                 <img

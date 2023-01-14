@@ -7,6 +7,7 @@ import ShowQuestions from './ShowQuestions/ShowQuestions';
 import QuizWindows from './QuizWindows/QuizWindows';
 
 import './index.css';
+
 import css from './Quiz.module.sass';
 
 const Quiz = () => {
@@ -14,11 +15,11 @@ const Quiz = () => {
 
     return (
         <div className={css.QuizBlock}>
-            {/*When quiz is finished*/}
-            {quizState.showResults && <ShowResults />}
-
             {/*When quiz is actively going*/}
             {!quizState.showResults && <ShowQuestions />}
+
+            {/*When quiz is finished*/}
+            {quizState.showResults && <ShowResults />}
 
             {/*Modals and Snackbar*/}
             <QuizWindows />

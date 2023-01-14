@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+  .namesSwiper .swiper-navigation-button {
+    display: none !important;
+  }
+}
+@media (max-width: 576px) {
+  .namesSwiper .swiper-slide-active {
+    transform: scale(1.2) !important;
+  }
+}
+
+/*# sourceMappingURL=namesSwiper.css.map */

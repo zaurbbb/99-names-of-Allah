@@ -1,6 +1,6 @@
 .swiper {
   width: 100%;
-  padding: 1rem 0 4rem 0 !important;
+  padding: 1rem 0 5rem 0 !important;
 }
 
 .swiper-slide {
@@ -123,9 +123,6 @@
     box-shadow: none;
     transition: all 1s ease-in-out;
   }
-  .swiper-slide-active, .swiper-slide-duplicate-active {
-    transform: scale(1.2) !important;
-  }
   .swiper-slide-prev::after, .swiper-slide-next::after {
     content: "";
     width: 100%;
@@ -171,4 +168,4 @@
   }
 }
 
-/*# sourceMappingURL=namesSwiper.css.map */
+/*# sourceMappingURL=swiper.css.map */

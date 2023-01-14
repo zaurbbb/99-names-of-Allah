@@ -43,6 +43,7 @@ export const trWords = {
 
     "test_title": " Allah'ın isimleri",
     "test_question_number": " / 10 soru",
+    "test_next_question": "Sonraki Soru",
     "test_ending_mashallah": "Maşallah",
     "test_ending_answers_number": "Soruların sayısına doğru cevap verdiniz mi - ",
     "test_ending_alhamdulilah": "Elhamdülillah",

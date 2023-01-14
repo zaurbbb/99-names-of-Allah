@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material';
 
-import { theme } from './themes/theme';
+import { materialTheme } from './themes/materialTheme';
 
 import AppLoader from './components/ui/loaders/AppLoader/AppLoader';
 
@@ -22,7 +22,7 @@ const App = React.lazy(() => import('./App.jsx'));
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <HashRouter>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={materialTheme}>
             <LanguageProvider>
                 <BookmarksProvider>
                     <WindowWidthProvider>

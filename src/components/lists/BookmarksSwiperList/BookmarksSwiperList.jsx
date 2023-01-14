@@ -7,7 +7,10 @@ import {
     Swiper,
     SwiperSlide
 } from 'swiper/react';
-import { Pagination } from 'swiper';
+import {
+    Pagination,
+    Keyboard
+} from 'swiper';
 
 import NameCard from '../../cards/NameCard/NameCard';
 import SliderPrevButton from '../../ui/sliders/SliderPrevButton/SliderPrevButton';
@@ -20,14 +23,16 @@ const BookmarksSwiperList = ({ result }) => {
 
     return (
         <Swiper
-            pagination={true}
-            modules={[Pagination]}
-            className='bookmarksSwiper'
+            modules={[Pagination, Keyboard]}
+            pagination={{ clickable: true }}
+            keyboard={{ enabled: true }}
+            allowTouchMove={isSliderButtonsShown && true}
             loop={true}
             slidesPerView={isSmallDevice ? 2 : 1}
             slidesPerGroup={1}
             centeredSlides={true}
             spaceBetween={30}
+            className='bookmarksSwiper'
         >
             {result.map((collection, index) => (
                 <SwiperSlide key={index}>

@@ -31,7 +31,7 @@
 }
 .Answers span:first-child {
   font-size: 1.2rem;
-  font-family: "GilroySemibold", sans-serif;
+  font-family: "GilroySemiBold", sans-serif;
 }
 .Answers span:nth-child(2) {
   color: #797979;
