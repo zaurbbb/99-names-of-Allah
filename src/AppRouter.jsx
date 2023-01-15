@@ -4,7 +4,8 @@ import {
     Route,
     Routes
 } from 'react-router-dom';
-import { routes } from './router/routes';
+
+import { routes } from './data/routesList';
 
 const AppRouter = () => {
 

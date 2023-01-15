@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+
+import { FormattedMessage } from 'react-intl';
 
 import { QuizContext } from '../../../context/quiz';
 
-import css from './ShowResults.module.sass';
-import { FormattedMessage } from 'react-intl';
 import CustomButton from '../../ui/custom/CustomButton/CustomButton';
-import { Link } from 'react-router-dom';
+
+import css from './ShowResults.module.sass';
 
 const ShowResults = () => {
     const [quizState, dispatch] = useContext(QuizContext);
@@ -16,11 +18,11 @@ const ShowResults = () => {
 
     return (
         <div className={css.Block}>
-            <h1>
+            <h2>
                 <FormattedMessage id='w.test_results_right_answers1' />
                 {quizState.correctAnswersCount}
                 <FormattedMessage id='w.test_results_right_answers2' />
-            </h1>
+            </h2>
             <div>
                 <CustomButton
                     filled={true}

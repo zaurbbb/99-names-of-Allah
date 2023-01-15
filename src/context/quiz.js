@@ -4,6 +4,7 @@ import {
 } from 'react';
 
 import questions from '../data/questions';
+
 import { shuffleAnswers } from '../helpers/shuffleAnswers';
 
 export const QuizContext = createContext();
@@ -12,11 +13,13 @@ const initialState = {
     questions: questions,
     currentQuestionIndex: 0,
     showResults: false,
-    answers: shuffleAnswers(questions[0]),
     currentAnswer: '',
     correctAnswersCount: 0,
+    answers: shuffleAnswers(questions[0]),
     usersAnswers: [],
 };
+
+
 const reducer = (state, action) => {
     switch (action.type) {
         case 'SELECT_ANSWER': {

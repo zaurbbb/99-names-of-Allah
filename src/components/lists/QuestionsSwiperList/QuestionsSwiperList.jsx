@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { useParams } from 'react-router-dom';
 
 import { EffectCards } from 'swiper';
 import {
@@ -7,14 +6,8 @@ import {
     SwiperSlide
 } from 'swiper/react';
 
-import { useNamesCollection } from '../../../hooks/useNamesCollection';
-import { useGenerateQuestions } from '../../../hooks/useGenerateQuestions';
-
 import { QuizContext } from '../../../context/quiz';
 import { WindowWidthContext } from '../../../context/windowWidth';
-
-import { testList } from '../../../data/testList';
-import questions from '../../../data/questions';
 
 import Question from '../../quiz/ShowQuestions/Question/Question';
 import QuizSliderNextButton from '../../ui/sliders/QuizSliderNextButton/QuizSliderNextButton';
@@ -32,14 +25,6 @@ const QuestionsSwiperList = () => {
     const [quizState] = useContext(QuizContext);
     const effectValue = isTabletDevice ? null : 'cards';
 
-    // filling questions array with data
-    const { testId } = useParams();
-    const testObject = testList.find(object => object['value'] === testId);
-    const allNamesCollection = useNamesCollection(99);
-    const rangeNamesCollection = useNamesCollection(testObject.startIndex - 1, testObject.endIndex);
-
-    useGenerateQuestions(testId, allNamesCollection, rangeNamesCollection);
-
     return (
         <div className='swiperBlock'>
             <Swiper
@@ -52,7 +37,7 @@ const QuestionsSwiperList = () => {
 
                 className='questionsSwiper'
             >
-                {questions.map((el, index) => (
+                {quizState.questions.map((el, index) => (
                     <SwiperSlide
                         key={index}
                     >

@@ -43,5 +43,10 @@
     line-height: 30px;
   }
 }
+@media (max-width: 380px) {
+  .SmallButton {
+    line-height: 30px;
+  }
+}
 
 /*# sourceMappingURL=CustomButton.module.css.map */

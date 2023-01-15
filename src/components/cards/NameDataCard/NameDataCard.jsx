@@ -5,7 +5,6 @@ import {
 } from 'react-router-dom';
 
 import { FormattedMessage } from 'react-intl';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { BookmarksContext } from '../../../context/bookmarks';
 
@@ -13,7 +12,6 @@ import { useMosque } from '../../../hooks/useMosque';
 import { useBookmarkName } from '../../../hooks/useBookmarkName';
 
 import StarIcon from '../../ui/svg/StarIcon/StarIcon';
-import ShareIcon from '../../ui/svg/ShareIcon/ShareIcon';
 import PlayIcon from '../../ui/svg/PlayIcon/PlayIcon';
 
 import css from './NameDataCard.module.sass';
@@ -37,8 +35,6 @@ const NameDataCard = ({
     const currentMosque = useMosque(nameId - 1);
     const nextNameId = +nameId === 99 ? 1 : +nameId + 1;
     const prevNameId = +nameId === 1 ? 99 : +nameId - 1;
-    const url = window.location.href;
-
 
     return (
         <div className={css.Block}>
@@ -58,7 +54,7 @@ const NameDataCard = ({
                 <div> {currentMosque} </div>
                 <div>
                     <Link to={`/name/${prevNameId}`}>
-                        <PlayIcon reverse={true}/>
+                        <PlayIcon reverse={true} />
                     </Link>
                     <div>
                         <h3>{name}</h3>

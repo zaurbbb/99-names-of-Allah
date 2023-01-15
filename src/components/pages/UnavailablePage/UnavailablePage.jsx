@@ -14,7 +14,9 @@ const UnavailablePage = () => {
                 <FormattedMessage id='w.unavailable_text' />
             </h1>
             <Link to='/'>
-                <CustomButton text='unavailable_subtext'/>
+                <CustomButton
+                    text='unavailable_subtext'
+                />
             </Link>
         </section>
     );

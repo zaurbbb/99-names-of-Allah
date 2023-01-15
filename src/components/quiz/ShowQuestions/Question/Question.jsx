@@ -6,14 +6,14 @@ import Answer from '../Answer/Answer';
 
 import css from './Question.module.sass';
 
-const Question = () => {
+const Question = ({ questions }) => {
     const [quizState, dispatch] = useContext(QuizContext);
-    const currentQuestion = quizState.questions[quizState.currentQuestionIndex];
+    const currentQuestion = questions[quizState.currentQuestionIndex];
 
     let clickCounter = 0;
     return (
         <div className={css.QuestionBlock}>
-            <span className={css.NameText}>الله</span>
+            <span className={css.NameText}>{questions[quizState.currentQuestionIndex].nameArabic}</span>
             <span className={css.NameText}>{currentQuestion.question}</span>
             <div className={css.AnswersBlock}>
                 {quizState.answers.map((answer, index) => (

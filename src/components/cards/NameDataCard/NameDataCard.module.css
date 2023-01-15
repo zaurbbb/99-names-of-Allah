@@ -44,8 +44,8 @@
   flex-direction: column;
   gap: 0;
   align-content: flex-start;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 .UpperCard div:last-child div h3:first-child {
   font-family: "GilroySemiBold", sans-serif;

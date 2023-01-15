@@ -1,9 +1,19 @@
+.ActiveLink, .InactiveLink {
+  text-align: center;
+}
+
 .ActiveLink {
   color: #89ECFF;
 }
 
 .InactiveLink {
   color: white;
+}
+
+@media (max-width: 576px) {
+  .ActiveLink, .InactiveLink {
+    font-size: 1.44rem;
+  }
 }
 
 /*# sourceMappingURL=NavItem.module.css.map */

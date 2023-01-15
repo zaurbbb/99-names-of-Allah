@@ -1,14 +1,9 @@
-import { testList } from '../data/testList';
 import questions from '../data/questions';
 
 export const useGenerateQuestions = (testId, allNamesCollection, rangeNamesCollection) => {
-
     if (questions.length !== 0) {
         questions.length = 0;
     }
-
-    // { id: 1, value: '1-10', startIndex: 1, endIndex: 10 }
-    const testObject = testList.find(object => object['value'] === testId);
 
     // choose random short meanings from all 99 names
     function randomShortMeanings(allNamesCollection, correctAnswerIndex) {
@@ -17,9 +12,9 @@ export const useGenerateQuestions = (testId, allNamesCollection, rangeNamesColle
             let randomizedIndex = Math.floor(Math.random() * allNamesCollection.length);
             if (
                 randomizedIndex !== correctAnswerIndex ||
-                randomizedIndex !== arr[0] ||
-                randomizedIndex !== arr[1] ||
-                randomizedIndex !== arr[2]
+                arr[0] !== arr[1] ||
+                arr[0] !== arr[2] ||
+                arr[1] !== arr[2]
             ) {
                 arr.push(randomizedIndex);
             }
@@ -31,6 +26,7 @@ export const useGenerateQuestions = (testId, allNamesCollection, rangeNamesColle
     rangeNamesCollection.forEach(elem => {
         questions.push({
             question: elem.name,
+            nameArabic: elem.nameArabic,
             nameIndex: elem.id,
             correctAnswer: elem.shortMeaning,
             incorrectAnswers: randomShortMeanings(allNamesCollection, elem.id)
@@ -38,3 +34,4 @@ export const useGenerateQuestions = (testId, allNamesCollection, rangeNamesColle
     });
 }
 
+export default questions;

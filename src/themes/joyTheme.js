@@ -30,7 +30,7 @@ export const joyTheme = extendTheme({
                 root: {
                     '--_root-size': '6rem',
                     [bk.breakpoints.down('sm')]: {
-                        '--_root-size': '4rem',
+                        '--_root-size': '5rem',
                     },
                 },
                 progress: {

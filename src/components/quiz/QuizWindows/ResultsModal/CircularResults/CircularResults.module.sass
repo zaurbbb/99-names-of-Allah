@@ -22,3 +22,7 @@
     &:last-child
       font-weight: 600
       font-size: 1rem
+
+@media (max-width: $md)
+  .Block
+    @include flexAlignment(center, flex-end, center)

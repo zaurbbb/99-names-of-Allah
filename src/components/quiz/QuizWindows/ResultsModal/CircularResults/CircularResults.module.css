@@ -32,4 +32,12 @@
   font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+  .Block {
+    align-content: center;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
 /*# sourceMappingURL=CircularResults.module.css.map */

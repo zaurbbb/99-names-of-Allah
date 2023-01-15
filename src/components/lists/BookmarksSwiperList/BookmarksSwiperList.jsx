@@ -16,17 +16,18 @@ import NameCard from '../../cards/NameCard/NameCard';
 import SliderPrevButton from '../../ui/sliders/SliderPrevButton/SliderPrevButton';
 import SliderNextButton from '../../ui/sliders/SliderNextButton/SliderNextButton';
 
+import './bookmarksSwiper.sass';
+
 const BookmarksSwiperList = ({ result }) => {
     const { isSmallDevice } = useContext(WindowWidthContext);
     const { bookmarks } = useContext(BookmarksContext);
-    const isSliderButtonsShown = !isSmallDevice && bookmarks.length > (isSmallDevice ? 4 : 9);
+    const isSliderButtonsShown = !isSmallDevice && bookmarks.length > (isSmallDevice ? 1 : 9);
 
     return (
         <Swiper
             modules={[Pagination, Keyboard]}
             pagination={{ clickable: true }}
             keyboard={{ enabled: true }}
-            allowTouchMove={isSliderButtonsShown && true}
             loop={true}
             slidesPerView={isSmallDevice ? 2 : 1}
             slidesPerGroup={1}
