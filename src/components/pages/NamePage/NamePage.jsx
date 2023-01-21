@@ -6,12 +6,12 @@ import React, {
 import { SnackbarContext } from '../../../context/snackbar';
 
 import { useNameData } from '../../../hooks/useNameData';
+import { useParams } from 'react-router-dom';
 
 import NameDataCard from '../../cards/NameDataCard/NameDataCard';
 import SourceModal from './SourceModal/SourceModal';
 import SnackbarWindow from '../../ui/windows/SnackbarWindow/SnackbarWindow';
 import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
-import { useParams } from 'react-router-dom';
 
 const NamePage = () => {
     const { nameId } = useParams();

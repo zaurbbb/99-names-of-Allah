@@ -61,6 +61,5 @@ export const useGenerateQuestions = (testId, allNamesCollection, rangeNamesColle
             // shuffledAnswers: shuffleAnswers(questions.correctAnswer, questions.incorrectAnswers),
         })
     });
-
 }
 
