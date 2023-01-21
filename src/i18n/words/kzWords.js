@@ -63,7 +63,7 @@ export const kzWords = {
     "copy_to_clipboard": "Cілтеме алмасу буферіне сәтті сақталды",
 
     "meruert_name": "Нұрғазы Меруерт",
-    "meruert_description": "Басшы және CEO",
+    "meruert_description": "Ұйымдастырушы және CEO",
 
     "kudaibergen_name": "Алимтаев Құдайберген",
     "kudaibergen_description": "Android бағдарламашы",

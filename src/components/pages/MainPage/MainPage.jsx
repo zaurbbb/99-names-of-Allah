@@ -8,9 +8,9 @@ import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
 import NamesSwiperList from '../../lists/NamesSwiperList/NamesSwiperList';
 
 const MainPage = () => {
-    const { isSmallDevice } = useContext(WindowWidthContext);
+    const { isSmallDevice, isLargeDevice } = useContext(WindowWidthContext);
     const namesCollection = useNamesCollection(0, isSmallDevice && 3);
-    const result = useChunks(namesCollection, 3);
+    const result = useChunks(namesCollection, isLargeDevice ? 4 : 3);
 
     return (
         <section>

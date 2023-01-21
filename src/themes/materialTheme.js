@@ -194,10 +194,9 @@ export const materialTheme = createTheme({
             styleOverrides: {
                 root: {
                     backgroundColor: `${lightBlue}`,
-                    borderRadius: '50px',
+                    borderRadius: '30px',
                     'div': {
                         alignItems: 'center',
-                        // css-ohtw-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper
                     },
                 },
             },
