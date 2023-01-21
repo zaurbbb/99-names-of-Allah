@@ -1,0 +1,45 @@
+.TextBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  top: 50%;
+  left: 4rem;
+  transform: translate(0, -50%);
+  margin-right: -50%;
+}
+.TextBlock h1 {
+  width: 15rem;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #89ECFF;
+  line-height: 4rem;
+}
+.TextBlock h3 {
+  color: white;
+  width: 19rem;
+}
+
+@media (max-width: 1200px) {
+  .TextBlock {
+    top: 55%;
+    width: 40%;
+  }
+}
+@media (max-width: 992px) {
+  .TextBlock {
+    transform: translate(-50%, -50%);
+    width: 90%;
+    left: 50%;
+    text-shadow: 3px 3px 5px #a74caf;
+  }
+  .TextBlock h1, .TextBlock h3 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=HeaderContent.module.css.map */

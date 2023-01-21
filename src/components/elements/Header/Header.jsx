@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { useShow } from '../../../hooks/useShow';
 
 import Navbar from '../Navbar/Navbar';
-import HeaderContent from './HeaderContent';
+import HeaderContent from './HeaderContent/HeaderContent';
 
 import css from './Header.module.sass';
 

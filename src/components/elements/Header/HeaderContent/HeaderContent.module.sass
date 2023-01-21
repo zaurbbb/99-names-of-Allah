@@ -1,0 +1,37 @@
+@import "../../../../variables"
+
+.TextBlock
+  @include flex(column, 0)
+  @include flexAlignment(center, center, flex-start)
+  position: absolute
+  top: 50%
+  left: 4rem
+  transform: translate(0, -50%)
+
+  margin-right: -50%
+  h1
+    width: 15rem
+
+    @include font(4rem, $fwB)
+    color: $primary
+    line-height: 4rem
+  h3
+    color: white
+    width: 19rem
+
+@media (max-width: $xl)
+  .TextBlock
+    top: 55%
+    width: 40%
+
+@media (max-width: $lg)
+  .TextBlock
+    transform: translate(-50%, -50%)
+
+    width: 90%
+    left: 50%
+
+    text-shadow: 3px 3px 5px #a74caf
+    h1, h3
+      text-align: center
+      width: 100%

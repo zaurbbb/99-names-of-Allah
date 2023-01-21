@@ -9,26 +9,6 @@
   background-size: cover
   height: 100vh
 
-
-.TextBlock
-  @include flex(column, 0)
-  @include flexAlignment(center, center, flex-start)
-  position: absolute
-  top: 50%
-  left: 22%
-  transform: translate(-50%, -50%)
-
-  margin-right: -50%
-  h1
-    width: 15rem
-
-    @include font(4rem, $fwB)
-    color: $primary
-    line-height: 4rem
-  h3
-    color: white
-    width: 19rem
-
 .Bg
   position: absolute
   top: 0
@@ -48,10 +28,3 @@
 @media (max-width: $lg)
   .Block
     background-position: right
-  .TextBlock
-    text-shadow: 3px 3px 5px #a74caf
-    h1, h3
-      text-align: center
-      width: 100%
-    width: 90%
-    left: 50%
