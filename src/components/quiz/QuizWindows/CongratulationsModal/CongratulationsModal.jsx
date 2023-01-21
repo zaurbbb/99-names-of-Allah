@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { Box } from '@mui/material';
 import { FormattedMessage } from 'react-intl';
 
-
 import { QuizContext } from '../../../../context/quiz';
 
 import ModalWindow from '../../../ui/windows/ModalWindow/ModalWindow';
@@ -48,9 +47,7 @@ const CongratulationsModal = ({ open, onClose, openResults }) => {
                         filled={true}
                     />
                 </div>
-                <div
-                    onClick={handleOpenAnotherModal}
-                >
+                <div onClick={handleOpenAnotherModal}>
                     <h5>
                         <FormattedMessage id='w.test_ending_check_answers' />
                     </h5>

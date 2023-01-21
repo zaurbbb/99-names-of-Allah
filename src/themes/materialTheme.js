@@ -223,7 +223,12 @@ export const materialTheme = createTheme({
                 paper: {
                     background: 'linear-gradient(#6A5FEA, #B471E8)',
                     borderRadius: '0',
-                    width: '50%'
+                    [bk.breakpoints.down('md')]: {
+                        width: '40%'
+                    },
+                    [bk.breakpoints.down('sm')]: {
+                        width: '60%'
+                    },
                 }
             }
         },

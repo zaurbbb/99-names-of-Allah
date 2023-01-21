@@ -3,10 +3,7 @@ import React, {
     useContext,
     useEffect
 } from 'react';
-import {
-    useLocation,
-    useParams
-} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import {
     IntlProvider,
@@ -14,8 +11,6 @@ import {
 } from 'react-intl';
 
 import { useBookmarks } from './hooks/useBookmarks';
-import { useNamesCollection } from './hooks/useNamesCollection';
-import { useGenerateQuestions } from './hooks/useGenerateQuestions';
 
 import { BookmarksContext } from './context/bookmarks';
 import { LanguageContext } from './context/language';
@@ -24,7 +19,6 @@ import { WindowWidthContext } from './context/windowWidth';
 import { messages } from './i18n/messages';
 import { flattenMessages } from './helpers/flattenMessages';
 import '@formatjs/intl-numberformat/locale-data/ru';
-import { testList } from './data/testList';
 
 import Header from './components/elements/Header/Header';
 import Footer from './components/elements/Footer/Footer';
@@ -40,14 +34,7 @@ function App() {
     const { setBookmarks } = useContext(BookmarksContext);
     const { windowWidth, setWindowWidth } = useContext(WindowWidthContext);
 
-
     const getBookmarks = useBookmarks();
-
-    // // updates questions
-    // if (testId) {
-    //
-    //     useGenerateQuestions(testId, allNamesCollection, rangeNamesCollection);
-    // }
 
     // updates bookmarks
     useEffect(() => {
@@ -79,12 +66,9 @@ function App() {
     };
 
     function onError(e) {
-        if (e.code === ReactIntlErrorCode.MISSING_DATA) {
-            return
-        }
+        if (e.code === ReactIntlErrorCode.MISSING_DATA) return
         console.error(e)
     }
-
 
     return (
         <IntlProvider
@@ -107,7 +91,6 @@ function App() {
 
             <Footer />
         </IntlProvider>
-
     );
 }
 

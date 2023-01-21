@@ -60,20 +60,17 @@
     gap: 1rem;
   }
 }
+@media (max-width: 992px) {
+  .Block .FirstColumn {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .Block div img {
     width: 18px !important;
   }
   .Block .FirstColumn img {
     width: 50px !important;
-  }
-  .ModalContainer {
-    width: 19rem;
-  }
-}
-@media (max-width: 576px) {
-  .Block .FirstColumn {
-    display: none;
   }
   .Block .SecondColumn {
     display: flex;
@@ -90,6 +87,9 @@
   .Block .SecondColumn, .Block .ThirdColumn {
     margin: 0;
     padding: 0 2rem;
+  }
+  .ModalContainer {
+    width: 19rem;
   }
 }
 .ActiveBg {

@@ -6,8 +6,6 @@ import ShowResults from './ShowResults/ShowResults';
 import ShowQuestions from './ShowQuestions/ShowQuestions';
 import QuizWindows from './QuizWindows/QuizWindows';
 
-import './index.css';
-
 import css from './Quiz.module.sass';
 
 const Quiz = () => {

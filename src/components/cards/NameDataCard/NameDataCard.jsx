@@ -13,11 +13,11 @@ import { useBookmarkName } from '../../../hooks/useBookmarkName';
 
 import StarIcon from '../../ui/svg/StarIcon/StarIcon';
 import PlayIcon from '../../ui/svg/PlayIcon/PlayIcon';
+import ShareUrl from '../../elements/ShareUrl/ShareUrl';
 
 import css from './NameDataCard.module.sass';
 
 import QuestionIcon from '../../../assets/icons/namePage/questionIcon.svg';
-import ShareUrl from '../../elements/ShareUrl/ShareUrl';
 
 const NameDataCard = ({
     name,

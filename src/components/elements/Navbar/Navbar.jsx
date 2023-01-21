@@ -22,7 +22,7 @@ import NavbarLogoIcon from '../../../assets/icons/navbar/navbar_logo.webp'
 import NavbarSearchIcon from '../../../assets/icons/navbar/search_light.webp'
 
 const Navbar = (props) => {
-    const { isSmallDevice } = useContext(WindowWidthContext)
+    const { isTabletDevice } = useContext(WindowWidthContext)
     const location = useLocation();
     const isBgShown = useShow(location, css.InactiveBg, css.ActiveBg);
 
@@ -41,7 +41,7 @@ const Navbar = (props) => {
                 </NavLink>
             </div>
             <div className={css.SecondColumn}>
-                {isSmallDevice ? <MobileDrawer /> : <NavList />}
+                {isTabletDevice ? <MobileDrawer /> : <NavList />}
             </div>
             <div className={css.ThirdColumn}>
                 <img

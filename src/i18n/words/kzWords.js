@@ -9,6 +9,7 @@ export const kzWords = {
     "header_main": "Басты бет",
     "header_test": "Тест",
     "header_about": "Біз туралы",
+    "header_bookmarks": "Сақталған есімдер",
     "header_allNames": "Есімдер тізімі",
 
     "search_button": "Іздеу",
