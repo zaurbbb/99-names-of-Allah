@@ -52,7 +52,7 @@
   .Block .SecondColumn {
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
   .Block .ThirdColumn {
     display: flex;
@@ -63,6 +63,11 @@
 @media (max-width: 992px) {
   .Block .FirstColumn {
     display: none;
+  }
+  .Block .SecondColumn {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
   }
 }
 @media (max-width: 768px) {

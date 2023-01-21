@@ -102,10 +102,7 @@
 }
 @media (max-width: 768px) {
   .swiper-pagination {
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    max-width: 100% !important;
+    display: none;
   }
   .swiper-pagination-bullet {
     width: 16px !important;
@@ -164,9 +161,6 @@
   }
   .swiper-slide {
     padding: 0 !important;
-  }
-  .swiper-pagination {
-    display: none;
   }
 }
 

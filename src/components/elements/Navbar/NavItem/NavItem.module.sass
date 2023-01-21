@@ -1,7 +1,8 @@
 @import "../../../../variables"
 
-.ActiveLink, .InactiveLink
+.Link
   text-align: center
+  padding: 0 10px
 
 .ActiveLink
   color: $primary
@@ -9,6 +10,6 @@
 .InactiveLink
   color: white
 
-@media (max-width: $sm)
-  .ActiveLink, .InactiveLink
-    font-size: $fs2
+@media (max-width: $md)
+  .Link
+    font-size: $fs3

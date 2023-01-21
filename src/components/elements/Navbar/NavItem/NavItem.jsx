@@ -7,7 +7,7 @@ import css from './NavItem.module.sass';
 
 const NavItem = ({ obj }) => {
     function isLinkActive(navData) {
-        return navData.isActive ? css.ActiveLink : css.InactiveLink;
+        return navData.isActive ? `${css.ActiveLink} ${css.Link}` : `${css.InactiveLink} ${css.Link}`;
     }
 
     return (

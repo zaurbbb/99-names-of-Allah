@@ -8,14 +8,14 @@ import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
 import NamesSwiperList from '../../lists/NamesSwiperList/NamesSwiperList';
 
 const MainPage = () => {
-    const { isSmallDevice, isLargeDevice } = useContext(WindowWidthContext);
-    const namesCollection = useNamesCollection(0, isSmallDevice && 3);
-    const result = useChunks(namesCollection, isLargeDevice ? 4 : 3);
+    const { isTabletDevice } = useContext(WindowWidthContext);
+    const namesCollection = useNamesCollection(0, isTabletDevice && 3);
+    const result = useChunks(namesCollection, isTabletDevice ? 2 : 3);
 
     return (
         <section>
             <CustomHeading value={'w.the_most_beautiful_names_text'} />
-            <NamesSwiperList result={isSmallDevice ? namesCollection : result} />
+            <NamesSwiperList result={isTabletDevice ? namesCollection : result} />
         </section>
     );
 };

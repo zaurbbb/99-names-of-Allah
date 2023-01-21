@@ -23,15 +23,15 @@ import 'swiper/css/navigation';
 import './namesSwiper.sass';
 
 const NamesSwiperList = ({ result }) => {
-    const { isSmallDevice } = useContext(WindowWidthContext);
+    const { isTabletDevice } = useContext(WindowWidthContext);
 
     return (
         <Swiper
             modules={[Pagination, Keyboard]}
             pagination={{ clickable: true }}
             keyboard={{ enabled: true }}
-            loop={result.length > 3 && true}
-            slidesPerView={isSmallDevice ? 2 : 1}
+            loop={result.length >= 3 && true}
+            slidesPerView={isTabletDevice ? 2 : 1}
             slidesPerGroup={1}
             centeredSlides={true}
             spaceBetween={30}
@@ -39,7 +39,7 @@ const NamesSwiperList = ({ result }) => {
         >
             {result.map((collection, index) => (
                 <SwiperSlide key={index}>
-                    {isSmallDevice ?
+                    {isTabletDevice ?
                         <NameCard
                             key={collection.id}
                             item={collection}
@@ -61,16 +61,9 @@ const NamesSwiperList = ({ result }) => {
                     }
                 </SwiperSlide>
             ))}
-            {isSmallDevice &&
+            {isTabletDevice &&
                 <SwiperSlide>
-                    <ShowMoreCard
-                        key={'item.id'}
-                        item={'item'}
-                        id={'item.id'}
-                        nameArabic={'item.nameArabic'}
-                        name={'item.name'}
-                        shortMeaning={'item.shortMeaning'}
-                    />
+                    <ShowMoreCard />
                 </SwiperSlide>
             }
             <div className='swiper-navigation-button'>

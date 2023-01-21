@@ -1,5 +1,6 @@
-.ActiveLink, .InactiveLink {
+.Link {
   text-align: center;
+  padding: 0 10px;
 }
 
 .ActiveLink {
@@ -10,9 +11,9 @@
   color: white;
 }
 
-@media (max-width: 576px) {
-  .ActiveLink, .InactiveLink {
-    font-size: 1.44rem;
+@media (max-width: 768px) {
+  .Link {
+    font-size: 1.2rem;
   }
 }
 
