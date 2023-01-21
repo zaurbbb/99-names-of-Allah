@@ -7,12 +7,11 @@ import { useBookmarks } from '../../../hooks/useBookmarks';
 import { useChunks } from '../../../hooks/useChunks';
 import { Navigate } from 'react-router-dom';
 import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
-import NamesSwiperList from '../../lists/NamesSwiperList/NamesSwiperList';
 import AllNamesList from '../../lists/AllNamesList/AllNamesList';
 
 const BookmarksPage = () => {
     const { bookmarks } = useContext(BookmarksContext);
-    const { isSmallDevice } = useContext(WindowWidthContext);
+    const { isTabletDevice } = useContext(WindowWidthContext);
     let bookmarksList = [];
     const getBookmarks = useBookmarks();
 
@@ -36,7 +35,7 @@ const BookmarksPage = () => {
     return (
         <section>
             <CustomHeading value='w.bookmarks_page_title' />
-            <AllNamesList result={isSmallDevice ? bookmarksList : result} />
+            <AllNamesList result={isTabletDevice ? bookmarksList : result} />
         </section>
     );
 };

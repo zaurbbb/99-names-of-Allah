@@ -16,7 +16,7 @@
 .Block .SecondColumn {
   display: flex;
   flex-direction: row;
-  gap: 4rem;
+  gap: 1rem;
 }
 .Block .ThirdColumn {
   display: flex;
@@ -49,10 +49,8 @@
 }
 
 @media (max-width: 1200px) {
-  .Block .SecondColumn {
-    display: flex;
-    flex-direction: row;
-    gap: 1.2rem;
+  .Block .FirstColumn {
+    display: none;
   }
   .Block .ThirdColumn {
     display: flex;
@@ -61,9 +59,6 @@
   }
 }
 @media (max-width: 992px) {
-  .Block .FirstColumn {
-    display: none;
-  }
   .Block .SecondColumn {
     display: flex;
     flex-direction: row;

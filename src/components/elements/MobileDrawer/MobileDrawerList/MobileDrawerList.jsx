@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NavList from '../../Navbar/NavList/NavList';
+import NavList from '../../../lists/NavList/NavList';
 
 import css from './MobileDrawerList.module.sass';
 

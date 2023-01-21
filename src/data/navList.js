@@ -3,5 +3,5 @@ export const navList = [
     { id: 2, value: 'w.header_test', route: '/tests' },
     { id: 3, value: 'w.header_about', route: '/about' },
     { id: 4, value: 'w.header_allNames', route: '/allNames' },
-    { id: 5, value: 'w.header_bookmarks', route: '/bookmarks' },
+    { id: 5, value: 'w.bookmarks_page_title', route: '/bookmarks' },
 ];

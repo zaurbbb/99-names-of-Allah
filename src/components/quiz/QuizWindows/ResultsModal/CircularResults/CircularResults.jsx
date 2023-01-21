@@ -16,7 +16,7 @@ const CircularResults = () => {
                 determinate
                 value={quizState.correctAnswersCount * 10}
                 size='lg'
-                thickness={isSmallDevice ? 8 : 10}
+                thickness={isSmallDevice ? 8 : 12}
             >
                 <p className={css.TextBlock}>
                     <span>

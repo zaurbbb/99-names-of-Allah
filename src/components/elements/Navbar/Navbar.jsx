@@ -14,7 +14,7 @@ import { useShow } from '../../../hooks/useShow';
 import SelectLanguages from './SelectLanguages/SelectLanguages';
 import SearchModal from './SearchModal/SearchModal';
 import MobileDrawer from '../MobileDrawer/MobileDrawer';
-import NavList from './NavList/NavList';
+import NavList from '../../lists/NavList/NavList';
 
 import css from './Navbar.module.sass';
 

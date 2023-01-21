@@ -9,7 +9,6 @@ export const trWords = {
     "header_main": "Ana",
     "header_test": "Test",
     "header_about": "Hakkımızda",
-    "header_bookmarks": "Kayıtlı Isimler",
     "header_allNames": "Isim Listesi",
 
     "search_button": "Arayış",

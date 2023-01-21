@@ -9,7 +9,6 @@ export const ruWords = {
     "header_main": "Главная",
     "header_test": "Тест",
     "header_about": "О нас",
-    "header_bookmarks": "Закладки",
     "header_allNames": "Список имён",
 
     "search_button": "Поиск",

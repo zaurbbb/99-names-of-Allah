@@ -12,7 +12,7 @@
   .FirstColumn, .SecondColumn, .ThirdColumn
     margin: 0 auto
   .SecondColumn
-    @include flex(row, 4rem)
+    @include flex(row, 1rem)
   .ThirdColumn
     @include flex(row, 1rem)
     @include flexAlignment(flex-start, center, center)
@@ -35,15 +35,13 @@
 
 @media (max-width: $xl)
   .Block
-    .SecondColumn
-      @include flex(row, 1.2rem)
+    .FirstColumn
+      display: none
     .ThirdColumn
       @include flex(row, 1rem)
 
 @media (max-width: $lg)
   .Block
-    .FirstColumn
-      display: none
     .SecondColumn
       @include flex(row, 1rem)
 
