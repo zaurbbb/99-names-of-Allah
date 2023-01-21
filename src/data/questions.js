@@ -8,6 +8,7 @@ const questions = [
             "Влиятельный",
         ],
         correctAnswer: "Единый бог",
+        shuffledAnswers: ["Единый бог", "Святой", "Могучий", "Влиятельный"],
     },
 ];
 

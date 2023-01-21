@@ -43,7 +43,7 @@ export const kzWords = {
 
     "test_title": " Алланың есімдері",
     "test_question_number": " / 10 сұрақ",
-    "test_next_question": "Келесі Сұрақ",
+    "test_next_question": "Келесі сұрақ",
     "test_ending_mashallah": "Машаллаһ",
     "test_ending_answers_number": "Дұрыс жауап берілген сұрақтар саны - ",
     "test_ending_alhamdulilah": "Әлһамдулилләһ",

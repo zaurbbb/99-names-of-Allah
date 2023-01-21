@@ -1,11 +1,9 @@
 import {
     createContext,
     useReducer
-} from 'react';
+} from "react";
 
-import questions from '../data/questions';
-
-import { shuffleAnswers } from '../helpers/shuffleAnswers';
+import questions from "../data/questions";
 
 export const QuizContext = createContext();
 
@@ -15,7 +13,6 @@ const initialState = {
     showResults: false,
     currentAnswer: '',
     correctAnswersCount: 0,
-    answers: shuffleAnswers(questions[0]),
     usersAnswers: [],
 };
 
@@ -42,12 +39,12 @@ const reducer = (state, action) => {
         case 'NEXT_QUESTION': {
             const showResults = state.currentQuestionIndex === state.questions.length - 1;
             const currentQuestionIndex = showResults ? state.currentQuestionIndex : state.currentQuestionIndex + 1;
-            const answers = showResults ? [] : shuffleAnswers(state.questions[currentQuestionIndex]);
+            // const answers = showResults ? [] : shuffleAnswers(state.questions[currentQuestionIndex]);
             return {
                 ...state,
                 currentQuestionIndex,
                 showResults,
-                answers,
+                // answers,
                 currentAnswer: '',
             };
         }

@@ -1,17 +1,14 @@
 import React, { useContext } from 'react';
 
 import { BookmarksContext } from '../../../context/bookmarks';
-import { WindowWidthContext } from '../../../context/windowWidth';
 
 import { useBookmarks } from '../../../hooks/useBookmarks';
-import { useChunks } from '../../../hooks/useChunks';
 import { Navigate } from 'react-router-dom';
 import CustomHeading from '../../ui/custom/CustomHeading/CustomHeading';
 import AllNamesList from '../../lists/AllNamesList/AllNamesList';
 
 const BookmarksPage = () => {
     const { bookmarks } = useContext(BookmarksContext);
-    const { isTabletDevice } = useContext(WindowWidthContext);
     let bookmarksList = [];
     const getBookmarks = useBookmarks();
 
@@ -23,7 +20,6 @@ const BookmarksPage = () => {
             bookmarksList.push(JSON.parse(localStorage.getItem('bookmarkItem' + getBookmarks[i]) || ''));
         }
     }
-    const result = useChunks(bookmarksList, 3);
 
     if (bookmarks.length === 0) {
         return <Navigate
@@ -35,7 +31,7 @@ const BookmarksPage = () => {
     return (
         <section>
             <CustomHeading value='w.bookmarks_page_title' />
-            <AllNamesList result={isTabletDevice ? bookmarksList : result} />
+            <AllNamesList result={bookmarksList} />
         </section>
     );
 };

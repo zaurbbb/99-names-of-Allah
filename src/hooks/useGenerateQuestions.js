@@ -1,8 +1,23 @@
-import questions from '../data/questions';
+import questions from "../data/questions";
 
 export const useGenerateQuestions = (testId, allNamesCollection, rangeNamesCollection) => {
     if (questions.length !== 0) {
         questions.length = 0;
+    }
+
+    // check that all elements or array are different from each other
+    function areDistinct(arr) {
+        let n = arr.length;
+
+        // Put all array elements in a map
+        let s = new Set();
+        for (let i = 0; i < n; i++) {
+            s.add(arr[i]);
+        }
+
+        // If all elements are distinct, size of
+        // set should be same array.
+        return (s.size === arr.length);
     }
 
     // choose random short meanings from all 99 names
@@ -10,28 +25,48 @@ export const useGenerateQuestions = (testId, allNamesCollection, rangeNamesColle
         let arr = [];
         while (arr.length < 3) {
             let randomizedIndex = Math.floor(Math.random() * allNamesCollection.length);
-            if (
-                randomizedIndex !== correctAnswerIndex ||
-                arr[0] !== arr[1] ||
-                arr[0] !== arr[2] ||
-                arr[1] !== arr[2]
-            ) {
+
+            if (areDistinct(arr) === false) {
+                console.log("I am not distinct");
+            }
+            console.log('randomizedIndex: ' + randomizedIndex);
+            console.log('correctAnswerIndex: ' + correctAnswerIndex);
+            console.log('randomizedIndex !== correctAnswerIndex: ' + (randomizedIndex !== correctAnswerIndex));
+            if (areDistinct(arr) && randomizedIndex !== correctAnswerIndex - 1) {
                 arr.push(randomizedIndex);
             }
         }
-        return arr.map(index => allNamesCollection[index]['shortMeaning']);
+        return arr.map(index => allNamesCollection[index]["shortMeaning"]);
+    }
+
+    function shuffleAnswers(correctAnswer, incorrectAnswers) {
+        const unshuffledAnswers = [
+            correctAnswer,
+            ...incorrectAnswers
+        ];
+
+        return unshuffledAnswers
+            .map(unshuffledAnswer => ({
+                sort: Math.random(),
+                value: unshuffledAnswer
+            }))
+            .sort((a, b) => a.sort - b.sort)
+            .map(el => el.value);
     }
 
     // create questions list
     rangeNamesCollection.forEach(elem => {
+        const incorrectAnswersValues = randomShortMeanings(allNamesCollection, elem.id);
         questions.push({
             question: elem.name,
             nameArabic: elem.nameArabic,
             nameIndex: elem.id,
             correctAnswer: elem.shortMeaning,
-            incorrectAnswers: randomShortMeanings(allNamesCollection, elem.id)
+            incorrectAnswers: incorrectAnswersValues,
+            shuffledAnswers: shuffleAnswers(elem.shortMeaning, incorrectAnswersValues),
+            // shuffledAnswers: shuffleAnswers(questions.correctAnswer, questions.incorrectAnswers),
         })
     });
+
 }
 
-export default questions;

@@ -43,7 +43,7 @@ export const ruWords = {
 
     "test_title": " имена Аллаха",
     "test_question_number": " вопрос из 10",
-    "test_next_question": "Cледующий вопрос",
+    "test_next_question": "Следующий вопрос",
     "test_ending_mashallah": "Машаллах",
     "test_ending_answers_number": "Вы правильно ответили на количество вопросов - ",
     "test_ending_alhamdulilah": "Альхамдулиллах",
