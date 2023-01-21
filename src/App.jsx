@@ -58,7 +58,7 @@ function App() {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, [windowWidth]);
+    }, [windowWidth, setWindowWidth]);
 
     const handleChange = ({ target: { value } }) => {
         setCurrentLocale(value);

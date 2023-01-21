@@ -26,12 +26,6 @@ export const useGenerateQuestions = (testId, allNamesCollection, rangeNamesColle
         while (arr.length < 3) {
             let randomizedIndex = Math.floor(Math.random() * allNamesCollection.length);
 
-            if (areDistinct(arr) === false) {
-                console.log("I am not distinct");
-            }
-            console.log('randomizedIndex: ' + randomizedIndex);
-            console.log('correctAnswerIndex: ' + correctAnswerIndex);
-            console.log('randomizedIndex !== correctAnswerIndex: ' + (randomizedIndex !== correctAnswerIndex));
             if (areDistinct(arr) && randomizedIndex !== correctAnswerIndex - 1) {
                 arr.push(randomizedIndex);
             }
