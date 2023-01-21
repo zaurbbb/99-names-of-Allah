@@ -10,7 +10,7 @@ import NamesSwiperList from '../../lists/NamesSwiperList/NamesSwiperList';
 const MainPage = () => {
     const { isSmallDevice } = useContext(WindowWidthContext);
     const namesCollection = useNamesCollection(0, isSmallDevice && 3);
-    const result = useChunks(namesCollection, 9);
+    const result = useChunks(namesCollection, 3);
 
     return (
         <section>

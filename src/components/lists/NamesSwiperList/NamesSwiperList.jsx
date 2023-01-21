@@ -30,12 +30,12 @@ const NamesSwiperList = ({ result }) => {
             modules={[Pagination, Keyboard]}
             pagination={{ clickable: true }}
             keyboard={{ enabled: true }}
-            className='namesSwiper'
-            loop={true}
+            loop={result.length > 3 && true}
             slidesPerView={isSmallDevice ? 2 : 1}
             slidesPerGroup={1}
             centeredSlides={true}
             spaceBetween={30}
+            className='namesSwiper'
         >
             {result.map((collection, index) => (
                 <SwiperSlide key={index}>

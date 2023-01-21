@@ -1,6 +1,6 @@
 .swiper {
   width: 100%;
-  padding: 1rem 0 5rem 0 !important;
+  padding: 1rem 0 7rem 0 !important;
 }
 
 .swiper-slide {
@@ -24,13 +24,14 @@
 .swiper-navigation-button, .swiper-pagination {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: absolute;
   bottom: 0.5% !important;
 }
 
 .swiper-navigation-button {
   width: 6rem;
-  height: 2rem !important;
+  height: 4.8rem !important;
   right: 3rem;
 }
 
@@ -70,23 +71,24 @@
 
 .swiper-pagination {
   align-content: center;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
   left: 3rem !important;
-  height: 2rem !important;
-  max-width: 60%;
+  height: 5rem !important;
+  max-width: 80%;
 }
 
 .swiper-pagination-bullet {
-  width: 20px !important;
-  height: 20px !important;
-  margin: 0 8px !important;
+  width: 16px !important;
+  height: 16px !important;
   transition: 0.2s ease-in-out !important;
 }
 
 .swiper-pagination-bullet-active {
   background: #00D2FF !important;
-  width: 60px !important;
+  width: 50px !important;
   border-radius: 1rem !important;
 }
 
