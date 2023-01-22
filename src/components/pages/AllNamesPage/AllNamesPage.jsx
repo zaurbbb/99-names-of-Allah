@@ -10,7 +10,7 @@ const AllNamesPage = () => {
 
     return (
         <section>
-            <CustomHeading value='w.bookmarks_page_title' />
+            <CustomHeading value='w.header_allNames' />
             <AllNamesList result={namesCollection}/>
         </section>
     );
