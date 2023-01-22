@@ -1,7 +1,7 @@
-export const shuffleAnswers = question => {
+export const shuffleAnswers = (correctAnswer, incorrectAnswers) => {
     const unshuffledAnswers = [
-        question.correctAnswer,
-        ...question.incorrectAnswers
+        correctAnswer,
+        ...incorrectAnswers
     ];
 
     return unshuffledAnswers
