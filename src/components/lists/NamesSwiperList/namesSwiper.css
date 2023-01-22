@@ -4,6 +4,9 @@
 }
 
 @media (max-width: 768px) {
+  .namesSwiper {
+    padding: 2rem 0 2rem 0 !important;
+  }
   .namesSwiper .swiper-navigation-button {
     display: none !important;
   }
