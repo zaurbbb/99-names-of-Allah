@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/99-names-of-Allah/static/css/main.4592bce1.css",
-    "main.js": "/99-names-of-Allah/static/js/main.e8efcfb4.js",
+    "main.js": "/99-names-of-Allah/static/js/main.19313a16.js",
     "static/css/828.6a0b06aa.chunk.css": "/99-names-of-Allah/static/css/828.6a0b06aa.chunk.css",
     "static/js/828.85567bbf.chunk.js": "/99-names-of-Allah/static/js/828.85567bbf.chunk.js",
-    "static/css/339.60643bc9.chunk.css": "/99-names-of-Allah/static/css/339.60643bc9.chunk.css",
+    "static/css/339.e1a39932.chunk.css": "/99-names-of-Allah/static/css/339.e1a39932.chunk.css",
     "static/js/339.8edc5fd8.chunk.js": "/99-names-of-Allah/static/js/339.8edc5fd8.chunk.js",
     "static/js/784.e954267f.chunk.js": "/99-names-of-Allah/static/js/784.e954267f.chunk.js",
     "static/js/633.f40b104e.chunk.js": "/99-names-of-Allah/static/js/633.f40b104e.chunk.js",
@@ -56,16 +56,16 @@
     "static/media/search_light.webp": "/99-names-of-Allah/static/media/search_light.73dabed9ee67e1245978.webp",
     "static/media/search_dark.svg": "/99-names-of-Allah/static/media/search_dark.5a9cca862ba63cded7f79e3b8be231f4.svg",
     "main.4592bce1.css.map": "/99-names-of-Allah/static/css/main.4592bce1.css.map",
-    "main.e8efcfb4.js.map": "/99-names-of-Allah/static/js/main.e8efcfb4.js.map",
+    "main.19313a16.js.map": "/99-names-of-Allah/static/js/main.19313a16.js.map",
     "828.6a0b06aa.chunk.css.map": "/99-names-of-Allah/static/css/828.6a0b06aa.chunk.css.map",
     "828.85567bbf.chunk.js.map": "/99-names-of-Allah/static/js/828.85567bbf.chunk.js.map",
-    "339.60643bc9.chunk.css.map": "/99-names-of-Allah/static/css/339.60643bc9.chunk.css.map",
+    "339.e1a39932.chunk.css.map": "/99-names-of-Allah/static/css/339.e1a39932.chunk.css.map",
     "339.8edc5fd8.chunk.js.map": "/99-names-of-Allah/static/js/339.8edc5fd8.chunk.js.map",
     "784.e954267f.chunk.js.map": "/99-names-of-Allah/static/js/784.e954267f.chunk.js.map",
     "633.f40b104e.chunk.js.map": "/99-names-of-Allah/static/js/633.f40b104e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4592bce1.css",
-    "static/js/main.e8efcfb4.js"
+    "static/js/main.19313a16.js"
   ]
 }
