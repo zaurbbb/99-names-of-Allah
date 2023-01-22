@@ -46,6 +46,7 @@
   align-content: flex-start;
   justify-content: center;
   align-items: center;
+  text-align: center !important;
 }
 .UpperCard div:last-child div h3:first-child {
   font-family: "GilroySemiBold", sans-serif;
@@ -54,6 +55,9 @@
 .UpperCard div:last-child div h3:last-child {
   font-family: "GilroyRegular", sans-serif;
   font-weight: 400;
+}
+.UpperCard div:last-child h3 {
+  text-align: center;
 }
 .UpperCard div:last-child a img {
   width: 2rem;
@@ -67,6 +71,9 @@
 .UpperCard div:first-child div:nth-child(odd), .LowerCard div:first-child div:nth-child(odd) {
   width: 40px;
 }
+.UpperCard div h3, .LowerCard div h3 {
+  text-align: center;
+}
 
 .MiddleCard, .LowerCard {
   gap: 1.5rem;
@@ -75,7 +82,6 @@
   color: #00D2FF;
   font-family: "GilroySemiBold", sans-serif;
   font-weight: 100;
-  text-align: center;
 }
 .MiddleCard div h4, .LowerCard div h4 {
   font-family: "GilroyRegular", sans-serif;

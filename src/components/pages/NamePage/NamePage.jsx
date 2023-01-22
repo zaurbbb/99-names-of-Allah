@@ -2,11 +2,11 @@ import React, {
     useContext,
     useState
 } from 'react';
+import { useParams } from 'react-router-dom';
 
 import { SnackbarContext } from '../../../context/snackbar';
 
 import { useNameData } from '../../../hooks/useNameData';
-import { useParams } from 'react-router-dom';
 
 import NameDataCard from '../../cards/NameDataCard/NameDataCard';
 import SourceModal from './SourceModal/SourceModal';

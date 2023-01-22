@@ -1,14 +1,13 @@
 import {
     createContext,
-    useMemo,
     useState
-} from 'react';
-import { LOCALES } from '../i18n/locales';
+} from "react";
+import { LOCALES } from "../i18n/locales";
 
 export const LanguageContext = createContext('ru-RU');
 
 export const LanguageProvider = ({ children }) => {
-    const [currentLocale, setCurrentLocale] = useState(useMemo(() => getInitialLocale(), []));
+    const [currentLocale, setCurrentLocale] = useState(getInitialLocale());
 
     function getInitialLocale() {
         const savedLocale = localStorage.getItem('locale')

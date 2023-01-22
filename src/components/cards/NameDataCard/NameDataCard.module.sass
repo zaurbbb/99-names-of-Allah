@@ -16,7 +16,6 @@
 
 .UpperCard
   gap: 0.5rem
-
   div
     &:first-child
       img
@@ -34,14 +33,17 @@
       div
         @include flex(column, 0)
         @include flexAlignment(flex-start, center, center)
-
+        text-align: center!important
         h3
+
           &:first-child
             font-family: $gilroySemiBold
             font-weight: 100
           &:last-child
             font-family: $gilroyRegular
             font-weight: 400
+      h3
+        text-align: center
       a
         img
           width: 2rem
@@ -55,6 +57,8 @@
 
       div:nth-child(odd)
         width: 40px
+    h3
+      text-align: center
 
 .MiddleCard, .LowerCard
   gap: 1.5rem
@@ -64,7 +68,7 @@
       color: $poison
       font-family: $gilroySemiBold
       font-weight: 100
-      text-align: center
+
 
     h4
       font-family: $gilroyRegular
