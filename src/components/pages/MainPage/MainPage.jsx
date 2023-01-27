@@ -1,4 +1,7 @@
-import React, { useContext } from 'react';
+import React, {
+    useContext,
+    useState
+} from "react";
 import { WindowWidthContext } from '../../../context/windowWidth';
 
 import { useNamesCollection } from '../../../hooks/useNamesCollection';
@@ -9,8 +12,8 @@ import NamesSwiperList from '../../lists/NamesSwiperList/NamesSwiperList';
 
 const MainPage = () => {
     const { isTabletDevice } = useContext(WindowWidthContext);
-    const namesCollection = useNamesCollection(0, isTabletDevice && 3);
-    const result = useChunks(namesCollection, isTabletDevice ? 2 : 3);
+    const [namesCollection] = useState(useNamesCollection(0, isTabletDevice && 3));
+    const [result] = useState(useChunks(namesCollection, isTabletDevice ? 2 : 3));
 
     return (
         <section>

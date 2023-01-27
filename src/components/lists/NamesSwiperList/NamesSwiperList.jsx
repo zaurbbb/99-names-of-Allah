@@ -1,4 +1,7 @@
-import React, { useContext } from 'react';
+import React, {
+    memo,
+    useContext
+} from "react";
 
 import {
     Pagination,
@@ -74,4 +77,4 @@ const NamesSwiperList = ({ result }) => {
     );
 };
 
-export default NamesSwiperList;
+export default memo(NamesSwiperList);

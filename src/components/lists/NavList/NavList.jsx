@@ -11,7 +11,7 @@ const NavList = () => {
     const { isTabletDevice } = useContext(WindowWidthContext);
     const { bookmarks } = useContext(BookmarksContext);
     const bookmarksCounter = bookmarks.length > 0 && <>({bookmarks.length})</>;
-
+    console.log('hi');
     return navList.map(elem => {
         const shouldAllNamesItemBeShowed = !isTabletDevice && elem.id === 4;
         const shouldBookmarksBeShowed = elem.id === 5 && bookmarks.length === 0;

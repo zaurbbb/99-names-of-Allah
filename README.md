@@ -9,7 +9,7 @@
 
 It's the web-application where you can learn 99 names of Allah.
 
-Live demo: —
+[Click to see live demo](http://93.170.72.112:3000/)
 
 ## Features:
 
