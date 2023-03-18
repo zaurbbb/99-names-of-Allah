@@ -18,7 +18,7 @@ It's the web-application where you can learn 99 names of Allah.
 - Searching names and sharing a link to a name.
 - Ability to save names to bookmarks.
 - Responsive web design for all devices.
-- Internationalization. Support for Kazakh, Arabic and Turkish languages.
+- Internationalization. Support for Kazakh, Russian and Turkish languages.
 
 ## Getting Started
 
